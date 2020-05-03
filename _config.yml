@@ -2,6 +2,7 @@
 
 title: "jackt8's Guide to Chunky"
 description: "A guide to Chunky made by jackjt8"
+baseurl: "/ChunkyGuide"
 
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "dark"
