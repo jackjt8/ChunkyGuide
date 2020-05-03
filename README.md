@@ -1,15 +1,15 @@
+---
+title: jackjt8's Guide to Chunky
+---
+
 <p align="center">
-  <a href="https://material-ui.com/" rel="noopener" target="_blank"><img width="100" src="https://raw.githubusercontent.com/llbit/chunky-docs/master/images/logo.png" alt="Chunky logo"></a>
+  <a href="https://github.com/llbit/chunky" rel="noopener" target="_blank"><img width="100" src="https://raw.githubusercontent.com/llbit/chunky-docs/master/images/logo.png" alt="Chunky logo"></a>
 </p>
 <h1 align="center">jackjt8's Guide to Chunky </h1>
 <div align="center">
 
 Chunky is a Minecraft rendering tool that uses Path Tracing to create realistic images of your Minecraft worlds.
 
-[Discord server][15] ·
-[Documentation][8] ·
-[Troubleshooting][2] ·
-[Subreddit][3]
 </div>
 
 ## jackjt8's Guide to Chunky 
