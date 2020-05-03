@@ -14,7 +14,6 @@ permalink: /
 
 <div align="center">Chunky is a Minecraft rendering tool that uses Path Tracing to create realistic images of your Minecraft worlds.</div>
 
-![](
 <img src="https://github.com/jackjt8/ChunkyGuide/blob/master/img/HP_14-512.denoised.png">
 _Witchcraft and Wizardry - The Floo Network_
 
