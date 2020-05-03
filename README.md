@@ -1,3 +1,11 @@
+---
+layout: default
+title: Home
+nav_order: 1
+description: ""
+permalink: /
+---
+
 <p align="center">
   <img width="100" src="https://raw.githubusercontent.com/llbit/chunky-docs/master/images/logo.png" alt="Chunky logo">
 </p>
