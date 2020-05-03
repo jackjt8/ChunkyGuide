@@ -27,6 +27,15 @@ The basic premise is to render a scene at a higher than target resolution, apply
 540p
 ![](img/docs/denoising/downsample/r540p.png)
 
+1080p
+![](img/docs/denoising/downsample/r1080p.png)
+
+2160p
+![](img/docs/denoising/downsample/r2160p.png)
+
+4320p
+![](img/docs/denoising/downsample/r4320p.png)
+
 ## Split Pass Denoising
 
 [An approach llbit showcased in September 2015](https://www.reddit.com/r/chunky/comments/3kwknl/results_of_some_quick_experiments_with_selective/).
