@@ -14,6 +14,8 @@ nav_order: 1
 1. TOC
 {:toc}
 
+---
+
 ## Super Sample Downscaling Denoising
 
 [A technique first covered back in October 2014](https://www.reddit.com/r/chunky/comments/2kljk1/proof_of_method_the_downscale_test/).
@@ -21,6 +23,9 @@ nav_order: 1
 The basic premise is to render a scene at a higher than target resolution, apply a Gaussian blur to the whole image, and then scale it down to the target resolution. The noise is still present but given the higher resolution each pixel of noise takes up less screen space compared to the “noiseless” data from the sun/sky. Blurring and scaling to target resolution should result in better results then rendering at native resolution.
 
 ### Original examples
+
+540p
+![](img/docs/denoising/downsample/r540p.png)
 
 ## Split Pass Denoising
 
