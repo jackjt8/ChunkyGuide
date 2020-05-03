@@ -25,16 +25,16 @@ The basic premise is to render a scene at a higher than target resolution, apply
 ### Original examples
 
 540p
-![](./img/docs/denoising/downsample/r540p.png)
+![](../img/docs/denoising/downsample/r540p.png)
 
 1080p
-![](./img/docs/denoising/downsample/r1080p.png)
+![](../img/docs/denoising/downsample/r1080p.png)
 
 2160p
-![](./img/docs/denoising/downsample/r2160p.png)
+![](../img/docs/denoising/downsample/r2160p.png)
 
 4320p
-![](./img/docs/denoising/downsample/r4320p.png)
+![](../img/docs/denoising/downsample/r4320p.png)
 
 ---
 
@@ -47,19 +47,19 @@ By rendering the scene twice, first with a “Sunlight Pass” to 200 SPP and th
 ### llbit's example
 
 Sunlight pass at 200 SPP
-![](./img/docs/denoising/split_pass/sunlight_pass.png)
+![](../img/docs/denoising/split_pass/sunlight_pass.png)
 
 Emitter pass at 400 SPP
-![](./img/docs/denoising/split_pass/raw_emitter_pass.png)
+![](../img/docs/denoising/split_pass/raw_emitter_pass.png)
 
 Filtered emitter pass
-![](./img/docs/denoising/split_pass/filtered_emitter_pass.png)
+![](../img/docs/denoising/split_pass/filtered_emitter_pass.png)
 
 Sunlight + filtered emitter pass
-![](./img/docs/denoising/split_pass/combined_post.png)
+![](../img/docs/denoising/split_pass/combined_post.png)
 
 Typical 400 SPP render
-![](./img/docs/denoising/split_pass/typical.png)
+![](../img/docs/denoising/split_pass/typical.png)
 
 ---
 
@@ -70,19 +70,19 @@ A technique which I never released; Covers rendering a scene with a clear and di
 ### Example
 
 Foreground selection of 76 chunks
-![](./img/docs/denoising/multi-plane/mapview_fore.png)
+![](../img/docs/denoising/multi-plane/mapview_fore.png)
 
 1024 SPP @ 932k SPS - aka it's fast
-![](./img/docs/denoising/multi-plane/multi-plane_fore-1024.png)
+![](../img/docs/denoising/multi-plane/multi-plane_fore-1024.png)
 
 Background selection of 1877 chunks
-![](./img/docs/denoising/multi-plane/mapview_back.png)
+![](../img/docs/denoising/multi-plane/mapview_back.png)
 
 128 SPP @ 482k SPS - aka it's slow
-![](./img/docs/denoising/multi-plane/multi-plane_back-128.png)
+![](../img/docs/denoising/multi-plane/multi-plane_back-128.png)
 
 Crude composite
-![](./img/docs/denoising/multi-plane/multi-plane_comp.png)
+![](../img/docs/denoising/multi-plane/multi-plane_comp.png)
 
 The key issue with this technique is that the lighting information in the foreground element would not completely match the background. Further mitigations would be to instead combine this Multi-plane technique with Split Pass to further speed up rendering and retain bounce lighting from Sun/Sky present within the background pass. Using Split Pass would also mean that less effort is required to recombine the completed results.
 
@@ -95,26 +95,26 @@ The key issue with this technique is that the lighting information in the foregr
 ### Example
 | SPP  | RAW                                               | OIDN                                                       |
 |------|---------------------------------------------------|------------------------------------------------------------|
-| 512  | ![](./img/docs/denoising/ai_based_dn/test-512.png)  | ![](./img/docs/denoising/ai_based_dn/test-512.denoised.png)  |
-| 2048 | ![](./img/docs/denoising/ai_based_dn/test-2048.png) | ![](./img/docs/denoising/ai_based_dn/test-2048.denoised.png) |
-| 4096 | ![](./img/docs/denoising/ai_based_dn/test-4096.png) | ![](./img/docs/denoising/ai_based_dn/test-4096.denoised.png) |
-| 8192 | ![](./img/docs/denoising/ai_based_dn/test-8192.png) | ![](./img/docs/denoising/ai_based_dn/test-8192.denoised.png) |
+| 512  | ![](../img/docs/denoising/ai_based_dn/test-512.png)  | ![](../img/docs/denoising/ai_based_dn/test-512.denoised.png)  |
+| 2048 | ![](../img/docs/denoising/ai_based_dn/test-2048.png) | ![](../img/docs/denoising/ai_based_dn/test-2048.denoised.png) |
+| 4096 | ![](../img/docs/denoising/ai_based_dn/test-4096.png) | ![](../img/docs/denoising/ai_based_dn/test-4096.denoised.png) |
+| 8192 | ![](../img/docs/denoising/ai_based_dn/test-8192.png) | ![](../img/docs/denoising/ai_based_dn/test-8192.denoised.png) |
 
 As some of you may have noticed while AI based denoisers work wonders there are a few issues with the outputted images. Noteworthy visual artifacts are the deformed blocks, blurred textures, and the painted effect you can often see. Below you can see an extreme case where a 32 SPP scene lit mostly by emitters was denoised.
 
 ### Example of painted effect
-![](./img/docs/denoising/ai_based_dn/HermitCraft7-32.denoised.png)
+![](../img/docs/denoising/ai_based_dn/HermitCraft7-32.denoised.png)
 
 Some of these issues can be resolved by using leMaik’s Denoising Plugin which has the ability to, not only to automatically denoise a scene once the target SPP is reached but, render auxiliary feature images / AOVs (Arbitrary Output Variables) to provide additional information to the denoiser.
 
 ### Albedo Map
-![](./img/docs/denoising/ai_based_dn/test.albedo.png)
+![](../img/docs/denoising/ai_based_dn/test.albedo.png)
 
 The Albedo map is a feature image that provides the largest quality bump to the denoiser. It’s basically just a representation of the texture information within the scene independant of shading (lighting) or viewing angle. This map tends to help restore texture details.
 **IMPORTANT** - Make sure you **disable all post processing** and set **exposure to 1**. The Denoiser plugin, at the time of writing, doesn’t exclude post processing and it can destroy the albedo.
 
 ### Normal Map
-![](./img/docs/denoising/ai_based_dn/test.normal.png)
+![](../img/docs/denoising/ai_based_dn/test.normal.png)
 
 The Normal map is another feature image that can help. In order to use a Normal map you need to provide the Denoiser with the Albedo map first. This map tends to help restore block shape.
 
@@ -134,35 +134,35 @@ Put simply: Render the Sun, Sky, and Fog in one pass. In another pass render the
 ### Example 1
 
 Sun + Sky + Fog Pass at 256 SPP
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_2-256.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_2-256.png)
 
 Raw Emitter Pass at 2048 SPP 
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_2e-2048.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_2e-2048.png)
 
 AI denoised Emitter Pass
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_2e-2048_oidn.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_2e-2048_oidn.png)
 
 Combined SSF + E_dn using GIMP and layer mode set to screen
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_2-ss256_e2048dn_s.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_2-ss256_e2048dn_s.png)
 
 ### Example 2
 
 Sun + Sky + Fog Pass at 256 SPP
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_3-256.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_3-256.png)
 
 Raw Emitter Pass at 2048 SPP 
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_3e-2048.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_3e-2048.png)
 
 AI denoised Emitter Pass
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_3e-2048.denoised.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_3e-2048.denoised.png)
 
 Combined SSF + E_dn using GIMP and layer mode set to screen
-![](./img/docs/denoising/split-ai/TheUncensoredLibrary_3_comp.png)
+![](../img/docs/denoising/split-ai/TheUncensoredLibrary_3_comp.png)
 
 ### A simple proof of concept with Layer mode: Screen
 
 Below is a showcase of further subdividing light sources into different passes and the combined composite VS a typical render. This is merely to showcase that splitting render passes and combining in post can produce equivalent results to a typical render. Of course subdividing a scene into this many passes and rendering to such a high SPP is not required for Split Pass + AI Denoising.
 
-| ![](./img/docs/denoising/layer_mode_screen/NoiseTest_S-8192.png) | ![](./img/docs/denoising/layer_mode_screen/NoiseTest_sky-16384.png) | ![](./img/docs/denoising/layer_mode_screen/NoiseTest_emitter-16384.png) |
+| ![](../img/docs/denoising/layer_mode_screen/NoiseTest_S-8192.png) | ![](../img/docs/denoising/layer_mode_screen/NoiseTest_sky-16384.png) | ![](../img/docs/denoising/layer_mode_screen/NoiseTest_emitter-16384.png) |
 |----------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------|
-| ![](./img/docs/denoising/layer_mode_screen/NoiseTest_comp.png)   |                                                                   | ![](./img/docs/denoising/layer_mode_screen/NoiseTest_SsE-16384.png)     |
+| ![](../img/docs/denoising/layer_mode_screen/NoiseTest_comp.png)   |                                                                   | ![](../img/docs/denoising/layer_mode_screen/NoiseTest_SsE-16384.png)     |
