@@ -1,7 +1,7 @@
 ---
 title: Denoising
 parent: Advanced Techniques
-has_children: false
+has_children: true
 nav_order: 1
 ---
 
@@ -22,20 +22,22 @@ nav_order: 1
 
 The basic premise is to render a scene at a higher than target resolution, apply a Gaussian blur to the whole image, and then scale it down to the target resolution. In any case it is assumed you render the scene for the same duration. Generally this means that a scene at say 1920x1080 with a target of 1024 SPP could be rendered at 3840x2160 at 256 SPP- These should take the same amount of time to render and the 2160p image would have perceptually less noise than the same scene rendered natively at 1080p.
 
-The noise is still present but given the higher resolution each pixel of noise takes up less screen space compared to the “noiseless” data from the sun/sky. Blurring and scaling to target resolution should result in better results then rendering at native resolution.
+The noise is still present but given the higher resolution each pixel of noise takes up less screen space compared to the “noiseless” data from the sun/sky. Blurring and scaling to target resolution should result in better results than rendering at native resolution.
+
+Increasing the canvas resolution does increase memory consumption.
 
 ### Original examples
 
-540p
+540p Native
 ![](img/denoising/downsample/r540p.png)
 
-1080p
+1080p (2x supersampling)
 ![](img/denoising/downsample/r1080p.png)
 
-2160p
+2160p (4x supersampling)
 ![](img/denoising/downsample/r2160p.jpg)
 
-4320p
+4320p (8x supersampling)
 ![](img/denoising/downsample/r4320p.jpg)
 
 ---
@@ -44,7 +46,7 @@ The noise is still present but given the higher resolution each pixel of noise t
 
 [An approach llbit showcased in September 2015](https://www.reddit.com/r/chunky/comments/3kwknl/results_of_some_quick_experiments_with_selective/).
 
-By rendering the scene twice, first with a “Sunlight Pass” to 200 SPP and then a “Raw Emitter Pass” to 400 SPP. The noisy emitter pass could then be filtered with a Selective Gaussian Blur in GIMP and then combined. Comparing a typical 400 SPP Sunlight + Raw Emitter image to the Sunlight + Filtered Emitter image it was seen that the lighting was softer and there was less noticeable noise.
+By rendering the scene twice, first with a “Sunlight Pass” to 200 SPP and then a “Raw Emitter Pass” to 400 SPP. The noisy emitter pass could then be filtered with a [Selective Gaussian Blur in GIMP](./gimp.md#sgb) and then combined. Comparing a typical 400 SPP Sunlight + Raw Emitter image to the Sunlight + Filtered Emitter image it was seen that the lighting was softer and there was less noticeable noise.
 
 The different lighting passes can be setup through the Lighting and the Sky & Fog tabs. For a Sunlight pass you would simply need to disable emitters. For an Emitter pass things are a bit more complex: Enable emitters (if not done), disable sunlight, and Sky mode: black OR enable transparent sky.
 
@@ -62,7 +64,7 @@ Filtered emitter pass
 Sunlight + filtered emitter pass
 ![](img/denoising/split_pass/combined_post.png)
 
-Typical 400 SPP render
+Same scene rendered at 400 SPP
 ![](img/denoising/split_pass/typical.png)
 
 ---
@@ -92,9 +94,9 @@ The key issue with this technique is that the lighting information in the foregr
 
 ---
 
-## AI Based Denoising
+## AI Based Denoising & Plugins
 
-[First showcased by u/StaysAwakeAllWeek in Nov 2018](https://www.reddit.com/r/chunky/comments/a0o15p/this_simple_aibased_denoiser_tool_for_nvidia_gpus/), this was the first time an AI based denoiser was mentioned on r/Chunky. Unfortunately at the time it was limited to just Nvidia GPUs. A few months later I discovered Intel’s Open Image Denoise; an AI based denoiser that works on any CPU with SSE4.1 support. The rest is history.
+[First showcased by u/StaysAwakeAllWeek in Nov 2018](https://www.reddit.com/r/chunky/comments/a0o15p/this_simple_aibased_denoiser_tool_for_nvidia_gpus/), this was the first time an AI based denoiser was mentioned on r/Chunky. Unfortunately at the time it was limited to just Nvidia GPUs. A few months later I discovered Intel’s Open Image Denoise; an AI based denoiser that works on any CPU with SSE4.1 support.
 
 ### Example
 
@@ -110,13 +112,15 @@ As some of you may have noticed while AI based denoisers work wonders there are 
 ### Example of painted effect
 ![](img/denoising/ai_based_dn/HermitCraft7-32.denoised.png)
 
-Some of these issues can be resolved or mitigated by using leMaik’s Denoising Plugin which has the ability to, not only to automatically denoise a scene once the target SPP is reached but, render auxiliary feature images / AOVs (Arbitrary Output Variables) to provide additional information to the denoiser. Unfortunately you still can't expect the AI denoiser to work real magic; If there is too much noise you will still get a painted effect.
+### leMaik's Denoising Plugin
+
+Some of these issues can be resolved or mitigated by using [leMaik’s Denoising Plugin](https://github.com/leMaik/chunky-denoiser) which has the ability to, not only to automatically denoise a scene once the target SPP is reached but, render auxiliary feature images / AOVs (Arbitrary Output Variables) to provide additional information to the denoiser. Unfortunately you still can't expect the AI denoiser to work real magic; If there is too much noise you will still get a painted effect.
 
 ### Albedo Map
 ![](img/denoising/ai_based_dn/test.albedo.png)
 
 The Albedo map is a feature image that provides the largest quality bump to the denoiser. It’s basically just a representation of the texture information within the scene independant of shading (lighting) or viewing angle. This map tends to help restore texture details.
-**IMPORTANT** - Make sure you **disable all post processing** and set **exposure to 1**. The Denoiser plugin, at the time of writing, doesn’t exclude post processing settings when rendering the albedo map and it can destroy any details within this map.
+**IMPORTANT** - Make sure you **disable all post processing** and set **exposure to 1**. [The Denoiser plugin, at the time of writing, doesn’t exclude post processing settings when rendering the albedo map and it can destroy any details within this map](https://github.com/leMaik/chunky-denoiser/issues/16).
 
 ### Normal Map
 ![](img/denoising/ai_based_dn/test.normal.png)
