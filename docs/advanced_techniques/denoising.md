@@ -31,10 +31,10 @@ The basic premise is to render a scene at a higher than target resolution, apply
 ![](img/denoising/downsample/r1080p.png)
 
 2160p
-![](img/denoising/downsample/r2160p.png)
+![](img/denoising/downsample/r2160p.jpg)
 
 4320p
-![](img/denoising/downsample/r4320p.png)
+![](img/denoising/downsample/r4320p.jpg)
 
 ---
 
@@ -94,7 +94,7 @@ The key issue with this technique is that the lighting information in the foregr
 
 ### Example
 | SPP  | RAW                                          | OIDN                                                  |
-|------|----------------------------------------------|-------------------------------------------------------|
+|:-----|:---------------------------------------------|:------------------------------------------------------|
 | 512  | ![](img/denoising/ai_based_dn/test-512.png)  | ![](img/denoising/ai_based_dn/test-512.denoised.png)  |
 | 2048 | ![](img/denoising/ai_based_dn/test-2048.png) | ![](img/denoising/ai_based_dn/test-2048.denoised.png) |
 | 4096 | ![](img/denoising/ai_based_dn/test-4096.png) | ![](img/denoising/ai_based_dn/test-4096.denoised.png) |
@@ -163,6 +163,8 @@ Combined SSF + E_dn using GIMP and layer mode set to screen
 
 Below is a showcase of further subdividing light sources into different passes and the combined composite VS a typical render. This is merely to showcase that splitting render passes and combining in post can produce equivalent results to a typical render. Of course subdividing a scene into this many passes and rendering to such a high SPP is not required for Split Pass + AI Denoising.
 
+| Sun pass                                                  | Sky pass                                                     | Emitter pass                                                     |
+|:----------------------------------------------------------|:-------------------------------------------------------------|------------------------------------------------------------------|
 | ![](img/denoising/layer_mode_screen/NoiseTest_S-8192.png) | ![](img/denoising/layer_mode_screen/NoiseTest_sky-16384.png) | ![](img/denoising/layer_mode_screen/NoiseTest_emitter-16384.png) |
-|----------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------|
-| ![](img/denoising/layer_mode_screen/NoiseTest_comp.png)   |                                                                   | ![](img/denoising/layer_mode_screen/NoiseTest_SsE-16384.png)     |
+| SSE_Comp                                                  |                                                              | Typical bake                                                     |
+| ![](img/denoising/layer_mode_screen/NoiseTest_comp.png)   |                                                              | ![](img/denoising/layer_mode_screen/NoiseTest_SsE-16384.png)     |
