@@ -94,7 +94,7 @@ The key issue with this technique is that the lighting information in the foregr
 
 ### Example
 | SPP  | RAW                                          | OIDN                                                  |
-|:-----|:---------------------------------------------|:------------------------------------------------------|
+|------|----------------------------------------------|-------------------------------------------------------|
 | 512  | ![](img/denoising/ai_based_dn/test-512.png)  | ![](img/denoising/ai_based_dn/test-512.denoised.png)  |
 | 2048 | ![](img/denoising/ai_based_dn/test-2048.png) | ![](img/denoising/ai_based_dn/test-2048.denoised.png) |
 | 4096 | ![](img/denoising/ai_based_dn/test-4096.png) | ![](img/denoising/ai_based_dn/test-4096.denoised.png) |
