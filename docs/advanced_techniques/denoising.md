@@ -93,8 +93,8 @@ The key issue with this technique is that the lighting information in the foregr
 [First showcased by u/StaysAwakeAllWeek in Nov 2018](https://www.reddit.com/r/chunky/comments/a0o15p/this_simple_aibased_denoiser_tool_for_nvidia_gpus/), this was the first time an AI based denoiser was mentioned on r/Chunky. Unfortunately it was limited to just Nvidia GPUs. A few months later I discovered Intel’s Open Image Denoise; an AI based denoiser that works on any CPU with SSE4.1 support. The rest is history.
 
 ### Example
-| SPP  | RAW                                               | OIDN                                                       |
-|------|---------------------------------------------------|------------------------------------------------------------|
+| SPP  | RAW                                          | OIDN                                                  |
+|------|----------------------------------------------|-------------------------------------------------------|
 | 512  | ![](img/denoising/ai_based_dn/test-512.png)  | ![](img/denoising/ai_based_dn/test-512.denoised.png)  |
 | 2048 | ![](img/denoising/ai_based_dn/test-2048.png) | ![](img/denoising/ai_based_dn/test-2048.denoised.png) |
 | 4096 | ![](img/denoising/ai_based_dn/test-4096.png) | ![](img/denoising/ai_based_dn/test-4096.denoised.png) |
