@@ -1,8 +1,8 @@
 ---
 title: GIMP
-parent: Denoising
+parent: Advanced Techniques
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # GNU Image Manipulation Program - A quick rundown
@@ -18,6 +18,8 @@ nav_order: 1
 
 ## Other
 
+---
+
 ## Filtering
 
 With the chosen layer selected over in the `Layers window`. You can apply various `Filters` to it by accessing the menu from the `Menu Bar`.
@@ -26,15 +28,19 @@ With the chosen layer selected over in the `Layers window`. You can apply variou
 
 ### Blur
 
-#### Gaussian blur
+#### 'Gaussian blur'
+
 _Performs an averaging of neighboring pixels with the normal distribution as weighting_
 
 This is the most basic blur filter available and really quick. Has the option to change blur size in X and Y independently.
 
 ![](img/gimp/gimp_gaussian_blur.jpg)
 
+---
+
 <a name="sgb"></a>
-#### Selective Gaussian blur
+#### 'Selective Gaussian blur'
+
 _Blur neighboring pixels, but only in low contrast areas_
 
 This filter is more advanced and lets you set a threshold so that only similar pixels are blurred together. Should help retain sharp edges while reducing grain. This filter is much slower than Gaussian blur but this probably won't amount to much addtional processing time unless working with a high resolution image. Unfortunately you cannot control blur in X&Y independently instead it is controlled by a Blur radius.
