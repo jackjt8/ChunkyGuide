@@ -28,7 +28,7 @@ With the chosen layer selected over in the `Layers window`. You can apply variou
 
 ### Blur
 
-#### 'Gaussian blur'
+#### Gaussian blur
 
 _Performs an averaging of neighboring pixels with the normal distribution as weighting_
 
@@ -39,7 +39,7 @@ This is the most basic blur filter available and really quick. Has the option to
 ---
 
 <a name="sgb"></a>
-#### 'Selective Gaussian blur'
+#### Selective Gaussian blur
 
 _Blur neighboring pixels, but only in low contrast areas_
 
