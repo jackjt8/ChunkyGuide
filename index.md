@@ -17,7 +17,7 @@ permalink: /
 ---
 
 ![](img/index/HP_14-512.denoised.png)
-<div align="right"> _Witchcraft and Wizardry - The Floo Network_ </div>
+<div align="right"><small><i>Witchcraft and Wizardry - The Floo Network</i></small></div>
 
 ---
 
