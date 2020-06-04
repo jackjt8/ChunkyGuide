@@ -6,6 +6,15 @@ nav_order: 1
 ---
 
 # Java
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 
 As stated in Installation, Chunky requires Java 8 update 40 or later (with JavaFX) and it is recommended that you use the 64 bit Java version if you have a 64 bit OS.
 
@@ -15,6 +24,8 @@ As stated in Installation, Chunky requires Java 8 update 40 or later (with JavaF
 
 Recommended OpenJDK:
 [AdoptOpenJDK 8 (LTS) HotSpot](https://adoptopenjdk.net/)
+
+---
 
 ## No Class Def Found Error - aka missing JavaFX
 
@@ -30,6 +41,8 @@ Caused by: java.lang.ClassNotFoundException: javafx.stage.Stage
 ```
 
 JavaFX/OpenJFX are often the short straw and unfortunately Chunky needs them. Below are a few solutions.
+
+---
 
 ### OpenJDK 8 OpenJFX fix on Ubuntu
 
@@ -49,12 +62,15 @@ dpkg -i *.deb
 apt-mark hold openjfx libopenjfx-java libopenjfx-jni
 ```
 
+---
 
 ### OpenJDK 8 OpenJFX fix on Windows
 
 On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of writing, have an official source. Instead you will need to find a pre-compiled build like below.
 
 [pre-compiled OpenJFX 8u172-b11](https://github.com/SkyLandTW/OpenJFX-binary-windows/releases){: .btn }
+
+---
 
 ### What about Java 11?
 
