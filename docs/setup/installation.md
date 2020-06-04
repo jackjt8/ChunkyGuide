@@ -1,7 +1,7 @@
 ---
 title: Installation
 has_children: true
-nav_order: 2
+nav_order: 3
 ---
 
 # Installing Chunky
@@ -37,7 +37,7 @@ Notes
 
 [Download ChunkyLauncher.jar](https://chunkyupdate.lemaik.de/ChunkyLauncher.jar){: .btn }
 
-The Chunky Launcher is a Java application that handles updating Chunky, multiple versions of Chunky, Plugins, and various Settings. You can start the Launcher by double clicking on the donloaded Jar file, or by typing the following command into a terminal/command prompt from the appropriate directory.
+The Chunky Launcher is a Java application that handles updating Chunky, version selection, Plugins, and various settings. You can start the Launcher by double clicking on the donloaded Jar file, or by typing the following command into a terminal/command prompt from the appropriate directory.
 
 `java -jar ChunkyLauncher.jar`
 
@@ -50,6 +50,8 @@ The first time you start Chunky Launcher you will be asked to pick a settings di
 After making this selection the Chunky Launcher will be shown. Please hit `Check for update` to show any available updates and then `Update to New Version` to get Chunky Launcher to download required files. Once done hit `Launch Chunky` to use the downloaded version. Or `Close` and use the `Launch` option within Chunky Launcher.
 
 ![](img/installation/chunky_update_available.png)
+
+Note - If no update is found or the download of the update fails you may need to enable `Download snapshots` from the advanced section of the Launcher.
 
 ---
 
@@ -77,7 +79,7 @@ After making this selection the Chunky Launcher will be shown. Please hit `Check
 
 `Enable debug console` & `Verbose logging` - The debug console is a seperate window that runs when you launch Chunky. As the name implies it is useful for debugging issues with Chunky and combined with Verbose logging, which enables addtional debug information, can be helpful in fixing bugs and crashes.
 
-`Download snapshots` - Snapshots are alpha/beta builds of Chunky and may be unstable.
+`Download snapshots` - Snapshots are nightly/alpha/beta builds of Chunky, depending on the update site used, and may be unstable.
 
 `Manage plugins` - The Plugin manager can be used to manage installed plugins.
 
