@@ -62,3 +62,10 @@ If you wish to run Chunky on Java 11 you will need to add `--module-path` and `-
 
 For more information, [please see issue #523](https://github.com/llbit/chunky/issues/523).
 
+---
+
+## Double clicking ChunkyLauncher.jar doesn't work on Windows?
+
+A common issue with Java on Windows is that jar files may not be correctly associated with Java.
+
+This can be fixed by either uninstalling and reinstalling Java or through using an application like [Jarfix](https://johann.loefflmann.net/en/software/jarfix/index.html).
