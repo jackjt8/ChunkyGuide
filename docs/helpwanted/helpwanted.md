@@ -1,7 +1,7 @@
 ---
 title: Help Wanted
 has_children: true
-nav_order: 4
+nav_order: 6
 ---
 
 # Current things that need to be tested
