@@ -2,7 +2,7 @@
 title: Chunky Launcher
 parent: Installation
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # Chunky Launcher
@@ -16,13 +16,15 @@ nav_order: 1
 
 ---
 
+## Chunky Launcher
+
 ![](img/installation/chunky_launcher.png)
 
 `Version select` - Drop down list which allows you to pick a downloaded Chunky version.
 
 `Check for update` - Checks for updates on chosen update channel.
 
-`Memory limit (MiB)` - Default is 1024 MiB but it is highly recommended that you raise this value to better reflect the amount of memory in your system. Please take into account that the OS and other applications will also require some memory so don't over set this. If you cannot raise this past 1500 MiB double check your Java installation is 64 bit.
+`Memory limit (MiB)` - Default is 1024 MiB but it is highly recommended that you raise this value to better reflect the amount of memory in your system. Please take into account that the OS and other applications will also require some memory so don't over set this. If you cannot raise this past 2000 MiB double check your Java installation is 64 bit.
 
 ---
 
