@@ -48,3 +48,10 @@ If you want to help out there is more information over at my GitHub Repo where y
 
 [Chunky AI Training Data](https://github.com/jackjt8/chunky_aidn_training){: .btn }
 
+---
+
+## GitHub Issues
+
+Confirming bugs, providing steps to reproduce them, or maybe even fixing them yourself are all really helpful. Maybe.. Try it out...
+
+[Chunky GitHub Issues](https://github.com/llbit/chunky/issues){: .btn }
