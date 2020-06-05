@@ -24,7 +24,7 @@ While it is known that UI elements have set ranges which we can bypass by enteri
 
 ---
 
-## Explore different tile-width sizes for potential speedups.
+## Explore different tile-width sizes for potential speedups
 
 In the ChunkyLauncher, under advanced, you can find Chunky options where you can provide arguments to change more advanced settings. The particular one we are looking at here is `-tile-width x` which modifies the frame subdivision size per worker thread. Alternatively you can call this option and render via commandline using the following:
 
