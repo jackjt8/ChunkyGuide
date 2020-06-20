@@ -5,6 +5,7 @@ nav_order: 6
 ---
 
 # FAQ / Troubleshooting
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
