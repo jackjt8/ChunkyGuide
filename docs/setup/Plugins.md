@@ -24,37 +24,40 @@ For a description and some examples please see the section on [AI Based Denoisin
 [Releases page](https://github.com/leMaik/chunky-denoiser/releases){: .btn }
 
 
-
+---
 ## leMaik's Discord Rich Presence plugin
 
 Unreleased.
 
 
-
-## demo Ambient Occlusion Plugin
+---
+## *demo* Ambient Occlusion Plugin
 
 [GitHub Repo](https://github.com/llbit/Chunky-AOPlugin)
 
 [Complied Chunky-AOPlugin](plugins/Chunky-AOPlugin.jar){: .btn }
 
 
-
-## demo Depth Buffer Plugin
+---
+## *demo* Depth Buffer Plugin
 
 [GitHub Repo](https://github.com/llbit/Chunky-DepthPlugin)
 
 [Complied Chunky-DepthPlugin](Chunky-DepthPlugin.jar){: .btn }
 
 
+---
+## Plugin Templates
+
 
 ---
-## demo Block Plugin Template
+### *demo* Block Plugin Template
 
 [GitHub Repo](https://github.com/llbit/Chunky-BlockMod)
 
 
-
-## demo Tab Plugin Template
+---
+### *demo* Tab Plugin Template
 
 [Github Repo](https://github.com/llbit/Chunky-TabMod)
 
