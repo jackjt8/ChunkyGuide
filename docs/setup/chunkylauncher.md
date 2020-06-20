@@ -66,4 +66,4 @@ nav_order: 2
 
 ## Chunky options
 
-- `-tile-width <NUM>` - Modifies the frame subdivision size per worker thread.
+- `-tile-width <NUM>` - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. [More testing is needed](https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups).

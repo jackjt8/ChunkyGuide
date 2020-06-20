@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: FAQ / Troubleshooting
 has_children: true
 nav_order: 4
 ---
@@ -38,7 +38,7 @@ If Java is installed to `C:\Program Files (x86)\Java\...` this is a 32 bit insta
 
 ### Exception in thread "main" java.lang.NoClassDefFoundError: javafx/stage/Stage
 
-[More info](https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#no-class-def-found-error---aka-missing-javafx)
+[More info and potential fixes](https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#no-class-def-found-error---aka-missing-javafx)
 
 ---
 
