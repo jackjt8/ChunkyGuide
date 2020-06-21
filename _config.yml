@@ -27,4 +27,4 @@ plugins:
   - jekyll-responsive-image
 
 responsive_image:
-  template: _includes/srcset-resized-fallback.html
+  template: _includes/responsive-image.html
