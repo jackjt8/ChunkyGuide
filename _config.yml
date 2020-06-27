@@ -5,7 +5,8 @@ description: "A guide to Chunky made by jackjt8"
 url: https://jackjt8.github.io
 baseurl: /ChunkyGuide
 
-remote_theme: pmarsceill/just-the-docs
+# remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 color_scheme: "dark"
 search_enabled: true
 

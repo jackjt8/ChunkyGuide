@@ -8,6 +8,8 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem "github-pages", group: :jekyll_plugins
 
+gem "just-the-docs"
+
 group :jekyll_plugins do
    gem 'jekyll-responsive-image'
 end
