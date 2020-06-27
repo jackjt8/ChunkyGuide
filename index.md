@@ -16,23 +16,7 @@ permalink: /
 
 ---
 
-old
-![test image size](img/index/HP_14-512.denoised.png)
-
-test1
 {% responsive_image path: "img/index/HP_14-512.denoised.png" alt: "A description of the image" %}
-
-test2
-{% assign path = 'img/index/HP_14-512.denoised.png' %}
-{% assign alt = 'Lorem ipsum...' %}
-
-{% responsive_image_block %}
-  path: {{ path }}
-  alt: {{ alt }}
-  {% if title %}
-  title: {{ title }}
-  {% endif %}
-{% endresponsive_image_block %}
 
 <div align="right"><small><i>Witchcraft and Wizardry - The Floo Network</i></small></div>
 
