@@ -2,8 +2,8 @@
 
 title: "jackt8's Guide to Chunky"
 description: "A guide to Chunky made by jackjt8"
-url: https://jackjt8.github.io
-baseurl: /ChunkyGuide
+url: https://jackjt8.github.io/ChunkyGuide
+baseurl:
 
 # remote_theme: pmarsceill/just-the-docs
 theme: just-the-docs
