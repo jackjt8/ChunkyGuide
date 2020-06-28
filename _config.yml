@@ -10,6 +10,8 @@ theme: just-the-docs
 color_scheme: "dark"
 search_enabled: true
 
+heading_anchors: true
+
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
 
@@ -19,7 +21,23 @@ aux_links:
     - "https://github.com/jackjt8"
 
 # Footer content appears at the bottom of every page's main content
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+#content
 footer_content: "Copyright &copy; 2020 jackjt8. Distributed by an <a href=\"https://github.com/jackjt8/ChunkyGuide/blob/master/LICENSE\">GNU license.</a>"
+
+# Footer last edited timestamp
+#last_edit_timestamp: true # Needs frontmatter!!
+#last_edit_time_format: "%b %e %Y at %I:%M %p"
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/jackjt8/ChunkyGuide"
+gh_edit_branch: "source"
+gh_edit_view_mode: "tree"
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
@@ -41,13 +59,16 @@ responsive_image:
   # An array of resize configuration objects. Each object must contain at least
   # a `width` value.
   sizes:
-    - width: 120  # New
-    - width: 240  # New
-    - width: 480  # [Required] How wide the resized image will be.
-      quality: 80 # [Optional] Overrides default_quality for this size.
-    - width: 800
-    - width: 1400
+    - width: 320
+    - width: 640
+    - width: 768  # New
+    - width: 1024  # New
+    - width: 1366  # [Required] How wide the resized image will be.
+      quality: 90 # [Optional] Overrides default_quality for this size.
+    - width: 1600
+    - width: 1920
       quality: 90
+    - width: 3840 # Might be overkill for a website
 
   # [Optional, Default: false]
   # Rotate resized images depending on their EXIF rotation attribute. Useful for
