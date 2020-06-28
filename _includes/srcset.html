@@ -14,4 +14,10 @@ Usage:
 {% endfor %}
 {% endcapture %}
 
-<img src="{{ site.baseurl }}/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }} {{ site.baseurl }}/{{ path }} {{ original.width }}w" sizes="{{ original.width }}px">
+{% capture size %}
+{% for i in resized %}
+    (max-width: {{ i.width }}px) {{ i.width }}px,
+{% endfor %}
+{% endcapture %}
+
+<img src="{{ site.baseurl }}/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }} {{ site.baseurl }}/{{ path }} {{ original.width }}w" sizes="{{ size | strip_newlines }} {{ original.width }}px">
