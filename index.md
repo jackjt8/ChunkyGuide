@@ -16,7 +16,7 @@ permalink: /
 
 ---
 
-{% responsive_image path: "img/index/HP_14-512.denoised.png" alt: "A description of the image" %}
+{% responsive_image path: "assets/images/index/HP_14-512.denoised.png" alt: "A description of the image" %}
 
 <div align="right"><small><i>Witchcraft and Wizardry - The Floo Network</i></small></div>
 

@@ -41,7 +41,12 @@ The Chunky Launcher is a Java application that handles updating Chunky, version 
 
 `java -jar ChunkyLauncher.jar`
 
-![](img/installation/chunky_first_time_setup.png)
+image
+
+<img src="{{site.baseurl}}/assets/images/installation/chunky_first_time_setup.png">
+
+responsive
+{% responsive_image path: "assets/images/installation/chunky_first_time_setup.png" %}
 
 The first time you start Chunky Launcher you will be asked to pick a settings directory for Chunky. I personally do not use the recommended Home Directory install location. Instead I like using Program or Working Directory such that I can keep multiple seperate installations of Chunky. The reason I do this will become clear with some of the advanced topics this guide will cover later.
 

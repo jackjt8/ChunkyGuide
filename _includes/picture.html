@@ -12,5 +12,5 @@ Usage:
     {% for i in resized %}
         <source media="(min-width: {{ i.width }}px)" srcset="{{ site.baseurl }}/{{ i.path }}">
     {% endfor %}
-    <img src="/{{ path }}">
+    <img src="{{ site.baseurl }}/{{ path }}">
 </picture>
