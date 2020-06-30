@@ -18,7 +18,7 @@ nav_order: 2
 
 ## Chunky Launcher
 
-![](img/installation/chunky_launcher.png)
+{% responsive_image path: "assets/images/installation/chunky_launcher.png" %}
 
 `Version select` - Drop down list which allows you to pick a downloaded Chunky version.
 
@@ -30,7 +30,7 @@ nav_order: 2
 
 ## Advanced Settings
 
-![](img/installation/chunky_launcher_advanced.png)
+{% responsive_image path: "assets/images/installation/chunky_launcher_advanced.png" %}
 
 `Update Site` - Changes source for updates.
 
@@ -52,7 +52,7 @@ nav_order: 2
 
 `Manage plugins` - The Plugin manager can be used to manage installed plugins.
 
-![](img/installation/chunky_plugin_manager.png)
+{% responsive_image path: "assets/images/installation/chunky_plugin_manager.png" %}
 
 ---
 

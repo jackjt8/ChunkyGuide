@@ -28,7 +28,7 @@ While it is known that UI elements have set ranges which we can bypass by enteri
 In the ChunkyLauncher, under advanced, you can find Chunky options where you can provide arguments to change more advanced settings. The particular one we are looking at here is `-tile-width x` which modifies the frame subdivision size per worker thread. Alternatively you can call this option and render via commandline using the following:
 
 ```
-java -jar ChunyLauncher.jar -tile-width x
+java -jar ChunkyLauncher.jar -tile-width x
 java -jar ChunkyLauncher.jar -render scene
 ```
 
@@ -37,6 +37,17 @@ In my limited testing of a scene that takes approximately 17 minutes I found tha
 When providing results please let me know the CPU model, Chunky version, resolution, and SPP target in addtional to providing data regarding tile-width values tested and the time in seconds. Just.. send me a spreadsheet or something.
 
 *Notes- Testing was performed on an i7-9750H, leMaik 1.4.5-231, 1920x1080, to a target of 256 SPP.*
+
+|------------|----------|--------|
+| tile-width | Time (s) | SPS    |
+| 1          | 1035     | 512882 |
+| 2          | 1018     | 521024 |
+| 4          | 1020     | 520021 |
+| 8          | 1014     | 523149 |
+| 16         | 1000     | 529312 |
+| 20         | 1033     | 513731 |
+| 32         | 1032     | 514064 |
+| ...        | ...      | ...    |
 
 ---
 

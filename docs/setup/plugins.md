@@ -6,6 +6,7 @@ nav_order: 3
 ---
 
 # Plugins
+todo - Add pictures
 {: .no_toc }
 
 ## Table of contents

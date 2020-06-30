@@ -24,7 +24,7 @@ nav_order: 2
 
 With the chosen layer selected over in the `Layers window`. You can apply various `Filters` to it by accessing the menu from the `Menu Bar`.
 
-![](img/gimp/gimp_filters.jpg)
+{% responsive_image path: "assets/images/gimp/gimp_filters.jpg" %}
 
 ### Blur
 
@@ -34,7 +34,7 @@ _Performs an averaging of neighboring pixels with the normal distribution as wei
 
 This is the most basic blur filter available and really quick. Has the option to change blur size in X and Y independently.
 
-![](img/gimp/gimp_gaussian_blur.jpg)
+{% responsive_image path: "assets/images/gimp/gimp_gaussian_blur.jpg" %}
 
 ---
 
@@ -45,4 +45,4 @@ _Blur neighboring pixels, but only in low contrast areas_
 
 This filter is more advanced and lets you set a threshold so that only similar pixels are blurred together. Should help retain sharp edges while reducing grain. This filter is much slower than Gaussian blur but this probably won't amount to much addtional processing time unless working with a high resolution image. Unfortunately you cannot control blur in X&Y independently instead it is controlled by a Blur radius.
 
-![](img/gimp/gimp_selective_gaussian_blur.jpg)
+{% responsive_image path: "assets/images/gimp/gimp_selective_gaussian_blur.jpg" %}
