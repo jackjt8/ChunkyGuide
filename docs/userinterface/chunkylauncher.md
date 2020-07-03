@@ -1,8 +1,8 @@
 ---
 title: Chunky Launcher
-parent: Installation
+parent: User Interface
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 # Chunky Launcher
@@ -42,21 +42,23 @@ nav_order: 2
 
 `Java Runtime` - Allows you to see and change the Runtime used for Chunky. Does not change the runtime used for the Launcher.
 
-`Java options` -
+`Java options` - [See below for the list of Java options]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html#java-options)
 
-`Chunky options` - Some advanced stuff...
+`Chunky options` - [See below for the list of Chunky options]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html#chunky-options)
 
 `Enable debug console` & `Verbose logging` - The debug console is a seperate window that runs when you launch Chunky. As the name implies it is useful for debugging issues with Chunky and combined with Verbose logging, which enables addtional debug information, can be helpful in fixing bugs and crashes.
 
 `Download snapshots` - Snapshots are nightly/alpha/beta builds of Chunky, depending on the update site used, and may be unstable.
 
-`Manage plugins` - The Plugin manager can be used to manage installed plugins.
+`Manage plugins` - The Plugin manager can be used to manage installed plugins. For a list of available plugins and their function, please refer to the [Pluings page]({{ site.baseurl }}/docs/setup/plugins.html).
 
 {% responsive_image path: "assets/images/installation/chunky_plugin_manager.png" %}
 
 ---
 
-## Java options
+### Java options
+
+- `-Dprism.order=sw` - Should the Chunky Launcher or Chunky windo appear blank when started this is caused by an issue with the JavaFX hardware renderer for Windows. The only known solution is to add the listed Java command/option. 
 
 - `-DlogLevel` - ERROR, WARNING, INFO - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings.
 
@@ -64,6 +66,24 @@ nav_order: 2
 
 ---
 
-## Chunky options
+### Chunky options
 
-- `-tile-width <NUM>` - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. [More testing is needed](https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups).
+- `-tile-width <NUM>` - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. [More testing is needed]({{ site.baseurl }}/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups).
+
+---
+
+## Older versions of Chunky
+
+Unfortunately, while the Chunky Launcher does allows you to select any installed version; it only allows newer versions of Chunky to be downloaded. This may cause an issue if you wish to render a Minecraft 1.12 world which requires Chunky 1.X if you have say Chunky 2.2 downloaded.
+
+As a work around to this issue I will be providing copies of older Chunky versions in .zip files which can be extracted into your Chunky directory. This should allow the Launchers `Version Select` to then see and use these older versions.
+
+### For Minecraft 1.2.1 - 1.12.2 (Anvil world format)
+
+[Chunky 1.4.5 zip]({{ site.baseurl }}/assets/downloads/chunky/chunky_1.4.5.zip){: .btn }
+
+[Chunky 1.4.6_beta2 zip]({{ site.baseurl }}/assets/downloads/plugins/chunky_1.4.6b2.zip){: .btn }
+
+### For Minecraft 1.13 (new world format?)
+
+Chunky 2.0_beta6 --- Superseded by Chunky 2.2 which supports 1.13 - 1.16~+.

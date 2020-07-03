@@ -35,7 +35,7 @@ Notes
 
 ## First time setup
 
-[Download ChunkyLauncher.jar](https://chunkyupdate.lemaik.de/ChunkyLauncher.jar){: .btn }
+[ChunkyLauncher.jar](https://chunkyupdate.lemaik.de/ChunkyLauncher.jar){: .btn }
 
 The Chunky Launcher is a Java application that handles updating Chunky, version selection, Plugins, and various settings. You can start the Launcher by double clicking on the donloaded Jar file, or by typing the following command into a terminal/command prompt from the appropriate directory.
 
@@ -52,4 +52,7 @@ After making this selection the Chunky Launcher will be shown. Please hit `Check
 {% responsive_image path: "assets/images/installation/chunky_update_available.png" %}
 
 Note - If no update is found or the download of the update fails you may need to enable `Download snapshots` from the advanced section of the Launcher.
+
+For further information on the functionally of the Chunky Launcher, including how to obtain different Chunky versions, please refer to the [User Interface section on the Chunky Launcher]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html).
+
 

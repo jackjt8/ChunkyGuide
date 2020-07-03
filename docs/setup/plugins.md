@@ -2,7 +2,7 @@
 title: Plugins
 parent: Installation
 has_children: false
-nav_order: 3
+nav_order: 2
 ---
 
 # Plugins
@@ -18,7 +18,7 @@ todo - Add pictures
 ---
 ## leMaik's Denoising Plugin
 
-For a description and some examples please see the section on [AI Based Denoising under Advanced Techniques](https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#ai-based-denoising--plugins).
+For a description and some examples please see the section on [AI Based Denoising under Advanced Techniques]({{ site.baseurl }}/docs/advanced_techniques/denoising.html#ai-based-denoising--plugins).
 
 [GitHub Repo](https://github.com/leMaik/chunky-denoiser)
 
@@ -36,7 +36,9 @@ Unreleased.
 
 [GitHub Repo](https://github.com/llbit/Chunky-AOPlugin)
 
-[Complied Chunky-AOPlugin](plugins/Chunky-AOPlugin.jar){: .btn }
+assets\downloads\plugins
+
+[Complied Chunky-AOPlugin]({{ site.baseurl }}/assets/downloads/plugins/Chunky-AOPlugin.jar){: .btn }
 
 
 ---
@@ -44,7 +46,7 @@ Unreleased.
 
 [GitHub Repo](https://github.com/llbit/Chunky-DepthPlugin)
 
-[Complied Chunky-DepthPlugin](Chunky-DepthPlugin.jar){: .btn }
+[Complied Chunky-DepthPlugin]({{ site.baseurl }}/assets/downloads/plugins/Chunky-DepthPlugin.jar){: .btn }
 
 
 ---

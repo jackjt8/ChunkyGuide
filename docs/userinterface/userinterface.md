@@ -15,5 +15,6 @@ nav_order: 4
 
 ---
 
-## PLACEHOLDER
+## Overview
 
+This section of the guide covers Chunky's User Interface.
