@@ -68,7 +68,7 @@ nav_order: 1
 
 ### Chunky options
 
-- `-tile-width <NUM>` - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. [More testing is needed]({{ site.baseurl }}/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups).
+- `-tile-width <NUM>` - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. It is recommended to use a tile-width of 16 as this seems to be optimal. [More information / testing]({{ site.baseurl }}/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups).
 
 ---
 

@@ -32,7 +32,7 @@ java -jar ChunkyLauncher.jar -tile-width x
 java -jar ChunkyLauncher.jar -render scene
 ```
 
-In my limited testing of a scene that takes approximately 17 minutes I found that a tile-width of 16 seemed to provide a 3.5% boost to rendering speed over default. While this is a minimal improvement it would add up over time. A value of 256 or greater resulted in a significant reduction in rendering performance.
+In my limited testing of a scene that takes approximately 17 minutes I found that a tile-width of 16 seemed to provide a 3.5% boost to rendering speed over default. While this is a minimal improvement it would add up over time. A value of 256 or greater resulted in a significant reduction in rendering performance. This behaviour has been confirmed by deltakeks#4740 on discord.
 
 When providing results please let me know the CPU model, Chunky version, resolution, and SPP target in addtional to providing data regarding tile-width values tested and the time in seconds. Just.. send me a spreadsheet or something.
 
