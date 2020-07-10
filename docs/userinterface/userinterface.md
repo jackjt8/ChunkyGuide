@@ -18,3 +18,25 @@ nav_order: 4
 ## Overview
 
 This section of the guide covers Chunky's User Interface.
+
+### Chunky Launcher
+
+	image_of_launcher + link to chunkylauncher.html
+
+### Chunky
+
+	image_of_chunky
+	
+Map (Right side tabs + Map view)
+
+Render (Preview + Render Controls)
+
+"
+Top (Render)
+
+Left (Render Controls)
+
+Middle (Map & Render Preview)
+
+Right (Out-of-render controls)
+"
