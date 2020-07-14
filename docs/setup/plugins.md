@@ -8,7 +8,9 @@ nav_order: 2
 # Plugins
 {: .no_toc }
 
-[Plugin Installation]({{ site.baseurl }}/docs/setup/plugins_install.html){: .btn }
+## Installation
+{: .no_toc }
+Upon opening the `Plugin Manager` within the `Chunky Launcher` a `Plugins` folder will be created in the install directory. Chunky plugins, which are `.jar` files, should be placed in the `Plugins` folder and then enabled within the `Plugin Manager`.
 
 ---
 
@@ -22,7 +24,7 @@ nav_order: 2
 ## Denoising Plugin
 created by leMaik
 
-{% responsive_image path: "assets/images/user_interface/plugins/chunky_denoiser_ui.png" %}
+{% responsive_image path: "assets/images/installation/plugins/chunky_denoiser_ui.png" %}
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -41,8 +43,8 @@ created by leMaik
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0lax">{% responsive_image path: "assets/images/user_interface/plugins/1_plugin_test-512.png" %}</td>
-    <td class="tg-0lax">{% responsive_image path: "assets/images/user_interface/plugins/1_plugin_test-512.denoised.png" %}</td>
+    <td class="tg-0lax">{% responsive_image path: "assets/images/installation/plugins/1_plugin_test-512.png" %}</td>
+    <td class="tg-0lax">{% responsive_image path: "assets/images/installation/plugins/1_plugin_test-512.denoised.png" %}</td>
   </tr>
 </tbody>
 </table>
@@ -58,9 +60,9 @@ For a description and some examples please see the section on [AI Based Denoisin
 ## Discord Rich Presence plugin
 created by leMaik
 
-{% responsive_image path: "assets/images/user_interface/plugins/chunky_discord.png" %}
+{% responsive_image path: "assets/images/installation/plugins/chunky_discord.png" %}
 
-{% responsive_image path: "assets/images/user_interface/plugins/discord_rtp.png" %}
+{% responsive_image path: "assets/images/installation/plugins/discord_rtp.png" %}
 
 Unreleased.
 
@@ -79,10 +81,10 @@ This is a plugin for Chunky that adds more octree implementations such as Compre
 created by llbit
 
 Preview
-{% responsive_image path: "assets/images/user_interface/plugins/1_plugin_test-0.png" %}
+{% responsive_image path: "assets/images/installation/plugins/1_plugin_test-0.png" %}
 
 AO
-{% responsive_image path: "assets/images/user_interface/plugins/1_plugin_test-AO.png" %}
+{% responsive_image path: "assets/images/installation/plugins/1_plugin_test-AO.png" %}
 
 [GitHub Repo](https://github.com/llbit/Chunky-AOPlugin)
 
@@ -94,10 +96,10 @@ AO
 created by llbit
 
 Preview
-{% responsive_image path: "assets/images/user_interface/plugins/1_plugin_test-0.png" %}
+{% responsive_image path: "assets/images/installation/plugins/1_plugin_test-0.png" %}
 
 Depth
-{% responsive_image path: "assets/images/user_interface/plugins/1_plugin_test-depth.png" %}
+{% responsive_image path: "assets/images/installation/plugins/1_plugin_test-depth.png" %}
 
 [GitHub Repo](https://github.com/llbit/Chunky-DepthPlugin)
 
