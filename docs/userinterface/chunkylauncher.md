@@ -52,7 +52,7 @@ nav_order: 1
 
 {% responsive_image path: "assets/images/user_interface/chunky_plugin_manager.png" %}
 
-`Manage plugins` - The Plugin manager can be used to manage installed plugins. For a list of available plugins and their function, please refer to the [Pluings page]({{ site.baseurl }}/docs/setup/plugins.html).
+`Manage plugins` - The Plugin manager can be used to manage installed plugins. For a list of available plugins and their function, please refer to the [Pluings page]({{ site.baseurl }}/docs/userinterface/plugins.html).
 
 ---
 

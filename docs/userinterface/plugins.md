@@ -1,21 +1,22 @@
 ---
 title: Plugins
-parent: Installation
+parent: User Interface
 has_children: false
 nav_order: 2
 ---
 
 # Plugins
-todo - Add pictures
 {: .no_toc }
+
+[Plugin Installation]({{ site.baseurl }}/docs/setup/plugins_install.html){: .btn }
+
+---
 
 ## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
-
-
 
 ---
 ## Denoising Plugin
