@@ -10,7 +10,7 @@ nav_order: 2
 
 ## Installation
 {: .no_toc }
-Upon opening the `Plugin Manager` within the `Chunky Launcher` a `Plugins` folder will be created in the install directory. Chunky plugins, which are `.jar` files, should be placed in the `Plugins` folder and then enabled within the `Plugin Manager`.
+Clicking `Manage Plugins` within the `Chunky Launcher` will open the `Plugin Manager` and create a `plugins` folder in the install directory. Chunky plugins, which are `.jar` files, should be placed in the `plugins` folder and then Enabled within the `Plugin Manager`.
 
 ---
 
@@ -70,11 +70,15 @@ Unreleased.
 ## Chunky-octree-plugin
 created by aTom3333
 
-This is a plugin for Chunky that adds more octree implementations such as Compressed Siblings which, while it does almost half memory usage, cannot be built & results in slower render times. See the GitHub repo for more information and use.
+This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below:
 
-[GitHub Repo](https://github.com/leMaik/chunky-denoiser)
+- Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled.
 
-[Releases page]((https://github.com/aTom3333/chunky-octree-plugin/releases/tag/v0.1.0){: .btn }
+- Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering.
+
+[GitHub Repo](https://github.com/aTom3333/chunky-octree-plugin)
+
+[Releases page](https://github.com/aTom3333/chunky-octree-plugin/releases){: .btn }
 
 ---
 ## *demo* Ambient Occlusion Plugin
