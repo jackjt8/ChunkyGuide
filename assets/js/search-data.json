@@ -275,75 +275,129 @@
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#double-clicking-chunkylauncherjar-doesnt-work-on-windows",
     "relUrl": "/docs/setup/java.html#double-clicking-chunkylauncherjar-doesnt-work-on-windows"
   },"46": {
+    "doc": "Map View",
+    "title": "Map View",
+    "content": " ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html",
+    "relUrl": "/docs/userinterface/map.html"
+  },"47": {
+    "doc": "Map View",
+    "title": "Table of contents",
+    "content": ". | Map . | Controls . | Right click menu | . | . | Map View Tab | Chunks Tab | Options Tab . | Resource Packs | . | About Tab | . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#table-of-contents",
+    "relUrl": "/docs/userinterface/map.html#table-of-contents"
+  },"48": {
+    "doc": "Map View",
+    "title": "Map",
+    "content": ". Chunky displays an overhead view of your world within the center panel under the Map tab, highlighted in red in the above image, and should be the default view when you launch Chunky. While this view can be used for mapping purposes it’s primary use is for making chunk selections for renders much easier. There are two available modes for the Map; At (map) Scale 13 or greater you will be shown individual blocks and for a Scale of 12 or under you will be displayed a biome view. Controls . | Left click and drag to move the viewport (also see Map View Tab) | Left click to select/deselect a Chunk (at Scale 16 or higher) or a Region (at Scale 15 or lower) | Shift + Left click and drag to create a draggable chunk selection. Note - Shift does not need to be held continuously only Left click does; On release selection of Chunks is made. | Mouse wheel to change Map Scale (also see Map View Tab) | Right click to open a menu with some Selection and Render related options | . | Prior to left clicking an outline of the highlighted Chunk will be shown. | After left clicking the outline will be filled in and Selected. | . | Prior to left clicking an outline of the highlighted Region will be shown. | After left clicking the Region outline will be filled in and Selected. | . | Draggable selection | Right click menu | . Biome view . Right click menu . The right click menu provides some selection and render related controls. | New scene from selection - Create a new 3d scene from selection | Clear selection - Clear selection | Move camera here - Moves camera to coordinates of right click | Select camera-visible chunks - Selects chunks visible to 3d camera and within the Maps current viewport. | . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#map",
+    "relUrl": "/docs/userinterface/map.html#map"
+  },"49": {
+    "doc": "Map View",
+    "title": "Map View Tab",
+    "content": ". | Current World - Displays the currently selected Minecraft world | Change World - Opens prompt to select a Minecraft world | . | Reload - Reloads currently selected Minecraft world | Dimension - Currently selected dimension is highlighted | Scale - Controls map Scale | Coordinates - Provides X,Z coordinates of the Maps view | track player - Centers Maps view on players position | track camera - Centers Maps view on 3D Cameras position | . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#map-view-tab",
+    "relUrl": "/docs/userinterface/map.html#map-view-tab"
+  },"50": {
+    "doc": "Map View",
+    "title": "Chunks Tab",
+    "content": ". | Clear selection - Clears current selection | Delete selected chunks - WARNING - Delets currently selected chunks; have a backup | Export chunks to ZIP - Exports selected chunks to a .ZIP archive | Export view to PNG - Exports current map view to a .PNG image | . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#chunks-tab",
+    "relUrl": "/docs/userinterface/map.html#chunks-tab"
+  },"51": {
+    "doc": "Map View",
+    "title": "Options Tab",
+    "content": ". | Edit resource packs - Allows you to select a Resource Pack or Minecraft .jar for textures. | Single color textures - Averages block textures into single color. | Show launcher when starting Chunky | Open Scene Directory | Change Scene Directory | . Resource Packs . | Add . | Select either a .ZIP or a minecraft .jar (found within .minecraft/versions/x/x.jar) . | . | | | . | . | Left Click a resource pack in the list and use Up/Down to move resource packs. Packs higher in the list will have their textures take priority over those below, including the latest Minecraft .jar which should be loaded regardless. | . | Apply | . (5.) You may need to to hit Reload under the Map View Tab and/or Reload Chunks if you have an active render; This should be done automatically… . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#options-tab",
+    "relUrl": "/docs/userinterface/map.html#options-tab"
+  },"52": {
+    "doc": "Map View",
+    "title": "About Tab",
+    "content": ". Has a few useful links and Chunky’s credits! . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#about-tab",
+    "relUrl": "/docs/userinterface/map.html#about-tab"
+  },"53": {
     "doc": "Plugins",
     "title": "Plugins",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html",
     "relUrl": "/docs/setup/plugins.html"
-  },"47": {
+  },"54": {
     "doc": "Plugins",
     "title": "Installation",
-    "content": "Upon opening the Plugin Manager within the Chunky Launcher a Plugins folder will be created in the install directory. Chunky plugins, which are .jar files, should be placed in the Plugins folder and then enabled within the Plugin Manager. ",
+    "content": "Clicking Manage Plugins within the Chunky Launcher will open the Plugin Manager and create a plugins folder in the install directory. Chunky plugins, which are .jar files, should be placed in the plugins folder and then Enabled within the Plugin Manager. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#installation",
     "relUrl": "/docs/setup/plugins.html#installation"
-  },"48": {
+  },"55": {
     "doc": "Plugins",
     "title": "Table of contents",
     "content": ". | Denoising Plugin | Discord Rich Presence plugin | Chunky-octree-plugin | demo Ambient Occlusion Plugin | demo Depth Buffer Plugin | Plugin Templates . | demo Block Plugin Template | demo Tab Plugin Template | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#table-of-contents",
     "relUrl": "/docs/setup/plugins.html#table-of-contents"
-  },"49": {
+  },"56": {
     "doc": "Plugins",
     "title": "Denoising Plugin",
     "content": "created by leMaik . | Noisy image | Denosied output | . | | | . For a description and some examples please see the section on AI Based Denoising under Advanced Techniques. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#denoising-plugin",
     "relUrl": "/docs/setup/plugins.html#denoising-plugin"
-  },"50": {
+  },"57": {
     "doc": "Plugins",
     "title": "Discord Rich Presence plugin",
     "content": "created by leMaik . Unreleased. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#discord-rich-presence-plugin",
     "relUrl": "/docs/setup/plugins.html#discord-rich-presence-plugin"
-  },"51": {
+  },"58": {
     "doc": "Plugins",
     "title": "Chunky-octree-plugin",
-    "content": "created by aTom3333 . This is a plugin for Chunky that adds more octree implementations such as Compressed Siblings which, while it does almost half memory usage, cannot be built &amp; results in slower render times. See the GitHub repo for more information and use. GitHub Repo . [Releases page]((https://github.com/aTom3333/chunky-octree-plugin/releases/tag/v0.1.0){: .btn } . ",
+    "content": "created by aTom3333 . This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below: . | Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled. | Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering. | . GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-octree-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-octree-plugin"
-  },"52": {
+  },"59": {
     "doc": "Plugins",
     "title": "demo Ambient Occlusion Plugin",
     "content": "created by llbit . Preview . AO . GitHub Repo . Complied Chunky-AOPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-ambient-occlusion-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-ambient-occlusion-plugin"
-  },"53": {
+  },"60": {
     "doc": "Plugins",
     "title": "demo Depth Buffer Plugin",
     "content": "created by llbit . Preview . Depth . GitHub Repo . Complied Chunky-DepthPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-depth-buffer-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-depth-buffer-plugin"
-  },"54": {
+  },"61": {
     "doc": "Plugins",
     "title": "Plugin Templates",
     "content": ". demo Block Plugin Template . created by llbit . GitHub Repo . demo Tab Plugin Template . created by llbit . Github Repo . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#plugin-templates",
     "relUrl": "/docs/setup/plugins.html#plugin-templates"
-  },"55": {
+  },"62": {
+    "doc": "Render Controls",
+    "title": "Render Controls",
+    "content": " ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html",
+    "relUrl": "/docs/userinterface/render.html"
+  },"63": {
+    "doc": "Render Controls",
+    "title": "Table of contents",
+    "content": ". ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#table-of-contents",
+    "relUrl": "/docs/userinterface/render.html#table-of-contents"
+  },"64": {
     "doc": "User Interface",
     "title": "User Interface",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html",
     "relUrl": "/docs/userinterface/userinterface.html"
-  },"56": {
+  },"65": {
     "doc": "User Interface",
     "title": "Table of contents",
-    "content": ". | Overview . | Chunky Launcher | Chunky | . | . ",
+    "content": ". | Overview . | Chunky Launcher | Chunky | Map View | Render Controls | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html#table-of-contents",
     "relUrl": "/docs/userinterface/userinterface.html#table-of-contents"
-  },"57": {
+  },"66": {
     "doc": "User Interface",
     "title": "Overview",
-    "content": "This section of the guide covers Chunky’s User Interface. Chunky Launcher . image_of_launcher + link to chunkylauncher.html . Chunky . image_of_chunky . Map (Right side tabs + Map view) . Render (Preview + Render Controls) . ” Top (Render) . Left (Render Controls) . Middle (Map &amp; Render Preview) . Right (Out-of-render controls) “ . ",
+    "content": "This section of the guide covers Chunky’s User Interface. Chunky Launcher . Chunky Launcher . Chunky . Chunky’s UI is built using JavaFX and is seperated into three panels which can be slide to increase/decrease screenspace of the different components. Then panels often have tabs which contain or hide addtional controls. For the sake of this guide I will describe groups or panels/tabs in two seperate pages based upon their function: . Map View . This first section covers the Map (view), options associated with the Map, some options, and finally an About/help seciton. Map View . Render Controls . The second covers Render related UI elements. Render Controls . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html#overview",
     "relUrl": "/docs/userinterface/userinterface.html#overview"
   }
