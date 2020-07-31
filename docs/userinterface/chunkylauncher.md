@@ -62,8 +62,6 @@ nav_order: 1
 
 - `-DlogLevel` - ERROR, WARNING, INFO - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings.
 
-- `-Dchunky.useLegacyOctree=true` - Disables new octree [see PR #604](https://github.com/llbit/chunky/pull/604). If you run into any issues with the new octree this will fix it. Please also report the issue on GitHub.
-
 ---
 
 ### Chunky options

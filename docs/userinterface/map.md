@@ -70,12 +70,14 @@ Biome view
 
 #### Right click menu
 
+{% responsive_image path: "assets/images/user_interface/chunky_map_rightclick.png" %}
+
 The right click menu provides some selection and render related controls.
 
-- New scene from selection - Create a new 3d scene from selection
-- Clear selection - Clear selection
-- Move camera here - Moves camera to coordinates of right click
-- Select camera-visible chunks - Selects chunks visible to 3d camera and within the Maps current viewport.
+- `New scene from selection` - Create a new 3d scene from selection
+- `Clear selection` - Clear selection
+- `Move camera here` - Moves camera to coordinates of right click
+- `Select camera-visible chunks` - Selects chunks visible to 3d camera and within the Maps current viewport.
 
 {% responsive_image path: "assets/images/user_interface/chunky_map_camera.png" %}
 
@@ -85,17 +87,17 @@ The right click menu provides some selection and render related controls.
 
 {% responsive_image path: "assets/images/user_interface/chunky_mapviewtab.png" %}
 
-- Current World - Displays the currently selected Minecraft world
-- Change World - Opens prompt to select a Minecraft world
+- `Current World` - Displays the currently selected Minecraft world
+- `Change World` - Opens prompt to select a Minecraft world
 
 {% responsive_image path: "assets/images/user_interface/chunky_select_world.png" %}
 
-- Reload - Reloads currently selected Minecraft world
-- Dimension - Currently selected dimension is highlighted
-- Scale - Controls map Scale
-- Coordinates - Provides X,Z coordinates of the Maps view
-- track player - Centers Maps view on players position
-- track camera - Centers Maps view on 3D Cameras position
+- `Reload` - Reloads currently selected Minecraft world
+- `Dimension` - Currently selected dimension is highlighted
+- `Scale` - Controls map Scale
+- `Coordinates` - Provides X,Z coordinates of the Maps view
+- `track player` - Centers Maps view on players position
+- `track camera` - Centers Maps view on 3D Cameras position
 
 ---
 
@@ -103,10 +105,10 @@ The right click menu provides some selection and render related controls.
 
 {% responsive_image path: "assets/images/user_interface/chunky_chunkstab.png" %}
 
-- Clear selection - Clears current selection
-- Delete selected chunks - WARNING - Delets currently selected chunks; have a backup
-- Export chunks to ZIP - Exports selected chunks to a .ZIP archive
-- Export view to PNG - Exports current map view to a .PNG image
+- `Clear selection` - Clears current selection
+- `Delete selected chunks` - WARNING - Delets currently selected chunks; have a backup
+- `Export chunks to ZIP` - Exports selected chunks to a .ZIP archive
+- `Export view to PNG` - Exports current map view to a .PNG image
 
 ---
 
@@ -114,11 +116,11 @@ The right click menu provides some selection and render related controls.
 
 {% responsive_image path: "assets/images/user_interface/chunky_optionstab.png" %}
 
-- Edit resource packs - Allows you to select a Resource Pack or Minecraft .jar for textures.
-- Single color textures - Averages block textures into single color.
-- Show launcher when starting Chunky
-- Open Scene Directory
-- Change Scene Directory
+- `Edit resource packs` - Allows you to select a Resource Pack or Minecraft .jar for textures.
+- `Single color textures` - Averages block textures into single color.
+- `Show launcher when starting Chunky`
+- `Open Scenes Directory` - Opens the directory Chunky uses to store it's scenes.
+- `Change Scenes Directory` - Changes folder used for the scenes directory.
 
 ---
 
@@ -126,9 +128,9 @@ The right click menu provides some selection and render related controls.
 
 {% responsive_image path: "assets/images/user_interface/chunky_resource_packs0.png" %}
 
-1. `Add`
+ 1. `Add`
 
-2. Select either a .ZIP or a minecraft .jar (found within .minecraft/versions/x/x.jar)
+ 2. Select either a .ZIP or a minecraft .jar (found within .minecraft/versions/x/x.jar)
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -147,11 +149,11 @@ The right click menu provides some selection and render related controls.
 </thead>
 </table>
 
-3. `Left Click` a resource pack in the list and use `Up`/`Down` to move resource packs. Packs higher in the list will have their textures take priority over those below, including the latest Minecraft .jar which should be loaded regardless.
+ 3. `Left Click` a resource pack in the list and use `Up`/`Down` to move resource packs. Packs higher in the list will have their textures take priority over those below, including the latest Minecraft .jar which should be loaded regardless.
 
 {% responsive_image path: "assets/images/user_interface/chunky_resource_packs_order.png" %}
 
-4. `Apply`
+ 4. `Apply`
 
 (5.) You may need to to hit `Reload` under the Map View Tab and/or `Reload Chunks` if you have an active render; This should be done automatically...
 
