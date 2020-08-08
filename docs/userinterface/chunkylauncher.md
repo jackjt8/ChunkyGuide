@@ -62,6 +62,8 @@ nav_order: 1
 
 - `-DlogLevel` - ERROR, WARNING, INFO - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings.
 
+- `-Dchunky.mapLoaderThreads` - Controls how many threads should be used for loading the Map View. Default is 3. Raising this value can improve Map load times at the cost of increased CPU usage when the map is being drawn.
+
 ---
 
 ### Chunky options
