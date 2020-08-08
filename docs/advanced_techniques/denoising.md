@@ -154,7 +154,6 @@ Some of these issues can be resolved or mitigated by using [leMaik’s Denoising
 {% responsive_image path: "assets/images/denoising/ai_based_dn/test.albedo.png" %}
 
 The Albedo map is a feature image that provides the largest quality bump to the denoiser. It’s basically just a representation of the texture information within the scene independant of shading (lighting) or viewing angle. This map tends to help restore texture details.
-**IMPORTANT** - Make sure you **disable all post processing** and set **exposure to 1**. [The Denoiser plugin, at the time of writing, doesn’t exclude post processing settings when rendering the albedo map and it can destroy any details within this map](https://github.com/leMaik/chunky-denoiser/issues/16).
 
 ### Normal Map
 {% responsive_image path: "assets/images/denoising/ai_based_dn/test.normal.png" %}
