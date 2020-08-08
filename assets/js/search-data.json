@@ -25,7 +25,7 @@
   },"4": {
     "doc": "Chunky Launcher",
     "title": "Advanced Settings",
-    "content": ". Update Site - Changes source for updates. | http://chunkyupdate.llbit.se/ should be used to obtain Chunky 1.X for Minecraft 1.12. | http://chunkyupdate2.llbit.se/ is for llbit’s Chunky 2.0 for Minecraft 1.13 however you will need to enable snapshots to get the latest version, 2.0beta6, else you will be stuck with an older version. | http://chunkyupdate.lemaik.de/ is for leMaik’s Chunky 2.1 which offers improved Minecraft 1.13 support, over llbit’s Chunky 2.0, in addtion to 1.14, 1.15, and 1.16 snapshot support. | . Java Runtime - Allows you to see and change the Runtime used for Chunky. Does not change the runtime used for the Launcher. Java options - See below for the list of Java options . Chunky options - See below for the list of Chunky options . Enable debug console &amp; Verbose logging - The debug console is a seperate window that runs when you launch Chunky. As the name implies it is useful for debugging issues with Chunky and combined with Verbose logging, which enables addtional debug information, can be helpful in fixing bugs and crashes. Download snapshots - Snapshots are nightly/alpha/beta builds of Chunky, depending on the update site used, and may be unstable. Manage plugins - The Plugin manager can be used to manage installed plugins. For a list of available plugins and their function, please refer to the Pluings page. Java options . | -Dprism.order=sw - Should the Chunky Launcher or Chunky windo appear blank when started this is caused by an issue with the JavaFX hardware renderer for Windows. The only known solution is to add the listed Java command/option. | -DlogLevel - ERROR, WARNING, INFO - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings. | -Dchunky.useLegacyOctree=true - Disables new octree see PR #604. If you run into any issues with the new octree this will fix it. Please also report the issue on GitHub. | . Chunky options . | -tile-width &lt;NUM&gt; - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. It is recommended to use a tile-width of 16 as this seems to be optimal. More information / testing. | . ",
+    "content": ". Update Site - Changes source for updates. | http://chunkyupdate.llbit.se/ should be used to obtain Chunky 1.X for Minecraft 1.12. | http://chunkyupdate2.llbit.se/ is for llbit’s Chunky 2.0 for Minecraft 1.13 however you will need to enable snapshots to get the latest version, 2.0beta6, else you will be stuck with an older version. | http://chunkyupdate.lemaik.de/ is for leMaik’s Chunky 2.1 which offers improved Minecraft 1.13 support, over llbit’s Chunky 2.0, in addtion to 1.14, 1.15, and 1.16 snapshot support. | . Java Runtime - Allows you to see and change the Runtime used for Chunky. Does not change the runtime used for the Launcher. Java options - See below for the list of Java options . Chunky options - See below for the list of Chunky options . Enable debug console &amp; Verbose logging - The debug console is a seperate window that runs when you launch Chunky. As the name implies it is useful for debugging issues with Chunky and combined with Verbose logging, which enables addtional debug information, can be helpful in fixing bugs and crashes. Download snapshots - Snapshots are nightly/alpha/beta builds of Chunky, depending on the update site used, and may be unstable. Manage plugins - The Plugin manager can be used to manage installed plugins. For a list of available plugins and their function, please refer to the Pluings page. Java options . | -Dprism.order=sw - Should the Chunky Launcher or Chunky windo appear blank when started this is caused by an issue with the JavaFX hardware renderer for Windows. The only known solution is to add the listed Java command/option. | -DlogLevel - ERROR, WARNING, INFO - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings. | . Chunky options . | -tile-width &lt;NUM&gt; - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. It is recommended to use a tile-width of 16 as this seems to be optimal. More information / testing. | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#advanced-settings",
     "relUrl": "/docs/userinterface/chunkylauncher.html#advanced-settings"
   },"5": {
@@ -307,7 +307,7 @@
   },"51": {
     "doc": "Map View",
     "title": "Options Tab",
-    "content": ". | Edit resource packs - Allows you to select a Resource Pack or Minecraft .jar for textures. | Single color textures - Averages block textures into single color. | Show launcher when starting Chunky | Open Scene Directory | Change Scene Directory | . Resource Packs . | Add . | Select either a .ZIP or a minecraft .jar (found within .minecraft/versions/x/x.jar) . | . | | | . | . | Left Click a resource pack in the list and use Up/Down to move resource packs. Packs higher in the list will have their textures take priority over those below, including the latest Minecraft .jar which should be loaded regardless. | . | Apply | . (5.) You may need to to hit Reload under the Map View Tab and/or Reload Chunks if you have an active render; This should be done automatically… . ",
+    "content": ". | Edit resource packs - Allows you to select a Resource Pack or Minecraft .jar for textures. | Single color textures - Averages block textures into single color. | Show launcher when starting Chunky | Open Scenes Directory - Opens the directory Chunky uses to store it’s scenes. | Change Scenes Directory - Changes folder used for the scenes directory. | . Resource Packs . | Add . | Select either a .ZIP or a minecraft .jar (found within .minecraft/versions/x/x.jar) . | . | | | . | . | Left Click a resource pack in the list and use Up/Down to move resource packs. Packs higher in the list will have their textures take priority over those below, including the latest Minecraft .jar which should be loaded regardless. | . | Apply | . (5.) You may need to to hit Reload under the Map View Tab and/or Reload Chunks if you have an active render; This should be done automatically… . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#options-tab",
     "relUrl": "/docs/userinterface/map.html#options-tab"
   },"52": {
@@ -371,30 +371,54 @@
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#plugin-templates",
     "relUrl": "/docs/setup/plugins.html#plugin-templates"
   },"62": {
+    "doc": "Render Preview",
+    "title": "Render Preview",
+    "content": " ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/preview.html",
+    "relUrl": "/docs/userinterface/preview.html"
+  },"63": {
+    "doc": "Render Preview",
+    "title": "Table of contents",
+    "content": ". ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/preview.html#table-of-contents",
+    "relUrl": "/docs/userinterface/preview.html#table-of-contents"
+  },"64": {
     "doc": "Render Controls",
     "title": "Render Controls",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html",
     "relUrl": "/docs/userinterface/render.html"
-  },"63": {
+  },"65": {
     "doc": "Render Controls",
     "title": "Table of contents",
-    "content": ". ",
+    "content": ". | General . | Select 3D Scene | . | Render controls . | Scene | Lighting | Sky &amp; Fog | Water | Camera | Entities | Materials | Postprocessing | Advanced | Help | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#table-of-contents",
     "relUrl": "/docs/userinterface/render.html#table-of-contents"
-  },"64": {
+  },"66": {
+    "doc": "Render Controls",
+    "title": "General",
+    "content": ". Scene(name) - Input field for the current scene’s name (Press enter to apply). Save scene - Saves current scene. Load scene - Opens the Select 3D Scene dialog. Save current frame - Saves the current frame of the Render. Copy current frame - Copies the current frame of the render to the clipboard. Select 3D Scene . Provides a list of all detected scenes in the Scenes directory. Delete - Deletes the currently selected scene (with a confirmation prompt). Export - Exports the currently selected scene as a .zip file to a custom location. Cancel - Closes the Select 3D Scene dialog Load selected scene . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#general",
+    "relUrl": "/docs/userinterface/render.html#general"
+  },"67": {
+    "doc": "Render Controls",
+    "title": "Render controls",
+    "content": "Scene . Open scene directory - Opens current scene’s directory on disk. Export settings - Allows you to export scene settings on a per section basis. Import settings - Import .json files. Restore default settings - Restores settings to default. Load selected chunks - Loads currently selected chunks. Reload chunks - Reloads currently selected chunks. Canvas size - (WxH) Drop down has a few presets. Set default - Sets current canvas size as default. x0.5, x1.5, x2 - Modifies the canvas size by the amount. ie Wx0.5,Hx0.5 . Load players Enable biome colors Save dump once every - Recommended to save often as to not loose any progress on renders if the worst occurs. But not too often as this process does take time. Save snapshot for each dump Y min clip - Default 0; Setting this will cut off blocks below which can speed up renders. Y max clip - Default 256; Setting this will cut off blocks above which can speed up renders. Lighting . Sky light - Default 1. Enable emitters - Toggles emitters on/off. Emitter intensity - Default 13. Enable sunlight - Toggles whether or not sunlight should be traced. Draw sun - Hides the sun texture in the sky. Sun intensity - Default 1.25. Sun azimuth Sun altitude Sun color . Sky &amp; Fog . Water . Camera . Entities . Materials . Postprocessing . Advanced . Help . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#render-controls-1",
+    "relUrl": "/docs/userinterface/render.html#render-controls-1"
+  },"68": {
     "doc": "User Interface",
     "title": "User Interface",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html",
     "relUrl": "/docs/userinterface/userinterface.html"
-  },"65": {
+  },"69": {
     "doc": "User Interface",
     "title": "Table of contents",
     "content": ". | Overview . | Chunky Launcher | Chunky | Map View | Render Controls | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html#table-of-contents",
     "relUrl": "/docs/userinterface/userinterface.html#table-of-contents"
-  },"66": {
+  },"70": {
     "doc": "User Interface",
     "title": "Overview",
     "content": "This section of the guide covers Chunky’s User Interface. Chunky Launcher . Chunky Launcher . Chunky . Chunky’s UI is built using JavaFX and is seperated into three panels which can be slide to increase/decrease screenspace of the different components. Then panels often have tabs which contain or hide addtional controls. For the sake of this guide I will describe groups or panels/tabs in two seperate pages based upon their function: . Map View . This first section covers the Map (view), options associated with the Map, some options, and finally an About/help seciton. Map View . Render Controls . The second covers Render related UI elements. Render Controls . ",
