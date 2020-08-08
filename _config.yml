@@ -36,7 +36,7 @@ footer_content: "Copyright &copy; 2020 jackjt8. Distributed by an <a href=\"http
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/jackjt8/ChunkyGuide"
-gh_edit_branch: "source"
+gh_edit_branch: "master"
 gh_edit_view_mode: "tree"
 
 # Google Analytics Tracking (optional)
