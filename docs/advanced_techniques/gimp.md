@@ -2,7 +2,7 @@
 title: GIMP
 parent: Advanced Techniques
 has_children: false
-nav_order: 2
+nav_order: 3
 ---
 
 # GNU Image Manipulation Program - A quick rundown

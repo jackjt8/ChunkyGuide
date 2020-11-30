@@ -107,3 +107,31 @@ For more information, [please see issue #523](https://github.com/llbit/chunky/is
 A common issue with Java on Windows is that jar files may not be correctly associated with Java.
 
 This can be fixed by either uninstalling and reinstalling Java or through using an application like [Jarfix](https://johann.loefflmann.net/en/software/jarfix/index.html).
+
+---
+
+## Batch script to launch (Windows)
+
+Don't want to have to type out commands each time you want to launch Chunky? Well in comes Batch scripts!
+
+Create a `.txt` file and enter the following lines, adjusting them where necessary to match the commands you need, then save the file as a `.bat` file in the same directory as ChunkyLauncher.jar.
+
+*Java 8 example*
+
+```
+cd /d %~dp0
+java -jar ChunkyLauncher.jar --launcher
+pause
+```
+
+*AdoptOpenJDK\jdk-11 example*
+
+```
+cd /d %~dp0
+java --module-path "C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar ChunkyLauncher.jar --launcher
+pause
+```
+
+You can then right click the .bat file and create a shortcut which can be place on the desktop, pinned to the taskbar, etc.
+
+For more advanced scripts please see the section on [Automation]({{ site.baseurl }}/docs/advanced_techniques/automation.html)
