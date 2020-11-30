@@ -1,424 +1,460 @@
 {"0": {
     "doc": "Advanced Techniques",
     "title": "Advanced Techniques",
-    "content": "This section of the guide covers more advance techniques that you can you in your renders; with the section on GIMP acting as a quick guide. ",
+    "content": "This section of the guide covers more advance techniques that you can utilize; with the section on GIMP acting as a quick guide for image manipulation. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/advanced_techniques.html",
     "relUrl": "/docs/advanced_techniques/advanced_techniques.html"
   },"1": {
+    "doc": "Automation",
+    "title": "Automating Chunky - Scripting basics",
+    "content": " ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/automation.html#automating-chunky---scripting-basics",
+    "relUrl": "/docs/advanced_techniques/automation.html#automating-chunky---scripting-basics"
+  },"2": {
+    "doc": "Automation",
+    "title": "Table of contents",
+    "content": ". | Batch Rendering . | .batch Rendering (Windows) | Python3 batch rendering script | . | Batch “manual” denoising . | .batch “manual” denoising | Drag’n’drop .batch denoising | Python3 based batch denoising? | . | . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/automation.html#table-of-contents",
+    "relUrl": "/docs/advanced_techniques/automation.html#table-of-contents"
+  },"3": {
+    "doc": "Automation",
+    "title": "Batch Rendering",
+    "content": "This section of the guide covers scripts which can be used to automate the Rendering of multiple scenes without any user input.batch Rendering (Windows) . This batch script looks for a txt file called queue.txt located in the same directory as this .bat script &amp; ChunkyLauncher.jar. @ECHO off SET queue=queue.txt SET /A sppTarget=1024 SET /A dumpFrequency=256 SET outputMode=PFM FOR /F %%a IN (%queue%) DO ( ECHO Rendering %%a java -jar ChunkyLauncher.jar -set sppTarget %sppTarget% %%a java -jar ChunkyLauncher.jar -set dumpFrequency %dumpFrequency% %%s java -jar ChunkyLauncher.jar -set outputMode %outputMode% %%a java -jar ChunkyLauncher.jar -render %%a -threads 8 ) PAUSE . Python3 batch rendering script . Same concept as before. Just need a queue.txt file to list all the scenes and then you need to run the Python script. \"\"\" AutoChunky v1.0.2 Written by colebob9 Coded in Python 3 Released under the MIT license Source code repo: https://github.com/colebob9/AutoChunky \"\"\" import shlex import subprocess import time # Config chunkyPath = \"ChunkyLauncher.jar\" threads = 4 # End config # Title print(\"AutoChunky v1.0.2\") print(\"Written by colebob9\") print(\"Source Code on GitHub.com/colebob9/AutoChunky\") # Checking queue file print(\"Reading queue file...\") print('') f = open(\"queue.txt\") queueList = f.readlines() queueList = [s.rstrip() for s in queueList] # stripping off \\n f.close() print(\"Currently queued scenes:\") print(queueList) print('') # Queue and render command for r in queueList: print('') print(\"Now rendering: \" + r) print('') subprocess.call(shlex.split(\"java -jar %s -render %s -threads %s\" % (chunkyPath, r, threads))) print('waiting for 2') time.sleep(2) exit . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/automation.html#batch-rendering",
+    "relUrl": "/docs/advanced_techniques/automation.html#batch-rendering"
+  },"4": {
+    "doc": "Automation",
+    "title": "Batch “manual” denoising",
+    "content": "Used a batch rendering script or otherwise and have a load of noisy images that need denoising? This is the place for you! .batch “manual” denoising . This is a very old script of mine which I used around the time AI base denoisers first came out mainly to denoise the outputs of my interpolation scripts (at 16 SPP they are very noisy). This .bat script needs to be located in the same directory as the images to denoise. SET FILE_EXTENSION=png SET PATH_TO_DENOISER=C:\\Denoiser_v2.1 SET OUTPUT_PREFIX=denoised_ for /r %%v in (*.%FILE_EXTENSION%) do %PATH_TO_DENOISER%\\Denoiser.exe -i \"%%~nv.%FILE_EXTENSION%\" -o \"%OUTPUT_PREFIX%%%~nv.%FILE_EXTENSION%\" cmd /k . Drag’n’drop .batch denoising . Once setup with the correct paths to the denoiser, drag and drop multiple noisy .png or .pfm files onto this .bat script for it to auto detect related .albedo and .normal feature images and denoise them… hopefully. GitHub . Python3 based batch denoising? . Nothing yet. Maybe someone should make something and it’ll be linked here. ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/automation.html#batch-manual-denoising",
+    "relUrl": "/docs/advanced_techniques/automation.html#batch-manual-denoising"
+  },"5": {
+    "doc": "Automation",
+    "title": "Automation",
+    "content": " ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/automation.html",
+    "relUrl": "/docs/advanced_techniques/automation.html"
+  },"6": {
     "doc": "Chunky Launcher",
     "title": "Chunky Launcher",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html",
     "relUrl": "/docs/userinterface/chunkylauncher.html"
-  },"2": {
+  },"7": {
     "doc": "Chunky Launcher",
     "title": "Table of contents",
     "content": ". | Chunky Launcher | Advanced Settings . | Java options | Chunky options | . | Older versions of Chunky . | For Minecraft 1.2.1 - 1.12.2 (Anvil world format) | For Minecraft 1.13 (new world format?) | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#table-of-contents",
     "relUrl": "/docs/userinterface/chunkylauncher.html#table-of-contents"
-  },"3": {
+  },"8": {
     "doc": "Chunky Launcher",
     "title": "Chunky Launcher",
     "content": ". Version select - Drop down list which allows you to pick a downloaded Chunky version. Check for update - Checks for updates on chosen update channel. Memory limit (MiB) - Default is 1024 MiB but it is highly recommended that you raise this value to better reflect the amount of memory in your system. Please take into account that the OS and other applications will also require some memory so don’t over set this. If you cannot raise this past 2000 MiB double check your Java installation is 64 bit. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html",
     "relUrl": "/docs/userinterface/chunkylauncher.html"
-  },"4": {
+  },"9": {
     "doc": "Chunky Launcher",
     "title": "Advanced Settings",
     "content": ". Update Site - Changes source for updates. | http://chunkyupdate.llbit.se/ should be used to obtain Chunky 1.X for Minecraft 1.12. | http://chunkyupdate2.llbit.se/ is for llbit’s Chunky 2.0 for Minecraft 1.13 however you will need to enable snapshots to get the latest version, 2.0beta6, else you will be stuck with an older version. | http://chunkyupdate.lemaik.de/ is for leMaik’s Chunky 2.1 which offers improved Minecraft 1.13 support, over llbit’s Chunky 2.0, in addtion to 1.14, 1.15, and 1.16 snapshot support. | . Java Runtime - Allows you to see and change the Runtime used for Chunky. Does not change the runtime used for the Launcher. Java options - See below for the list of Java options . Chunky options - See below for the list of Chunky options . Enable debug console &amp; Verbose logging - The debug console is a seperate window that runs when you launch Chunky. As the name implies it is useful for debugging issues with Chunky and combined with Verbose logging, which enables addtional debug information, can be helpful in fixing bugs and crashes. Download snapshots - Snapshots are nightly/alpha/beta builds of Chunky, depending on the update site used, and may be unstable. Manage plugins - The Plugin manager can be used to manage installed plugins. For a list of available plugins and their function, please refer to the Pluings page. Java options . | -Dprism.order=sw - Should the Chunky Launcher or Chunky windo appear blank when started this is caused by an issue with the JavaFX hardware renderer for Windows. The only known solution is to add the listed Java command/option. | -DlogLevel - ERROR, WARNING, INFO - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings. | -Dchunky.mapLoaderThreads - Controls how many threads should be used for loading the Map View. Default is 3. Raising this value can improve Map load times at the cost of increased CPU usage when the map is being drawn. | . Chunky options . | -tile-width &lt;NUM&gt; - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. It is recommended to use a tile-width of 16 as this seems to be optimal. More information / testing. | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#advanced-settings",
     "relUrl": "/docs/userinterface/chunkylauncher.html#advanced-settings"
-  },"5": {
+  },"10": {
     "doc": "Chunky Launcher",
     "title": "Older versions of Chunky",
     "content": "Unfortunately, while the Chunky Launcher does allows you to select any installed version; it only allows newer versions of Chunky to be downloaded. This may cause an issue if you wish to render a Minecraft 1.12 world which requires Chunky 1.X if you have say Chunky 2.2 downloaded. As a work around to this issue I will be providing copies of older Chunky versions in .zip files which can be extracted into your Chunky directory. This should allow the Launchers Version Select to then see and use these older versions. For Minecraft 1.2.1 - 1.12.2 (Anvil world format) . Chunky 1.4.5 zip . Chunky 1.4.6_beta2 zip . For Minecraft 1.13 (new world format?) . Chunky 2.0_beta6 — Superseded by Chunky 2.2 which supports 1.13 - 1.16~+. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#older-versions-of-chunky",
     "relUrl": "/docs/userinterface/chunkylauncher.html#older-versions-of-chunky"
-  },"6": {
+  },"11": {
     "doc": "Denoising",
     "title": "Denoising",
     "content": "todo - need to scale downsampling to 540p . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html",
     "relUrl": "/docs/advanced_techniques/denoising.html"
-  },"7": {
+  },"12": {
     "doc": "Denoising",
     "title": "Table of contents",
     "content": ". | Denoising . | Super Sample Downscaling Denoising . | Original examples | . | Split Pass Denoising . | llbit’s example | . | Multi-plane . | Example | . | AI Based Denoising &amp; Plugins . | Example | Example of painted effect | leMaik’s Denoising Plugin | Albedo Map | Normal Map | . | Split Pass + AI Denoising . | Example 1 | Example 2 | A simple proof of concept with Layer mode: Screen | . | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#table-of-contents",
     "relUrl": "/docs/advanced_techniques/denoising.html#table-of-contents"
-  },"8": {
+  },"13": {
     "doc": "Denoising",
     "title": "Super Sample Downscaling Denoising",
     "content": "A technique first covered back in October 2014. The basic premise is to render a scene at a higher than target resolution, apply a Gaussian blur to the whole image, and then scale it down to the target resolution. In any case it is assumed you render the scene for the same duration. Generally this means that a scene at say 1920x1080 with a target of 1024 SPP could be rendered at 3840x2160 at 256 SPP- These should take the same amount of time to render and the 2160p image would have perceptually less noise than the same scene rendered natively at 1080p. The noise is still present but given the higher resolution each pixel of noise takes up less screen space compared to the “noiseless” data from the sun/sky. Blurring and scaling to target resolution should result in better results than rendering at native resolution. Increasing the canvas resolution does increase memory consumption. Original examples . 540p Native . 1080p (2x supersampling) . 2160p (4x supersampling) . 4320p (8x supersampling) . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#super-sample-downscaling-denoising",
     "relUrl": "/docs/advanced_techniques/denoising.html#super-sample-downscaling-denoising"
-  },"9": {
+  },"14": {
     "doc": "Denoising",
     "title": "Split Pass Denoising",
     "content": "An approach llbit showcased in September 2015. By rendering the scene twice, first with a “Sunlight Pass” to 200 SPP and then a “Raw Emitter Pass” to 400 SPP. The noisy emitter pass could then be filtered with a Selective Gaussian Blur in GIMP and then combined. Comparing a typical 400 SPP Sunlight + Raw Emitter image to the Sunlight + Filtered Emitter image it was seen that the lighting was softer and there was less noticeable noise. The different lighting passes can be setup through the Lighting and the Sky &amp; Fog tabs. For a Sunlight pass you would simply need to disable emitters. For an Emitter pass things are a bit more complex: Enable emitters (if not done), disable sunlight, and Sky mode: black OR enable transparent sky. llbit’s example . Sunlight pass at 200 SPP . Emitter pass at 400 SPP . Filtered emitter pass . Sunlight + filtered emitter pass . Same scene rendered at 400 SPP . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#split-pass-denoising",
     "relUrl": "/docs/advanced_techniques/denoising.html#split-pass-denoising"
-  },"10": {
+  },"15": {
     "doc": "Denoising",
     "title": "Multi-plane",
     "content": "A technique which I never released; Covers rendering a scene with a clear and distinct fore and background elements. By rendering the complete scene with emitters at 0.01, emitters would light up but not emit visible light. This would lead to zero emitter noise in the distance. Meaning lower SPPs could be used for this element. Foreground element should be loaded with a reduced number of chunks, to speed up rendering speed, with the chosen emittance. With a careful selection of Chunks and combination of the two elements in post a reasonable result can be achieved. Example . Foreground selection of 76 chunks . 1024 SPP @ 932k SPS - aka it’s fast . Background selection of 1877 chunks . 128 SPP @ 482k SPS - aka it’s slow . Crude composite . The key issue with this technique is that the lighting information in the foreground element would not completely match the background. Further mitigations would be to instead combine this Multi-plane technique with Split Pass to further speed up rendering and retain bounce lighting from Sun/Sky present within the background pass. Using Split Pass would also mean that less effort is required to recombine the completed results. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#multi-plane",
     "relUrl": "/docs/advanced_techniques/denoising.html#multi-plane"
-  },"11": {
+  },"16": {
     "doc": "Denoising",
     "title": "AI Based Denoising &amp; Plugins",
     "content": "First showcased by u/StaysAwakeAllWeek in Nov 2018, this was the first time an AI based denoiser was mentioned on r/Chunky. Unfortunately at the time it was limited to just Nvidia GPUs. A few months later I discovered Intel’s Open Image Denoise; an AI based denoiser that works on any CPU with SSE4.1 support. Example . | SPP | RAW | OIDN | . | 512 | | | . | 2048 | | | . | 4096 | | | . | 8192 | | | . As some of you may have noticed while AI based denoisers work wonders there are a few issues with the outputted images. Noteworthy visual artifacts are the deformed blocks, blurred textures, and the painted effect you can often see. Below you can see an extreme case where a 32 SPP scene lit mostly by emitters was denoised. Example of painted effect . leMaik’s Denoising Plugin . Some of these issues can be resolved or mitigated by using leMaik’s Denoising Plugin which has the ability to, not only to automatically denoise a scene once the target SPP is reached but, render auxiliary feature images / AOVs (Arbitrary Output Variables) to provide additional information to the denoiser. Unfortunately you still can’t expect the AI denoiser to work real magic; If there is too much noise you will still get a painted effect. Albedo Map . The Albedo map is a feature image that provides the largest quality bump to the denoiser. It’s basically just a representation of the texture information within the scene independant of shading (lighting) or viewing angle. This map tends to help restore texture details. Normal Map . The Normal map is another feature image that can help. In order to use a Normal map you need to provide the Denoiser with the Albedo map first. This map tends to help restore block shape. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#ai-based-denoising--plugins",
     "relUrl": "/docs/advanced_techniques/denoising.html#ai-based-denoising--plugins"
-  },"12": {
+  },"17": {
     "doc": "Denoising",
     "title": "Split Pass + AI Denoising",
     "content": "For some scenes where we have access to both Sun/Sky light and Emitters. This technique is… well it is mostly a combinaton of llbit’s Split Pass and AI denoising with a touch of my Multi-plane. The goal of this method is to min-max speed and quality as much as possible. As many would probably know by now; Scenes which receive most of their lighting directly from the Sun or Sky generally do not require SPPs past 1000 SPP, and often work fine with 64-256 SPP, unlike scenes with emitters that can require 8000 SPP or more. Subjecting the whole scene to an AI based denoiser when it is not necessary is what this combination technique aims to solve. We take llbit’s Split Pass Denoising and instead of feeding the emitter pass through a simple Gaussian blur we use an AI based denoiser like Nvidia Optix or OIDN. Given the Sun, Sky, and Fog pass is not put through the denoiser any fine details or grain from this pass will be kept. This is most noticeable when looking at the fog as this tends to be heavily blurred by AI Denoisers. Any part of the scene that does not receive lighting from the Sun, Sky, and Fog pass but instead is lit from the emitter pass will still unfortunately be subjected the the pitfalls of the AI Denoiser. However, given that we can reduce the number of chunks loaded for this pass, and that we do not need to deal with fog, it should be possible to achieve a high SPP relatively quickly. Put simply: Render the Sun, Sky, and Fog in one pass. In another pass render the emitters and denoise them with an AI base denoiser like Open Image Denoise or Nvidia Optix. These two passes can be combined using GIMP by setting the layer mode to Screen. Example 1 . Sun + Sky + Fog Pass at 256 SPP . Raw Emitter Pass at 2048 SPP . AI denoised Emitter Pass . Combined SSF + E_dn using GIMP and layer mode set to screen . Example 2 . Sun + Sky + Fog Pass at 256 SPP . Raw Emitter Pass at 2048 SPP . AI denoised Emitter Pass . Combined SSF + E_dn using GIMP and layer mode set to screen . A simple proof of concept with Layer mode: Screen . Below is a showcase of further subdividing light sources into different passes and the combined composite VS a typical render. This is merely to showcase that splitting render passes and combining in post can produce equivalent results to a more typical render. Of course subdividing a scene into this many passes and rendering to such a high SPP is not required for Split Pass + AI Denoising. | Sun pass | Sky pass | Emitter pass | . | | | | . | SSE_Comp | | Typical bake | . | | | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#split-pass--ai-denoising",
     "relUrl": "/docs/advanced_techniques/denoising.html#split-pass--ai-denoising"
-  },"13": {
+  },"18": {
     "doc": "FAQ / Troubleshooting",
     "title": "FAQ / Troubleshooting",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html",
     "relUrl": "/docs/faq/faq.html"
-  },"14": {
+  },"19": {
     "doc": "FAQ / Troubleshooting",
     "title": "Table of contents",
     "content": ". | FAQ | Troubleshooting . | Chunky does not Launch | Cannot allocate more than 2GB of RAM? | Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage | Black blocks with a red X | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#table-of-contents",
     "relUrl": "/docs/faq/faq.html#table-of-contents"
-  },"15": {
+  },"20": {
     "doc": "FAQ / Troubleshooting",
     "title": "FAQ",
     "content": "TODO Read llbit’s one for now . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#faq",
     "relUrl": "/docs/faq/faq.html#faq"
-  },"16": {
+  },"21": {
     "doc": "FAQ / Troubleshooting",
     "title": "Troubleshooting",
     "content": ". Chunky does not Launch . See here. Cannot allocate more than 2GB of RAM? . If Java is installed to C:\\Program Files (x86)\\Java\\... this is a 32 bit installation. It is highly recommended to remove this and install 64 bit Java. Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage . More info and potential fixes . Black blocks with a red X . If Chunky cannot find a Minecraft installation to load textures from a missing texture texture will be shown. Options --&gt; Edit resource packs --&gt; Add . Navigate to .../.minecraft/versions/ open the corresponding version folder, ie 1.14.4, and then select the .jar file, ie 1.14.4.jar, and hit Open, &amp; Apply. Alternatively, navigate a Minecraft Resource Pack stored in a .zip file and Open and Apply that. You may need to use Scene --&gt; Reload chunks for this to work. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#troubleshooting",
     "relUrl": "/docs/faq/faq.html#troubleshooting"
-  },"17": {
+  },"22": {
     "doc": "GIMP",
     "title": "GNU Image Manipulation Program - A quick rundown",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#gnu-image-manipulation-program---a-quick-rundown",
     "relUrl": "/docs/advanced_techniques/gimp.html#gnu-image-manipulation-program---a-quick-rundown"
-  },"18": {
+  },"23": {
     "doc": "GIMP",
     "title": "Table of contents",
     "content": ". | Other | Filtering . | Blur . | Gaussian blur | Selective Gaussian blur | . | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#table-of-contents",
     "relUrl": "/docs/advanced_techniques/gimp.html#table-of-contents"
-  },"19": {
+  },"24": {
     "doc": "GIMP",
     "title": "Other",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#other",
     "relUrl": "/docs/advanced_techniques/gimp.html#other"
-  },"20": {
+  },"25": {
     "doc": "GIMP",
     "title": "Filtering",
     "content": "With the chosen layer selected over in the Layers window. You can apply various Filters to it by accessing the menu from the Menu Bar. Blur . Gaussian blur . Performs an averaging of neighboring pixels with the normal distribution as weighting . This is the most basic blur filter available and really quick. Has the option to change blur size in X and Y independently. . Selective Gaussian blur . Blur neighboring pixels, but only in low contrast areas . This filter is more advanced and lets you set a threshold so that only similar pixels are blurred together. Should help retain sharp edges while reducing grain. This filter is much slower than Gaussian blur but this probably won’t amount to much addtional processing time unless working with a high resolution image. Unfortunately you cannot control blur in X&amp;Y independently instead it is controlled by a Blur radius. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#filtering",
     "relUrl": "/docs/advanced_techniques/gimp.html#filtering"
-  },"21": {
+  },"26": {
     "doc": "GIMP",
     "title": "GIMP",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html",
     "relUrl": "/docs/advanced_techniques/gimp.html"
-  },"22": {
+  },"27": {
     "doc": "Help Wanted",
     "title": "Current things that need to be tested",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#current-things-that-need-to-be-tested",
     "relUrl": "/docs/helpwanted/helpwanted.html#current-things-that-need-to-be-tested"
-  },"23": {
+  },"28": {
     "doc": "Help Wanted",
     "title": "Table of contents",
     "content": ". | UI elements vs Text fields | Explore different tile-width sizes for potential speedups | Chunky AI Denoiser Training | GitHub Issues | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#table-of-contents",
     "relUrl": "/docs/helpwanted/helpwanted.html#table-of-contents"
-  },"24": {
+  },"29": {
     "doc": "Help Wanted",
     "title": "UI elements vs Text fields",
     "content": "While it is known that UI elements have set ranges which we can bypass by entering values into the corresponding Text Field. Anyone is able to view and comment this document, but I do intend to manually grant edit permissions. Google Sheets . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#ui-elements-vs-text-fields",
     "relUrl": "/docs/helpwanted/helpwanted.html#ui-elements-vs-text-fields"
-  },"25": {
+  },"30": {
     "doc": "Help Wanted",
     "title": "Explore different tile-width sizes for potential speedups",
     "content": "In the ChunkyLauncher, under advanced, you can find Chunky options where you can provide arguments to change more advanced settings. The particular one we are looking at here is -tile-width x which modifies the frame subdivision size per worker thread. Alternatively you can call this option and render via commandline using the following: . java -jar ChunkyLauncher.jar -tile-width x java -jar ChunkyLauncher.jar -render scene . In my limited testing of a scene that takes approximately 17 minutes I found that a tile-width of 16 seemed to provide a 3.5% boost to rendering speed over default. While this is a minimal improvement it would add up over time. A value of 256 or greater resulted in a significant reduction in rendering performance. This behaviour has been confirmed by deltakeks#4740 on discord. When providing results please let me know the CPU model, Chunky version, resolution, and SPP target in addtional to providing data regarding tile-width values tested and the time in seconds. Just.. send me a spreadsheet or something. Notes- Testing was performed on an i7-9750H, leMaik 1.4.5-231, 1920x1080, to a target of 256 SPP. | tile-width | Time (s) | SPS | . | 1 | 1035 | 512882 | . | 2 | 1018 | 521024 | . | 4 | 1020 | 520021 | . | 8 | 1014 | 523149 | . | 16 | 1000 | 529312 | . | 20 | 1033 | 513731 | . | 32 | 1032 | 514064 | . | … | … | … | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups",
     "relUrl": "/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups"
-  },"26": {
+  },"31": {
     "doc": "Help Wanted",
     "title": "Chunky AI Denoiser Training",
     "content": "Would training Intel’s Open Image Denoise with Chunky data provide any meaningful improvement to denoising results? No clue. But given they only used as few as 20 different scenes from some renderers it certainly gives us some hope! . If you want to help out there is more information over at my GitHub Repo where you can provide your own data. Chunky AI Training Data . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#chunky-ai-denoiser-training",
     "relUrl": "/docs/helpwanted/helpwanted.html#chunky-ai-denoiser-training"
-  },"27": {
+  },"32": {
     "doc": "Help Wanted",
     "title": "GitHub Issues",
     "content": "Confirming bugs, providing steps to reproduce them, or maybe even fixing them yourself are all really helpful. Maybe.. Try it out… . Chunky GitHub Issues . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#github-issues",
     "relUrl": "/docs/helpwanted/helpwanted.html#github-issues"
-  },"28": {
+  },"33": {
     "doc": "Help Wanted",
     "title": "Help Wanted",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html",
     "relUrl": "/docs/helpwanted/helpwanted.html"
-  },"29": {
+  },"34": {
     "doc": "Home",
     "title": "jackjt8's Guide to Chunky ",
     "content": "Chunky is a Minecraft rendering tool that uses Path Tracing to create realistic images of your Minecraft worlds. Witchcraft and Wizardry - The Floo Network . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"30": {
+  },"35": {
     "doc": "Home",
     "title": "About Me",
     "content": "I have used Chunky for over 7 years now and in this time I have produced in excess of 400 renders. Over the years I have learnt so much and I feel it's time to put everything in writing. This guide is an accumulation of knowledge and I very much hope that others will add to it so it can evolve and become something more. Just in case anyone wants to see my work, you can find all of it in this Google Drive folder. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"31": {
+  },"36": {
     "doc": "Home",
     "title": "Home",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"32": {
+  },"37": {
     "doc": "Installation",
     "title": "Installing Chunky",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#installing-chunky",
     "relUrl": "/docs/setup/installation.html#installing-chunky"
-  },"33": {
+  },"38": {
     "doc": "Installation",
     "title": "Table of contents",
     "content": ". | Prerequisites - Java . | Java Downloads | . | First time setup | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#table-of-contents",
     "relUrl": "/docs/setup/installation.html#table-of-contents"
-  },"34": {
+  },"39": {
     "doc": "Installation",
     "title": "Prerequisites - Java",
     "content": "Chunky requires Java 8 update 40 or later (with JavaFX) and we recommend using the 64 bit version if you have a 64 bit OS. Java Downloads . Oracle Java 8 (including JavaFX) . Notes . | OpenJDK varients will work but some addtional setup may be required. | You may run into issues installing Oracle Java on Ubuntu; JavaFX is missing. | Newer versions of Java, ie Java 9, Java 11, etc., may also require addtional setup. | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#prerequisites---java",
     "relUrl": "/docs/setup/installation.html#prerequisites---java"
-  },"35": {
+  },"40": {
     "doc": "Installation",
     "title": "First time setup",
     "content": "ChunkyLauncher.jar . The Chunky Launcher is a Java application that handles updating Chunky, version selection, Plugins, and various settings. You can start the Launcher by double clicking on the donloaded Jar file, or by typing the following command into a terminal/command prompt from the appropriate directory. java -jar ChunkyLauncher.jar . The first time you start Chunky Launcher you will be asked to pick a settings directory for Chunky. I personally do not use the recommended Home Directory install location. Instead I like using Program or Working Directory such that I can keep multiple seperate installations of Chunky. The reason I do this will become clear with some of the advanced topics this guide will cover later. After making this selection the Chunky Launcher will be shown. Please hit Check for update to show any available updates and then Update to New Version to get Chunky Launcher to download required files. Once done hit Launch Chunky to use the downloaded version. Or Close and use the Launch option within Chunky Launcher. Note - If no update is found or the download of the update fails you may need to enable Download snapshots from the advanced section of the Launcher. For further information on the functionally of the Chunky Launcher, including how to obtain different Chunky versions, please refer to the User Interface section on the Chunky Launcher. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#first-time-setup",
     "relUrl": "/docs/setup/installation.html#first-time-setup"
-  },"36": {
+  },"41": {
     "doc": "Installation",
     "title": "Installation",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html",
     "relUrl": "/docs/setup/installation.html"
-  },"37": {
+  },"42": {
     "doc": "Introduction",
     "title": "Introduction to Chunky",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html#introduction-to-chunky",
     "relUrl": "/docs/introduction/introduction.html#introduction-to-chunky"
-  },"38": {
+  },"43": {
     "doc": "Introduction",
     "title": "Table of contents",
     "content": ". | Path Tracing | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html#table-of-contents",
     "relUrl": "/docs/introduction/introduction.html#table-of-contents"
-  },"39": {
+  },"44": {
     "doc": "Introduction",
     "title": "Path Tracing",
     "content": "Probably best you just read llbit’s page on this one. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html#path-tracing",
     "relUrl": "/docs/introduction/introduction.html#path-tracing"
-  },"40": {
+  },"45": {
     "doc": "Introduction",
     "title": "Introduction",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html",
     "relUrl": "/docs/introduction/introduction.html"
-  },"41": {
+  },"46": {
     "doc": "Java",
     "title": "Java",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html",
     "relUrl": "/docs/setup/java.html"
-  },"42": {
+  },"47": {
     "doc": "Java",
     "title": "Table of contents",
-    "content": ". | Java Downloads | No Class Def Found Error - aka missing JavaFX . | OpenJDK 8 OpenJFX fix on Ubuntu | OpenJDK 8 OpenJFX fix on Windows | What about Java 11? . | OpenJDK 11 OpenJFX on Windows | . | . | Double clicking ChunkyLauncher.jar doesn’t work on Windows? | . As stated in Installation, Chunky requires Java 8 update 40 or later (with JavaFX) and it is recommended that you use the 64 bit Java version if you have a 64 bit OS. ",
+    "content": ". | Java Downloads | No Class Def Found Error - aka missing JavaFX . | OpenJDK 8 OpenJFX fix on Ubuntu | OpenJDK 8 OpenJFX fix on Windows | What about Java 11? . | OpenJDK 11 OpenJFX on Windows | . | . | Double clicking ChunkyLauncher.jar doesn’t work on Windows? | Batch script to launch (Windows) | . As stated in Installation, Chunky requires Java 8 update 40 or later (with JavaFX) and it is recommended that you use the 64 bit Java version if you have a 64 bit OS. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#table-of-contents",
     "relUrl": "/docs/setup/java.html#table-of-contents"
-  },"43": {
+  },"48": {
     "doc": "Java",
     "title": "Java Downloads",
     "content": "Oracle Java 8 (including JavaFX) . Recommended OpenJDK: AdoptOpenJDK 8 (LTS) HotSpot . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#java-downloads",
     "relUrl": "/docs/setup/java.html#java-downloads"
-  },"44": {
+  },"49": {
     "doc": "Java",
     "title": "No Class Def Found Error - aka missing JavaFX",
     "content": "Exception in thread \"main\" java.lang.NoClassDefFoundError: javafx/stage/Stage at se.llbit.chunky.launcher.ChunkyLauncher.firstTimeSetup(ChunkyLauncher.java:274) at se.llbit.chunky.launcher.ChunkyLauncher.main(ChunkyLauncher.java:192) Caused by: java.lang.ClassNotFoundException: javafx.stage.Stage at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ... 2 more . JavaFX/OpenJFX are often the short straw and unfortunately Chunky needs them. Below are a few solutions. OpenJDK 8 OpenJFX fix on Ubuntu . Below is a script you can run on Ubuntu to obtain and retain a working OpenJFX. credit - UNuX#1985 - 11/07/2019 . #!/bin/bash su apt install openjdk-8-jre mkdir -p /tmp/chunky-deps-tmp cd /tmp/chunky-deps-tmp wget https://launchpadlibrarian.net/363521276/libopenjfx-jni_8u161-b12-1ubuntu2_amd64.deb wget https://launchpadlibrarian.net/363521272/libopenjfx-java_8u161-b12-1ubuntu2_all.deb wget https://launchpadlibrarian.net/363521275/openjfx_8u161-b12-1ubuntu2_amd64.deb dpkg -i *.deb apt-mark hold openjfx libopenjfx-java libopenjfx-jni . OpenJDK 8 OpenJFX fix on Windows . On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of writing, have an official source. Instead you will need to find a pre-compiled build like below. pre-compiled OpenJFX 8u172-b11 . What about Java 11? . If you wish to run Chunky on Java 11 you will need to add --module-path and --add-modules in the Launcher under Advanced field Java options directly to the relevant modules. For more information, please see issue #523. OpenJDK 11 OpenJFX on Windows . | Install OpenJDK of your choice. | Download the OpenJFX Windows SDK from gluonhq, extract, and copy the Bin and Lib folder into the OpenJDK install directory; Typcially, this would be something like C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot where you should see existing Bin and Lib folders. | In the Lib folder found in your OpenJDK install directory, find and delete jrt-fs.jar otherwise you may run into an error when attempting to launch Chunky - java.lang.LayerInstantiationException: Package jdk.internal.jimage in both module java.base and module jrt.fs. | Launch ChunkyLauncher.jar via command line using java --module-path \"path\\to\\openjdk\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar \"path\\to\\chunkylauncher\\chunkylauncher.jar\" . ie . java --module-path \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar D:\\Programs\\Chunky_293\\chunkylauncher.jar . | Inside ChunkyLauncher, under Advanced Settings add the same --module-path and --add-modules options to the Java options field. ie . --module-path \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#no-class-def-found-error---aka-missing-javafx",
     "relUrl": "/docs/setup/java.html#no-class-def-found-error---aka-missing-javafx"
-  },"45": {
+  },"50": {
     "doc": "Java",
     "title": "Double clicking ChunkyLauncher.jar doesn’t work on Windows?",
     "content": "A common issue with Java on Windows is that jar files may not be correctly associated with Java. This can be fixed by either uninstalling and reinstalling Java or through using an application like Jarfix. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#double-clicking-chunkylauncherjar-doesnt-work-on-windows",
     "relUrl": "/docs/setup/java.html#double-clicking-chunkylauncherjar-doesnt-work-on-windows"
-  },"46": {
+  },"51": {
+    "doc": "Java",
+    "title": "Batch script to launch (Windows)",
+    "content": "Don’t want to have to type out commands each time you want to launch Chunky? Well in comes Batch scripts! . Create a .txt file and enter the following lines, adjusting them where necessary to match the commands you need, then save the file as a .bat file in the same directory as ChunkyLauncher.jar. Java 8 example . cd /d %~dp0 java -jar ChunkyLauncher.jar --launcher pause . AdoptOpenJDK\\jdk-11 example . cd /d %~dp0 java --module-path \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar ChunkyLauncher.jar --launcher pause . You can then right click the .bat file and create a shortcut which can be place on the desktop, pinned to the taskbar, etc. For more advanced scripts please see the section on Automation . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#batch-script-to-launch-windows",
+    "relUrl": "/docs/setup/java.html#batch-script-to-launch-windows"
+  },"52": {
     "doc": "Map View",
     "title": "Map View",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html",
     "relUrl": "/docs/userinterface/map.html"
-  },"47": {
+  },"53": {
     "doc": "Map View",
     "title": "Table of contents",
     "content": ". | Map . | Controls . | Right click menu | . | . | Map View Tab | Chunks Tab | Options Tab . | Resource Packs | . | About Tab | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#table-of-contents",
     "relUrl": "/docs/userinterface/map.html#table-of-contents"
-  },"48": {
+  },"54": {
     "doc": "Map View",
     "title": "Map",
     "content": ". Chunky displays an overhead view of your world within the center panel under the Map tab, highlighted in red in the above image, and should be the default view when you launch Chunky. While this view can be used for mapping purposes it’s primary use is for making chunk selections for renders much easier. There are two available modes for the Map; At (map) Scale 13 or greater you will be shown individual blocks and for a Scale of 12 or under you will be displayed a biome view. Controls . | Left click and drag to move the viewport (also see Map View Tab) | Left click to select/deselect a Chunk (at Scale 16 or higher) or a Region (at Scale 15 or lower) | Shift + Left click and drag to create a draggable chunk selection. Note - Shift does not need to be held continuously only Left click does; On release selection of Chunks is made. | Mouse wheel to change Map Scale (also see Map View Tab) | Right click to open a menu with some Selection and Render related options | . | Prior to left clicking an outline of the highlighted Chunk will be shown. | After left clicking the outline will be filled in and Selected. | . | Prior to left clicking an outline of the highlighted Region will be shown. | After left clicking the Region outline will be filled in and Selected. | . | Draggable selection | Right click menu | . Biome view . Right click menu . The right click menu provides some selection and render related controls. | New scene from selection - Create a new 3d scene from selection | Clear selection - Clear selection | Move camera here - Moves camera to coordinates of right click | Select camera-visible chunks - Selects chunks visible to 3d camera and within the Maps current viewport. | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#map",
     "relUrl": "/docs/userinterface/map.html#map"
-  },"49": {
+  },"55": {
     "doc": "Map View",
     "title": "Map View Tab",
     "content": ". | Current World - Displays the currently selected Minecraft world | Change World - Opens prompt to select a Minecraft world | . | Reload - Reloads currently selected Minecraft world | Dimension - Currently selected dimension is highlighted | Scale - Controls map Scale | Coordinates - Provides X,Z coordinates of the Maps view | track player - Centers Maps view on players position | track camera - Centers Maps view on 3D Cameras position | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#map-view-tab",
     "relUrl": "/docs/userinterface/map.html#map-view-tab"
-  },"50": {
+  },"56": {
     "doc": "Map View",
     "title": "Chunks Tab",
     "content": ". | Clear selection - Clears current selection | Delete selected chunks - WARNING - Delets currently selected chunks; have a backup | Export chunks to ZIP - Exports selected chunks to a .ZIP archive | Export view to PNG - Exports current map view to a .PNG image | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#chunks-tab",
     "relUrl": "/docs/userinterface/map.html#chunks-tab"
-  },"51": {
+  },"57": {
     "doc": "Map View",
     "title": "Options Tab",
     "content": ". | Edit resource packs - Allows you to select a Resource Pack or Minecraft .jar for textures. | Single color textures - Averages block textures into single color. | Show launcher when starting Chunky | Open Scenes Directory - Opens the directory Chunky uses to store it’s scenes. | Change Scenes Directory - Changes folder used for the scenes directory. | . Resource Packs . | Add . | Select either a .ZIP or a minecraft .jar (found within .minecraft/versions/x/x.jar) . | . | | | . | . | Left Click a resource pack in the list and use Up/Down to move resource packs. Packs higher in the list will have their textures take priority over those below, including the latest Minecraft .jar which should be loaded regardless. | . | Apply | . (5.) You may need to to hit Reload under the Map View Tab and/or Reload Chunks if you have an active render; This should be done automatically… . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#options-tab",
     "relUrl": "/docs/userinterface/map.html#options-tab"
-  },"52": {
+  },"58": {
     "doc": "Map View",
     "title": "About Tab",
     "content": ". Has a few useful links and Chunky’s credits! . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#about-tab",
     "relUrl": "/docs/userinterface/map.html#about-tab"
-  },"53": {
+  },"59": {
     "doc": "Plugins",
     "title": "Plugins",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html",
     "relUrl": "/docs/setup/plugins.html"
-  },"54": {
+  },"60": {
     "doc": "Plugins",
     "title": "Installation",
     "content": "Clicking Manage Plugins within the Chunky Launcher will open the Plugin Manager and create a plugins folder in the install directory. Chunky plugins, which are .jar files, should be placed in the plugins folder and then Enabled within the Plugin Manager. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#installation",
     "relUrl": "/docs/setup/plugins.html#installation"
-  },"55": {
+  },"61": {
     "doc": "Plugins",
     "title": "Table of contents",
     "content": ". | Denoising Plugin | Discord Rich Presence plugin | Chunky-octree-plugin | demo Ambient Occlusion Plugin | demo Depth Buffer Plugin | Plugin Templates . | demo Block Plugin Template | demo Tab Plugin Template | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#table-of-contents",
     "relUrl": "/docs/setup/plugins.html#table-of-contents"
-  },"56": {
+  },"62": {
     "doc": "Plugins",
     "title": "Denoising Plugin",
     "content": "created by leMaik . | Noisy image | Denosied output | . | | | . For a description and some examples please see the section on AI Based Denoising under Advanced Techniques. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#denoising-plugin",
     "relUrl": "/docs/setup/plugins.html#denoising-plugin"
-  },"57": {
+  },"63": {
     "doc": "Plugins",
     "title": "Discord Rich Presence plugin",
     "content": "created by leMaik . Unreleased. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#discord-rich-presence-plugin",
     "relUrl": "/docs/setup/plugins.html#discord-rich-presence-plugin"
-  },"58": {
+  },"64": {
     "doc": "Plugins",
     "title": "Chunky-octree-plugin",
     "content": "created by aTom3333 . This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below: . | Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled. | Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering. | . GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-octree-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-octree-plugin"
-  },"59": {
+  },"65": {
     "doc": "Plugins",
     "title": "demo Ambient Occlusion Plugin",
     "content": "created by llbit . Preview . AO . GitHub Repo . Complied Chunky-AOPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-ambient-occlusion-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-ambient-occlusion-plugin"
-  },"60": {
+  },"66": {
     "doc": "Plugins",
     "title": "demo Depth Buffer Plugin",
     "content": "created by llbit . Preview . Depth . GitHub Repo . Complied Chunky-DepthPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-depth-buffer-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-depth-buffer-plugin"
-  },"61": {
+  },"67": {
     "doc": "Plugins",
     "title": "Plugin Templates",
     "content": ". demo Block Plugin Template . created by llbit . GitHub Repo . demo Tab Plugin Template . created by llbit . Github Repo . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#plugin-templates",
     "relUrl": "/docs/setup/plugins.html#plugin-templates"
-  },"62": {
+  },"68": {
     "doc": "Render Preview",
     "title": "Render Preview",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/preview.html",
     "relUrl": "/docs/userinterface/preview.html"
-  },"63": {
+  },"69": {
     "doc": "Render Preview",
     "title": "Table of contents",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/preview.html#table-of-contents",
     "relUrl": "/docs/userinterface/preview.html#table-of-contents"
-  },"64": {
+  },"70": {
     "doc": "Render Controls",
     "title": "Render Controls",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html",
     "relUrl": "/docs/userinterface/render.html"
-  },"65": {
+  },"71": {
     "doc": "Render Controls",
     "title": "Table of contents",
     "content": ". | General . | Select 3D Scene | . | Render controls . | Scene | Lighting | Sky &amp; Fog | Water | Camera | Entities | Materials | Postprocessing | Advanced | Help | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#table-of-contents",
     "relUrl": "/docs/userinterface/render.html#table-of-contents"
-  },"66": {
+  },"72": {
     "doc": "Render Controls",
     "title": "General",
     "content": ". Scene(name) - Input field for the current scene’s name (Press enter to apply). Save scene - Saves current scene. Load scene - Opens the Select 3D Scene dialog. Save current frame - Saves the current frame of the Render. Copy current frame - Copies the current frame of the render to the clipboard. Select 3D Scene . Provides a list of all detected scenes in the Scenes directory. Delete - Deletes the currently selected scene (with a confirmation prompt). Export - Exports the currently selected scene as a .zip file to a custom location. Cancel - Closes the Select 3D Scene dialog Load selected scene . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#general",
     "relUrl": "/docs/userinterface/render.html#general"
-  },"67": {
+  },"73": {
     "doc": "Render Controls",
     "title": "Render controls",
     "content": "Scene . Open scene directory - Opens current scene’s directory on disk. Export settings - Allows you to export scene settings on a per section basis. Import settings - Import .json files. Restore default settings - Restores settings to default. Load selected chunks - Loads currently selected chunks. Reload chunks - Reloads currently selected chunks. Canvas size - (WxH) Drop down has a few presets. Set default - Sets current canvas size as default. x0.5, x1.5, x2 - Modifies the canvas size by the amount. ie Wx0.5,Hx0.5 . Load players Enable biome colors Save dump once every - Recommended to save often as to not loose any progress on renders if the worst occurs. But not too often as this process does take time. Save snapshot for each dump Y min clip - Default 0; Setting this will cut off blocks below which can speed up renders. Y max clip - Default 256; Setting this will cut off blocks above which can speed up renders. Lighting . Sky light - Default 1. Enable emitters - Toggles emitters on/off. Emitter intensity - Default 13. Enable sunlight - Toggles whether or not sunlight should be traced. Draw sun - Hides the sun texture in the sky. Sun intensity - Default 1.25. Sun azimuth Sun altitude Sun color . Sky &amp; Fog . Water . Camera . Entities . Materials . Postprocessing . Advanced . Help . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#render-controls-1",
     "relUrl": "/docs/userinterface/render.html#render-controls-1"
-  },"68": {
+  },"74": {
     "doc": "User Interface",
     "title": "User Interface",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html",
     "relUrl": "/docs/userinterface/userinterface.html"
-  },"69": {
+  },"75": {
     "doc": "User Interface",
     "title": "Table of contents",
     "content": ". | Overview . | Chunky Launcher | Chunky | Map View | Render Controls | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html#table-of-contents",
     "relUrl": "/docs/userinterface/userinterface.html#table-of-contents"
-  },"70": {
+  },"76": {
     "doc": "User Interface",
     "title": "Overview",
     "content": "This section of the guide covers Chunky’s User Interface. Chunky Launcher . Chunky Launcher . Chunky . Chunky’s UI is built using JavaFX and is seperated into three panels which can be slide to increase/decrease screenspace of the different components. Then panels often have tabs which contain or hide addtional controls. For the sake of this guide I will describe groups or panels/tabs in two seperate pages based upon their function: . Map View . This first section covers the Map (view), options associated with the Map, some options, and finally an About/help seciton. Map View . Render Controls . The second covers Render related UI elements. Render Controls . ",
