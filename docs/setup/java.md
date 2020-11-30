@@ -90,13 +90,13 @@ For more information, [please see issue #523](https://github.com/llbit/chunky/is
 
 4. Launch ChunkyLauncher.jar via command line using `java --module-path "path\to\openjdk\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar "path\to\chunkylauncher\chunkylauncher.jar"`
 
-ie
+    ie
 
     `java --module-path "C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar D:\Programs\Chunky_293\chunkylauncher.jar`
 
 5. Inside ChunkyLauncher, under Advanced Settings add the same `--module-path` and `--add-modules` options to the `Java options` field. 
 
-ie
+    ie
 
     `--module-path "C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml`
 
