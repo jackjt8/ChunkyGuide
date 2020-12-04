@@ -379,13 +379,13 @@
   },"63": {
     "doc": "Plugins",
     "title": "Discord Rich Presence plugin",
-    "content": "created by leMaik . Unreleased. ",
+    "content": "created by leMaik . GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#discord-rich-presence-plugin",
     "relUrl": "/docs/setup/plugins.html#discord-rich-presence-plugin"
   },"64": {
     "doc": "Plugins",
     "title": "Chunky-octree-plugin",
-    "content": "created by aTom3333 . This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below: . | Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled. | Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering. | . GitHub Repo . Releases page . ",
+    "content": "created by aTom3333 . This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below: . | Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled. | Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering. | Garbage-collected Implementation - Generally faster octree creation/loading times. | Small-leaf Implementation - Should offer a 33% memory saving Vs Packed at a small performance cost. This has yet to be tested . | . GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-octree-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-octree-plugin"
   },"65": {
