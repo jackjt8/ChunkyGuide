@@ -64,7 +64,9 @@ created by leMaik
 
 {% responsive_image path: "assets/images/installation/plugins/discord_rtp.png" %}
 
-Unreleased.
+[GitHub Repo](https://github.com/leMaik/chunky-discord)
+
+[Releases page](https://github.com/leMaik/chunky-discord/releases){: .btn }
 
 ---
 ## Chunky-octree-plugin
@@ -75,6 +77,10 @@ This is a plugin for Chunky that adds more octree implementations with a range o
 - Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled.
 
 - Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering.
+
+- Garbage-collected Implementation - Generally faster octree creation/loading times.
+
+- Small-leaf Implementation - Should offer a 33% memory saving Vs Packed at a small performance cost. *This has yet to be tested*
 
 [GitHub Repo](https://github.com/aTom3333/chunky-octree-plugin)
 
