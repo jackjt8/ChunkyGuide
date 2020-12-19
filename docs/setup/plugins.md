@@ -64,6 +64,8 @@ created by leMaik
 
 {% responsive_image path: "assets/images/installation/plugins/discord_rtp.png" %}
 
+**Compatibility note:** Make sure that this plugin is loaded after the Denoising plugin, i.e. use the Down button to move it below it in the plugin list. Otherwise the denoising plugin will not work.
+
 [GitHub Repo](https://github.com/leMaik/chunky-discord)
 
 [Releases page](https://github.com/leMaik/chunky-discord/releases){: .btn }
