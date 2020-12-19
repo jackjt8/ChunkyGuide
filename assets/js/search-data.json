@@ -391,7 +391,7 @@
   },"65": {
     "doc": "Plugins",
     "title": "Discord Rich Presence plugin",
-    "content": "created by leMaik . GitHub Repo . Releases page . ",
+    "content": "created by leMaik . Compatibility note: Make sure that this plugin is loaded after the Denoising plugin, i.e. use the Down button to move it below it in the plugin list. Otherwise the denoising plugin will not work. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#discord-rich-presence-plugin",
     "relUrl": "/docs/setup/plugins.html#discord-rich-presence-plugin"
   },"66": {
