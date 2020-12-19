@@ -22,6 +22,14 @@ permalink: /
 
 ---
 
+<h2 align="center">jackjt8's (unscripted) Video Guide to Chunky</h2>
+
+<iframe width="960" height="540"
+src="https://www.youtube.com/embed/ArszPie3B6o">
+</iframe>
+
+---
+
 <h2 align="center">About Me</h2>
 
 <div align="center">
