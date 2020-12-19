@@ -210,251 +210,263 @@
     "relUrl": "/"
   },"35": {
     "doc": "Home",
+    "title": "jackjt8's (unscripted) Video Guide to Chunky",
+    "content": ". ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/",
+    "relUrl": "/"
+  },"36": {
+    "doc": "Home",
     "title": "About Me",
     "content": "I have used Chunky for over 7 years now and in this time I have produced in excess of 400 renders. Over the years I have learnt so much and I feel it's time to put everything in writing. This guide is an accumulation of knowledge and I very much hope that others will add to it so it can evolve and become something more. Just in case anyone wants to see my work, you can find all of it in this Google Drive folder. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"36": {
+  },"37": {
     "doc": "Home",
     "title": "Home",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"37": {
+  },"38": {
     "doc": "Installation",
     "title": "Installing Chunky",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#installing-chunky",
     "relUrl": "/docs/setup/installation.html#installing-chunky"
-  },"38": {
+  },"39": {
     "doc": "Installation",
     "title": "Table of contents",
     "content": ". | Prerequisites - Java . | Java Downloads | . | First time setup | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#table-of-contents",
     "relUrl": "/docs/setup/installation.html#table-of-contents"
-  },"39": {
+  },"40": {
     "doc": "Installation",
     "title": "Prerequisites - Java",
     "content": "Chunky requires Java 8 update 40 or later (with JavaFX) and we recommend using the 64 bit version if you have a 64 bit OS. Java Downloads . Oracle Java 8 (including JavaFX) . Notes . | OpenJDK varients will work but some addtional setup may be required. | You may run into issues installing Oracle Java on Ubuntu; JavaFX is missing. | Newer versions of Java, ie Java 9, Java 11, etc., may also require addtional setup. | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#prerequisites---java",
     "relUrl": "/docs/setup/installation.html#prerequisites---java"
-  },"40": {
+  },"41": {
     "doc": "Installation",
     "title": "First time setup",
     "content": "ChunkyLauncher.jar . The Chunky Launcher is a Java application that handles updating Chunky, version selection, Plugins, and various settings. You can start the Launcher by double clicking on the donloaded Jar file, or by typing the following command into a terminal/command prompt from the appropriate directory. java -jar ChunkyLauncher.jar . The first time you start Chunky Launcher you will be asked to pick a settings directory for Chunky. I personally do not use the recommended Home Directory install location. Instead I like using Program or Working Directory such that I can keep multiple seperate installations of Chunky. The reason I do this will become clear with some of the advanced topics this guide will cover later. After making this selection the Chunky Launcher will be shown. Please hit Check for update to show any available updates and then Update to New Version to get Chunky Launcher to download required files. Once done hit Launch Chunky to use the downloaded version. Or Close and use the Launch option within Chunky Launcher. Note - If no update is found or the download of the update fails you may need to enable Download snapshots from the advanced section of the Launcher. For further information on the functionally of the Chunky Launcher, including how to obtain different Chunky versions, please refer to the User Interface section on the Chunky Launcher. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#first-time-setup",
     "relUrl": "/docs/setup/installation.html#first-time-setup"
-  },"41": {
+  },"42": {
     "doc": "Installation",
     "title": "Installation",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html",
     "relUrl": "/docs/setup/installation.html"
-  },"42": {
+  },"43": {
     "doc": "Introduction",
     "title": "Introduction to Chunky",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html#introduction-to-chunky",
     "relUrl": "/docs/introduction/introduction.html#introduction-to-chunky"
-  },"43": {
+  },"44": {
     "doc": "Introduction",
     "title": "Table of contents",
-    "content": ". | Path Tracing | . ",
+    "content": ". | Path Tracing | Emitter Sampling Strategy (ESS) | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html#table-of-contents",
     "relUrl": "/docs/introduction/introduction.html#table-of-contents"
-  },"44": {
+  },"45": {
     "doc": "Introduction",
     "title": "Path Tracing",
     "content": "Probably best you just read llbit’s page on this one. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html#path-tracing",
     "relUrl": "/docs/introduction/introduction.html#path-tracing"
-  },"45": {
+  },"46": {
+    "doc": "Introduction",
+    "title": "Emitter Sampling Strategy (ESS)",
+    "content": "With every intersection the sun is sampled adding its contribution to the ray without the need for random sampling; which is one of the main reasons why the convergence of scenes lit by the sun (and sky) occurs quickly. Emitters on the other hand need to be directly hit for them to contribute which has a lower probability of occuring; espically with smaller emitters like torchers. ESS enables similar sampling to which the sun uses and, in theory, should lead to faster convergence. However, whereas there is only a single sun present in the scene, there can be multiple emitters and those at distances where they will not contribute much to the image- For this we have the emittergrid which holds the positions of emitters within cells. When sampling we would only consider emitters within the cell at the intersection and adjacent cells; That way the cost of processing the addtional samples is minimalised. | With ESS ONE only a single emitter is sampled per intersection and cell(+adj) &amp; for ALL every emitter in the cell(+adj) is sampled per intersection. Sampling emitters increases the rendering cost but reduces the required samples. ESS:ONE tends to be very similar to ESS:NONE with ESS:ALL being the “slowest” but potentially fastest to converge- ALL also tends to result in much brighter images than NONE | ONE so a reduction in exposure or emittance value is required to compensate for this. | . The emitter grid (cell) size changes the size of the cells which can impact how many emitters would need to be sampled per intersection, potentially improving performance, however this could lead to issues such as light cut-off if set too low. ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html#emitter-sampling-strategy-ess",
+    "relUrl": "/docs/introduction/introduction.html#emitter-sampling-strategy-ess"
+  },"47": {
     "doc": "Introduction",
     "title": "Introduction",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/introduction/introduction.html",
     "relUrl": "/docs/introduction/introduction.html"
-  },"46": {
+  },"48": {
     "doc": "Java",
     "title": "Java",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html",
     "relUrl": "/docs/setup/java.html"
-  },"47": {
+  },"49": {
     "doc": "Java",
     "title": "Table of contents",
     "content": ". | Java Downloads | No Class Def Found Error - aka missing JavaFX . | OpenJDK 8 OpenJFX fix on Ubuntu | OpenJDK 8 OpenJFX fix on Windows | What about Java 11? . | OpenJDK 11 OpenJFX on Windows | . | . | Double clicking ChunkyLauncher.jar doesn’t work on Windows? | Batch script to launch (Windows) | . As stated in Installation, Chunky requires Java 8 update 40 or later (with JavaFX) and it is recommended that you use the 64 bit Java version if you have a 64 bit OS. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#table-of-contents",
     "relUrl": "/docs/setup/java.html#table-of-contents"
-  },"48": {
+  },"50": {
     "doc": "Java",
     "title": "Java Downloads",
     "content": "Oracle Java 8 (including JavaFX) . Recommended OpenJDK: AdoptOpenJDK 8 (LTS) HotSpot . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#java-downloads",
     "relUrl": "/docs/setup/java.html#java-downloads"
-  },"49": {
+  },"51": {
     "doc": "Java",
     "title": "No Class Def Found Error - aka missing JavaFX",
     "content": "Exception in thread \"main\" java.lang.NoClassDefFoundError: javafx/stage/Stage at se.llbit.chunky.launcher.ChunkyLauncher.firstTimeSetup(ChunkyLauncher.java:274) at se.llbit.chunky.launcher.ChunkyLauncher.main(ChunkyLauncher.java:192) Caused by: java.lang.ClassNotFoundException: javafx.stage.Stage at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ... 2 more . JavaFX/OpenJFX are often the short straw and unfortunately Chunky needs them. Below are a few solutions. OpenJDK 8 OpenJFX fix on Ubuntu . Below is a script you can run on Ubuntu to obtain and retain a working OpenJFX. credit - UNuX#1985 - 11/07/2019 . #!/bin/bash su apt install openjdk-8-jre mkdir -p /tmp/chunky-deps-tmp cd /tmp/chunky-deps-tmp wget https://launchpadlibrarian.net/363521276/libopenjfx-jni_8u161-b12-1ubuntu2_amd64.deb wget https://launchpadlibrarian.net/363521272/libopenjfx-java_8u161-b12-1ubuntu2_all.deb wget https://launchpadlibrarian.net/363521275/openjfx_8u161-b12-1ubuntu2_amd64.deb dpkg -i *.deb apt-mark hold openjfx libopenjfx-java libopenjfx-jni . OpenJDK 8 OpenJFX fix on Windows . On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of writing, have an official source. Instead you will need to find a pre-compiled build like below. pre-compiled OpenJFX 8u172-b11 . What about Java 11? . If you wish to run Chunky on Java 11 you will need to add --module-path and --add-modules in the Launcher under Advanced field Java options directly to the relevant modules. For more information, please see issue #523. OpenJDK 11 OpenJFX on Windows . | Install OpenJDK of your choice. | Download the OpenJFX Windows SDK from gluonhq, extract, and copy the Bin and Lib folder into the OpenJDK install directory; Typcially, this would be something like C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot where you should see existing Bin and Lib folders. | In the Lib folder found in your OpenJDK install directory, find and delete jrt-fs.jar otherwise you may run into an error when attempting to launch Chunky - java.lang.LayerInstantiationException: Package jdk.internal.jimage in both module java.base and module jrt.fs. | Launch ChunkyLauncher.jar via command line using java --module-path \"path\\to\\openjdk\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar \"path\\to\\chunkylauncher\\chunkylauncher.jar\" . ie . java --module-path \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar D:\\Programs\\Chunky_293\\chunkylauncher.jar . | Inside ChunkyLauncher, under Advanced Settings add the same --module-path and --add-modules options to the Java options field. ie . --module-path \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#no-class-def-found-error---aka-missing-javafx",
     "relUrl": "/docs/setup/java.html#no-class-def-found-error---aka-missing-javafx"
-  },"50": {
+  },"52": {
     "doc": "Java",
     "title": "Double clicking ChunkyLauncher.jar doesn’t work on Windows?",
     "content": "A common issue with Java on Windows is that jar files may not be correctly associated with Java. This can be fixed by either uninstalling and reinstalling Java or through using an application like Jarfix. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#double-clicking-chunkylauncherjar-doesnt-work-on-windows",
     "relUrl": "/docs/setup/java.html#double-clicking-chunkylauncherjar-doesnt-work-on-windows"
-  },"51": {
+  },"53": {
     "doc": "Java",
     "title": "Batch script to launch (Windows)",
     "content": "Don’t want to have to type out commands each time you want to launch Chunky? Well in comes Batch scripts! . Create a .txt file and enter the following lines, adjusting them where necessary to match the commands you need, then save the file as a .bat file in the same directory as ChunkyLauncher.jar. Java 8 example . cd /d %~dp0 java -jar ChunkyLauncher.jar --launcher pause . AdoptOpenJDK\\jdk-11 example . cd /d %~dp0 java --module-path \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar ChunkyLauncher.jar --launcher pause . You can then right click the .bat file and create a shortcut which can be place on the desktop, pinned to the taskbar, etc. For more advanced scripts please see the section on Automation . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#batch-script-to-launch-windows",
     "relUrl": "/docs/setup/java.html#batch-script-to-launch-windows"
-  },"52": {
+  },"54": {
     "doc": "Map View",
     "title": "Map View",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html",
     "relUrl": "/docs/userinterface/map.html"
-  },"53": {
+  },"55": {
     "doc": "Map View",
     "title": "Table of contents",
     "content": ". | Map . | Controls . | Right click menu | . | . | Map View Tab | Chunks Tab | Options Tab . | Resource Packs | . | About Tab | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#table-of-contents",
     "relUrl": "/docs/userinterface/map.html#table-of-contents"
-  },"54": {
+  },"56": {
     "doc": "Map View",
     "title": "Map",
     "content": ". Chunky displays an overhead view of your world within the center panel under the Map tab, highlighted in red in the above image, and should be the default view when you launch Chunky. While this view can be used for mapping purposes it’s primary use is for making chunk selections for renders much easier. There are two available modes for the Map; At (map) Scale 13 or greater you will be shown individual blocks and for a Scale of 12 or under you will be displayed a biome view. Controls . | Left click and drag to move the viewport (also see Map View Tab) | Left click to select/deselect a Chunk (at Scale 16 or higher) or a Region (at Scale 15 or lower) | Shift + Left click and drag to create a draggable chunk selection. Note - Shift does not need to be held continuously only Left click does; On release selection of Chunks is made. | Mouse wheel to change Map Scale (also see Map View Tab) | Right click to open a menu with some Selection and Render related options | . | Prior to left clicking an outline of the highlighted Chunk will be shown. | After left clicking the outline will be filled in and Selected. | . | Prior to left clicking an outline of the highlighted Region will be shown. | After left clicking the Region outline will be filled in and Selected. | . | Draggable selection | Right click menu | . Biome view . Right click menu . The right click menu provides some selection and render related controls. | New scene from selection - Create a new 3d scene from selection | Clear selection - Clear selection | Move camera here - Moves camera to coordinates of right click | Select camera-visible chunks - Selects chunks visible to 3d camera and within the Maps current viewport. | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#map",
     "relUrl": "/docs/userinterface/map.html#map"
-  },"55": {
+  },"57": {
     "doc": "Map View",
     "title": "Map View Tab",
     "content": ". | Current World - Displays the currently selected Minecraft world | Change World - Opens prompt to select a Minecraft world | . | Reload - Reloads currently selected Minecraft world | Dimension - Currently selected dimension is highlighted | Scale - Controls map Scale | Coordinates - Provides X,Z coordinates of the Maps view | track player - Centers Maps view on players position | track camera - Centers Maps view on 3D Cameras position | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#map-view-tab",
     "relUrl": "/docs/userinterface/map.html#map-view-tab"
-  },"56": {
+  },"58": {
     "doc": "Map View",
     "title": "Chunks Tab",
     "content": ". | Clear selection - Clears current selection | Delete selected chunks - WARNING - Delets currently selected chunks; have a backup | Export chunks to ZIP - Exports selected chunks to a .ZIP archive | Export view to PNG - Exports current map view to a .PNG image | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#chunks-tab",
     "relUrl": "/docs/userinterface/map.html#chunks-tab"
-  },"57": {
+  },"59": {
     "doc": "Map View",
     "title": "Options Tab",
     "content": ". | Edit resource packs - Allows you to select a Resource Pack or Minecraft .jar for textures. | Single color textures - Averages block textures into single color. | Show launcher when starting Chunky | Open Scenes Directory - Opens the directory Chunky uses to store it’s scenes. | Change Scenes Directory - Changes folder used for the scenes directory. | . Resource Packs . | Add . | Select either a .ZIP or a minecraft .jar (found within .minecraft/versions/x/x.jar) . | . | | | . | . | Left Click a resource pack in the list and use Up/Down to move resource packs. Packs higher in the list will have their textures take priority over those below, including the latest Minecraft .jar which should be loaded regardless. | . | Apply | . (5.) You may need to to hit Reload under the Map View Tab and/or Reload Chunks if you have an active render; This should be done automatically… . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#options-tab",
     "relUrl": "/docs/userinterface/map.html#options-tab"
-  },"58": {
+  },"60": {
     "doc": "Map View",
     "title": "About Tab",
     "content": ". Has a few useful links and Chunky’s credits! . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/map.html#about-tab",
     "relUrl": "/docs/userinterface/map.html#about-tab"
-  },"59": {
+  },"61": {
     "doc": "Plugins",
     "title": "Plugins",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html",
     "relUrl": "/docs/setup/plugins.html"
-  },"60": {
+  },"62": {
     "doc": "Plugins",
     "title": "Installation",
     "content": "Clicking Manage Plugins within the Chunky Launcher will open the Plugin Manager and create a plugins folder in the install directory. Chunky plugins, which are .jar files, should be placed in the plugins folder and then Enabled within the Plugin Manager. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#installation",
     "relUrl": "/docs/setup/plugins.html#installation"
-  },"61": {
+  },"63": {
     "doc": "Plugins",
     "title": "Table of contents",
     "content": ". | Denoising Plugin | Discord Rich Presence plugin | Chunky-octree-plugin | demo Ambient Occlusion Plugin | demo Depth Buffer Plugin | Plugin Templates . | demo Block Plugin Template | demo Tab Plugin Template | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#table-of-contents",
     "relUrl": "/docs/setup/plugins.html#table-of-contents"
-  },"62": {
+  },"64": {
     "doc": "Plugins",
     "title": "Denoising Plugin",
     "content": "created by leMaik . | Noisy image | Denosied output | . | | | . For a description and some examples please see the section on AI Based Denoising under Advanced Techniques. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#denoising-plugin",
     "relUrl": "/docs/setup/plugins.html#denoising-plugin"
-  },"63": {
+  },"65": {
     "doc": "Plugins",
     "title": "Discord Rich Presence plugin",
     "content": "created by leMaik . GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#discord-rich-presence-plugin",
     "relUrl": "/docs/setup/plugins.html#discord-rich-presence-plugin"
-  },"64": {
+  },"66": {
     "doc": "Plugins",
     "title": "Chunky-octree-plugin",
     "content": "created by aTom3333 . This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below: . | Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled. | Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering. | Garbage-collected Implementation - Generally faster octree creation/loading times. | Small-leaf Implementation - Should offer a 33% memory saving Vs Packed at a small performance cost. This has yet to be tested . | . GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-octree-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-octree-plugin"
-  },"65": {
+  },"67": {
     "doc": "Plugins",
     "title": "demo Ambient Occlusion Plugin",
     "content": "created by llbit . Preview . AO . GitHub Repo . Complied Chunky-AOPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-ambient-occlusion-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-ambient-occlusion-plugin"
-  },"66": {
+  },"68": {
     "doc": "Plugins",
     "title": "demo Depth Buffer Plugin",
     "content": "created by llbit . Preview . Depth . GitHub Repo . Complied Chunky-DepthPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-depth-buffer-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-depth-buffer-plugin"
-  },"67": {
+  },"69": {
     "doc": "Plugins",
     "title": "Plugin Templates",
     "content": ". demo Block Plugin Template . created by llbit . GitHub Repo . demo Tab Plugin Template . created by llbit . Github Repo . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#plugin-templates",
     "relUrl": "/docs/setup/plugins.html#plugin-templates"
-  },"68": {
+  },"70": {
     "doc": "Render Preview",
     "title": "Render Preview",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/preview.html",
     "relUrl": "/docs/userinterface/preview.html"
-  },"69": {
+  },"71": {
     "doc": "Render Preview",
     "title": "Table of contents",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/preview.html#table-of-contents",
     "relUrl": "/docs/userinterface/preview.html#table-of-contents"
-  },"70": {
+  },"72": {
     "doc": "Render Controls",
     "title": "Render Controls",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html",
     "relUrl": "/docs/userinterface/render.html"
-  },"71": {
+  },"73": {
     "doc": "Render Controls",
     "title": "Table of contents",
     "content": ". | General . | Select 3D Scene | . | Render controls . | Scene | Lighting | Sky &amp; Fog | Water | Camera | Entities | Materials | Postprocessing | Advanced | Help | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#table-of-contents",
     "relUrl": "/docs/userinterface/render.html#table-of-contents"
-  },"72": {
+  },"74": {
     "doc": "Render Controls",
     "title": "General",
     "content": ". Scene(name) - Input field for the current scene’s name (Press enter to apply). Save scene - Saves current scene. Load scene - Opens the Select 3D Scene dialog. Save current frame - Saves the current frame of the Render. Copy current frame - Copies the current frame of the render to the clipboard. Select 3D Scene . Provides a list of all detected scenes in the Scenes directory. Delete - Deletes the currently selected scene (with a confirmation prompt). Export - Exports the currently selected scene as a .zip file to a custom location. Cancel - Closes the Select 3D Scene dialog Load selected scene . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#general",
     "relUrl": "/docs/userinterface/render.html#general"
-  },"73": {
+  },"75": {
     "doc": "Render Controls",
     "title": "Render controls",
     "content": "Scene . Open scene directory - Opens current scene’s directory on disk. Export settings - Allows you to export scene settings on a per section basis. Import settings - Import .json files. Restore default settings - Restores settings to default. Load selected chunks - Loads currently selected chunks. Reload chunks - Reloads currently selected chunks. Canvas size - (WxH) Drop down has a few presets. Set default - Sets current canvas size as default. x0.5, x1.5, x2 - Modifies the canvas size by the amount. ie Wx0.5,Hx0.5 . Load players Enable biome colors Save dump once every - Recommended to save often as to not loose any progress on renders if the worst occurs. But not too often as this process does take time. Save snapshot for each dump Y min clip - Default 0; Setting this will cut off blocks below which can speed up renders. Y max clip - Default 256; Setting this will cut off blocks above which can speed up renders. Lighting . Sky light - Default 1. Enable emitters - Toggles emitters on/off. Emitter intensity - Default 13. Enable sunlight - Toggles whether or not sunlight should be traced. Draw sun - Hides the sun texture in the sky. Sun intensity - Default 1.25. Sun azimuth Sun altitude Sun color . Sky &amp; Fog . Water . Camera . Entities . Materials . Postprocessing . Advanced . Help . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/render.html#render-controls-1",
     "relUrl": "/docs/userinterface/render.html#render-controls-1"
-  },"74": {
+  },"76": {
     "doc": "User Interface",
     "title": "User Interface",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html",
     "relUrl": "/docs/userinterface/userinterface.html"
-  },"75": {
+  },"77": {
     "doc": "User Interface",
     "title": "Table of contents",
     "content": ". | Overview . | Chunky Launcher | Chunky | Map View | Render Controls | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/userinterface.html#table-of-contents",
     "relUrl": "/docs/userinterface/userinterface.html#table-of-contents"
-  },"76": {
+  },"78": {
     "doc": "User Interface",
     "title": "Overview",
     "content": "This section of the guide covers Chunky’s User Interface. Chunky Launcher . Chunky Launcher . Chunky . Chunky’s UI is built using JavaFX and is seperated into three panels which can be slide to increase/decrease screenspace of the different components. Then panels often have tabs which contain or hide addtional controls. For the sake of this guide I will describe groups or panels/tabs in two seperate pages based upon their function: . Map View . This first section covers the Map (view), options associated with the Map, some options, and finally an About/help seciton. Map View . Render Controls . The second covers Render related UI elements. Render Controls . ",
