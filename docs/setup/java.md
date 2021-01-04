@@ -22,9 +22,6 @@ As stated in Installation, Chunky requires Java 8 update 40 or later (with JavaF
 
 [Oracle Java 8 (including JavaFX)](https://www.java.com/en/download/manual.jsp)
 
-Recommended OpenJDK:
-[AdoptOpenJDK 8 (LTS) HotSpot](https://adoptopenjdk.net/)
-
 ---
 
 ## No Class Def Found Error - aka missing JavaFX
@@ -66,9 +63,7 @@ apt-mark hold openjfx libopenjfx-java libopenjfx-jni
 
 ### OpenJDK 8 OpenJFX fix on Windows
 
-On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of writing, have an official source. Instead you will need to find a pre-compiled build like below.
-
-[pre-compiled OpenJFX 8u172-b11](https://github.com/SkyLandTW/OpenJFX-binary-windows/releases){: .btn }
+On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of writing, have an official source. Instead you will need to find a pre-compiled build though I would not recommend this.
 
 ---
 
