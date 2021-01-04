@@ -194,22 +194,137 @@ Provides a list of all detected scenes in the Scenes directory.
 
 ### Camera
 
+{% responsive_image path: "assets/images/user_interface/chunky_render_camera.png" %}
+
+`Load preset` - Isometric (NW, NE, SE, SW), Skybox (Right, Left, Up, Down, Front (North), Back)
+
+	`Isometric` - Sets camera to parallel with the camera aimed down at 45 degrees towards the center of the currently loaded chunks. Yaw depends on mode selected.
+	
+	`Skybox` - From the center of the currently loaded chunks look towards that skybox.
+
+`Camera` - Allows a scene to have multiple independant camera which have different properties.
+
+	`Clone` - Clones selected camera
+
+	`Remove` - Removes selected camera
+
+---
+
+	`Position & Orientation`
+
+		`Position` - X, Y (height), Z
+
+		`Orientation` - Yaw, Pitch, Roll
+
+		`Lense shift` - Horizontal lense shift, Vertical lense shift : Relative to canvas height.
+
+	`Camera to player` - Moves the selected camera to the "players" position. Which one? No clue.
+
+	`Center camera` - Centers camera within currently loaded chunks.
+	
+	`Projection mode`
+	
+		`Standard` - Default pinhole projection.
+		
+		`Parallel`
+		
+		`Fisheye`
+		
+		`Stereographic`
+		
+		`Panoramic (equirectangular)`
+		
+		`Panoramic (slot)`
+		
+		`Omni-deirctional Stereo (left/right eye)`
+	
+	`Field of view (zoom)`
+	
+	`Depth of field` - Lower values increase strength of Depth of field.
+	
+	`Subject distance` - Distance from camera to block/object you wish to focus on.
+	
+	`Autofocus` - Typically only useful for range finding (Subject Distance) unless working with closer blocks. DoF typically needs to be adjusted manually if looking for a stronger effect.
+
 ---
 
 ### Entities
+
+{% responsive_image path: "assets/images/user_interface/chunky_render_entities.png" %}
+
+Entity management. Allows the removal and creation of Entities while posing them.
 
 ---
 
 ### Materials
 
+{% responsive_image path: "assets/images/user_interface/chunky_render_materials.png" %}
+
+`Filter` - Filter materials list
+
+`Materials` 
+
+Material Properties
+
+`Emittance` - Disable or control the per block emittance intensity.
+
+`Specular` - Controls the specularity of blocks 0.0 - 1.0.
+
+`IoR`- Index of Refraction
+
+NOTE - Support for PBR resource packs is WIP and will fundamentially change how this all functions.
+
 ---
 
 ### Postprocessing
+
+{% responsive_image path: "assets/images/user_interface/chunky_render_post.png" %}
+
+`Exposure` - Changes the images exposure.
+
+`Postprocessing mode` - Changes the tonemap used.
+	
+	`None`
+	
+	`Gamma correction`
+	
+	`Tonemap operator 1`
+	
+	`ACES filmic tonemapping` - Darker than other tonemaps; raise exposure.
+	
+	`Hable tonemapping`
 
 ---
 
 ### Advanced
 
+{% responsive_image path: "assets/images/user_interface/chunky_render_advanced.png" %}
+
+`Render threads` - Changes the number of threads Chunky should use while rendering. (Needs restart)
+
+`CPU utilization` - Adds in sleep cycles to the rendering process to attempt to reduce the CPU usage. Would recommend using `Render threads` for more predictable scaling.
+
+`Ray depth` - Controls the number of times a ray is allowed to bounce without striking a light source before killed. For outdoor scenes a value between 3-5 should typically be enough with indoor scenes benifitting more from higher values around 10. Higher values offer more realistic light bounce however at a cost to render time. Balance this carefully.
+
+`Merge render dump` - Useful for multi-PC rendering. Merges a renders .dump file into the currently loaded scene combining the total SPP.
+
+`Shutdown computer when render completes` - Toggle.
+
+`Fast Fog` - Impacts the quality of fog rendering. Typically only noticable if viewing fog through alpha textures which is rare.
+
+`Output mode` - `PNG` (default), `TIFF, 32-bit floating point`, `PFM, Portable FloatMap (32-bit)`
+
+`Octree implementation` - `PACKED` (default), `BIGPACKED`, `NODE` (legacy)
+
+`Emitter grid size`- Controls size of emitter grid.
+
+`Prevent normal emitter when using emitter sampling` - Attempts to disable typical random emitter hits which would reduce noise.
+
 ---
 
 ### Help
+
+{% responsive_image path: "assets/images/user_interface/chunky_render_help.png" %}
+
+Camera bindings.
+
