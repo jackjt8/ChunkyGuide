@@ -26,7 +26,7 @@ Example: 960x540 (16/9) @ 70 FoV
 
 ### Subdivision by half
 
-To calculate the required lense shift values to render two smaller canvases (side-by-side) with a [`W`/2 x H] = [w x h] size, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated
+To calculate the required lense shift values to render two smaller canvases (side-by-side) with a [`W`/2 x `H`] = [`w` x `h`] size, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated
 
 ``` x = +/- 1/2 * w/h ```
 
@@ -65,7 +65,7 @@ E.G. For the provided subdivisions the offsets would be [+-0.444444444,0].
 
 ### Subdivision by quarters
 
-To calculate the required lense shift values to render four smaller canvases with a [`W`/2 x `H`/2] = [w x h] size with a `F`/2 = f FoV, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated:
+To calculate the required lense shift values to render four smaller canvases with a [`W`/2 x `H`/2] = [`w` x `h`] size with a `F`/2 = `f` FoV, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated:
 
 ``` x = +/- 1/2 * w/h ```
 
@@ -114,7 +114,7 @@ E.G. For the provided subdivisions the offsets would be [+-0.888888889, +-0.5].
 
 ### Ninth part subdivision
 
-To calculate the required lense shift values to render nine smaller canvases with a [`W`/3 x `H`/3] = [w x h] size with a **`F`/3**? = f FoV, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated:
+To calculate the required lense shift values to render nine smaller canvases with a [`W`/3 x `H`/3] = [`w` x `h`] size with a **`F`/3**? = `f` FoV, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated:
 
 WIP
 
@@ -122,7 +122,7 @@ WIP
 
 ### Sixteenth part subdivision
 
-To calculate the required lense shift values to render sixteen smaller canvases with a [`W`/4 x `H`/4] = [w x h] size with a **`F`/4**? = f FoV, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated:
+To calculate the required lense shift values to render sixteen smaller canvases with a [`W`/4 x `H`/4] = [`w` x `h`] size with a **`F`/4**? = `f` FoV, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated:
 
 WIP
 
