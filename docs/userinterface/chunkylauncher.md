@@ -60,15 +60,23 @@ nav_order: 1
 
 - `-Dprism.order=sw` - Should the Chunky Launcher or Chunky windo appear blank when started this is caused by an issue with the JavaFX hardware renderer for Windows. The only known solution is to add the listed Java command/option. 
 
-- `-DlogLevel` - ERROR, WARNING, INFO - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings.
+- `-DlogLevel=INFO` - `ERROR`,`WARNING`, `INFO` - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings.
 
-- `-Dchunky.mapLoaderThreads` - Controls how many threads should be used for loading the Map View. Default is 3. Raising this value can improve Map load times at the cost of increased CPU usage when the map is being drawn.
+- `-Dchunky.mapLoaderThreads=3` - Controls how many threads should be used for loading the Map View. Default is 3. Raising this value can improve Map load times at the cost of increased CPU usage when the map is being drawn.
+
+WIP PBR builds of Chunky have addtional options
+
+- `-Dchunky.pbr.emittance=labpbr` - `labpbr`, `oldpbr` - Tells Chunky which format the emittance map is in.
+
+- `-Dchunky.pbr.specular=labpbr` - `labpbr`, `oldpbr` - Tells Chunky which format the specular map is in.
 
 ---
 
 ### Chunky options
 
 - `-tile-width <NUM>` - Modifies the frame subdivision size per worker thread. Can potentially provide a boost to render speed or, if set too high, reduce render speeds. It is recommended to use a tile-width of 16 as this seems to be optimal. [More information / testing]({{ site.baseurl }}/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups).
+
+- `-spp-per-pass <NUM>` - The spp-per-pass defines how many samples a certain tile should be render to before moving onto the next tile. The default value of 1 would mean each tile would be sampled to the same SPP before incrementing further. This means that not only will the Preview Window display the most up-to-date SPP but we are able to stop the render upon it completing queued samples for the pass. Raising the spp-per-pass breaks a lot of GUI functionality however, due to a multitude of factors, rendering performance is improved. Recommended that you only use this option for headless operation.
 
 ---
 
