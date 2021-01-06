@@ -59,6 +59,8 @@ Examples at 480x540 @ 70 FoV
 </tbody>
 </table>
 
+E.G. For the provided subdivisions the offsets would be [+-0.444444444,0].
+
 ---
 
 ### Subdivision by quarters
@@ -106,6 +108,8 @@ Examples at 480x270 @ 35 FoV
 </tbody>
 </table>
 
+E.G. For the provided subdivisions the offsets would be [+-0.888888889, +-0.5].
+
 ---
 
 ### Ninth part subdivision
@@ -114,8 +118,13 @@ To calculate the required lense shift values to render nine smaller canvases wit
 
 WIP
 
+---
+
 ### Sixteenth part subdivision
 
 To calculate the required lense shift values to render sixteen smaller canvases with a [`W`/4 x `H`/4] = [w x h] size with a **`F`/4**? = f FoV, given it's relation to canvas height, only the ratio between the `w` & `h` of the sub-canvas is required to be calulated:
 
 WIP
+
+---
+
