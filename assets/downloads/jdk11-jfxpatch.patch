@@ -1,0 +1,80 @@
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision 221bc3f91415b73bb5eb33f21d3379376c3f467d)
++++ build.gradle	(date 1590599024452)
+@@ -1,3 +1,12 @@
++plugins {
++  id 'org.openjfx.javafxplugin' version '0.0.8'
++}
++
++javafx {
++  version = "11"
++  modules = [ 'javafx.controls', 'javafx.fxml']
++}
++
+ project.version = getVersion()
+ 
+ println "Building version ${project.version}"
+Index: lib/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/build.gradle	(revision 221bc3f91415b73bb5eb33f21d3379376c3f467d)
++++ lib/build.gradle	(date 1590599024452)
+@@ -1,3 +1,12 @@
++plugins {
++  id 'org.openjfx.javafxplugin'
++}
++
++javafx {
++  version = "11"
++  modules = [ 'javafx.controls', 'javafx.fxml']
++}
++
+ sourceSets.main.java {
+   srcDir 'src'
+ }
+Index: launcher/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- launcher/build.gradle	(revision 221bc3f91415b73bb5eb33f21d3379376c3f467d)
++++ launcher/build.gradle	(date 1590599024452)
+@@ -1,3 +1,12 @@
++plugins {
++  id 'org.openjfx.javafxplugin'
++}
++
++javafx {
++  version = "11"
++  modules = [ 'javafx.controls', 'javafx.fxml']
++}
++
+ dependencies {
+   compile project(':lib')
+ }
+Index: chunky/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chunky/build.gradle	(revision 221bc3f91415b73bb5eb33f21d3379376c3f467d)
++++ chunky/build.gradle	(date 1590599024452)
+@@ -1,3 +1,12 @@
++plugins {
++  id 'org.openjfx.javafxplugin'
++}
++
++javafx {
++  version = "11"
++  modules = [ 'javafx.controls', 'javafx.fxml']
++}
++
+ apply plugin: 'application'
+ apply plugin: 'maven'
+ apply plugin: 'signing'

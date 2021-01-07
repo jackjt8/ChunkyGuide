@@ -53,3 +53,11 @@ Navigate to `.../.minecraft/versions/` open the corresponding version folder, ie
 
 You may need to use `Scene --> Reload chunks` for this to work.
 
+---
+
+### Trying to contribute and are getting missing JavaFX modules while building?
+
+[a_Tom has a .patch for you!]({{ site.baseurl }}/assets/downloads/jdk11-jfxpatch.patch){: .btn }
+
+---
+
