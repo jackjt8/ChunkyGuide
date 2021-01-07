@@ -139,7 +139,7 @@
   },"23": {
     "doc": "FAQ / Troubleshooting",
     "title": "Table of contents",
-    "content": ". | FAQ | Troubleshooting . | Chunky does not Launch | Cannot allocate more than 2GB of RAM? | Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage | Black blocks with a red X | . | . ",
+    "content": ". | FAQ | Troubleshooting . | Chunky does not Launch | Cannot allocate more than 2GB of RAM? | Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage | Black blocks with a red X | Trying to contribute and are getting missing JavaFX modules while building? | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#table-of-contents",
     "relUrl": "/docs/faq/faq.html#table-of-contents"
   },"24": {
@@ -151,7 +151,7 @@
   },"25": {
     "doc": "FAQ / Troubleshooting",
     "title": "Troubleshooting",
-    "content": ". Chunky does not Launch . See here. Cannot allocate more than 2GB of RAM? . If Java is installed to C:\\Program Files (x86)\\Java\\... this is a 32 bit installation. It is highly recommended to remove this and install 64 bit Java. Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage . More info and potential fixes . Black blocks with a red X . If Chunky cannot find a Minecraft installation to load textures from a missing texture texture will be shown. Options --&gt; Edit resource packs --&gt; Add . Navigate to .../.minecraft/versions/ open the corresponding version folder, ie 1.14.4, and then select the .jar file, ie 1.14.4.jar, and hit Open, &amp; Apply. Alternatively, navigate a Minecraft Resource Pack stored in a .zip file and Open and Apply that. You may need to use Scene --&gt; Reload chunks for this to work. ",
+    "content": ". Chunky does not Launch . See here. Cannot allocate more than 2GB of RAM? . If Java is installed to C:\\Program Files (x86)\\Java\\... this is a 32 bit installation. It is highly recommended to remove this and install 64 bit Java. Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage . More info and potential fixes . Black blocks with a red X . If Chunky cannot find a Minecraft installation to load textures from a missing texture texture will be shown. Options --&gt; Edit resource packs --&gt; Add . Navigate to .../.minecraft/versions/ open the corresponding version folder, ie 1.14.4, and then select the .jar file, ie 1.14.4.jar, and hit Open, &amp; Apply. Alternatively, navigate a Minecraft Resource Pack stored in a .zip file and Open and Apply that. You may need to use Scene --&gt; Reload chunks for this to work. Trying to contribute and are getting missing JavaFX modules while building? . a_Tom has a .patch for you! . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#troubleshooting",
     "relUrl": "/docs/faq/faq.html#troubleshooting"
   },"26": {
