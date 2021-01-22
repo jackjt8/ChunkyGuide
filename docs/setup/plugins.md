@@ -10,7 +10,10 @@ nav_order: 2
 
 ## Installation
 {: .no_toc }
+
 Clicking `Manage Plugins` within the `Chunky Launcher` will open the `Plugin Manager` and create a `plugins` folder in the install directory. Chunky plugins, which are `.jar` files, should be placed in the `plugins` folder and then Enabled within the `Plugin Manager`.
+
+{% responsive_image path: "assets/images/user_interface/chunky_plugin_manager.png" %}
 
 ---
 

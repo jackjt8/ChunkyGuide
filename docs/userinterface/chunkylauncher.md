@@ -95,3 +95,26 @@ As a work around to this issue I will be providing copies of older Chunky versio
 ### For Minecraft 1.13 (new world format?)
 
 Chunky 2.0_beta6 --- Superseded by Chunky 2.2 which supports 1.13 - 1.16~+.
+
+---
+
+## Bypassing the ChunkyLauncher (ie directly running Chunky-Core)
+
+The ChunkyLauncher will only display and run Chunky versions which have a valid version .json located within `chunky.home\versions\`. Valid .json files need to have a correct md5 hash and file size else you will get an integrity issue stopping that version from launching.
+
+To bypass the ChunkyLauncher and these checks you can directly launch `chunky-cores` you can directly invoke java with `-classpath` ensuring you add all required.
+
+ie `java -Xmx4G -classpath ...\lib\chunky-core-2.3.0-56-g4419bd7e.jar;...\lib\fastutil-8.4.4.jar;...\lib\commons-math3-3.2.jar`
+
+Additional arguments may be required or preferred such as specifying Chunky Home using `-Dchunky.home` or adding JavaFX modules.
+
+### View command used to launch Chunky on Windows
+
+Launch a version of Chunky via the launcer. Open Task Manager and under `processes` find the JRE/JDK process for that Chunky version. Right click and `Go to Details`. From here, right click the top of the table and `Select Columns`, scroll down to and enable `Command Line`. Then, assuming the java.exe process is still selected, press `ctrl+c`. Paste into any document.  From here we can extract and modify the command freely.
+
+Example of what you can extract from Task Manager:
+
+```
+Name	PID	Status	Username	CPU	Memory (active private working set)	Command line	UAC virtualisation
+java.exe	7540	Running	<username>	00 	421,008 K	**"C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin\java.exe" -Xmx4096m -Dchunky.home=D:\Programs\Chunky_293 --module-path "C:\Program Files\openjfx\lib" --add-modules javafx.controls,javafx.fxml -classpath D:\Programs\Chunky_293\lib\chunky-core-2.3.0-56-g4419bd7e.jar;D:\Programs\Chunky_293\lib\fastutil-8.4.4.jar;D:\Programs\Chunky_293\lib\commons-math3-3.2.jar -DlogLevel=INFO se.llbit.chunky.main.Chunky -tile-width 16**	Disabled
+```
