@@ -74,6 +74,14 @@ created by leMaik
 [Releases page](https://github.com/leMaik/chunky-discord/releases){: .btn }
 
 ---
+## ChunkyClPlugin
+
+A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii.
+
+[GitHub Repo](https://github.com/alexhliu/ChunkyClPlugin)
+
+
+---
 ## Chunky-octree-plugin
 created by aTom3333
 
@@ -90,6 +98,7 @@ This is a plugin for Chunky that adds more octree implementations with a range o
 [GitHub Repo](https://github.com/aTom3333/chunky-octree-plugin)
 
 [Releases page](https://github.com/aTom3333/chunky-octree-plugin/releases){: .btn }
+
 
 ---
 ## *demo* Ambient Occlusion Plugin
