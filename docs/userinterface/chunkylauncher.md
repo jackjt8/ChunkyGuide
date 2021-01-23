@@ -116,5 +116,5 @@ Example of what you can extract from Task Manager:
 
 ```
 Name	PID	Status	Username	CPU	Memory (active private working set)	Command line	UAC virtualisation
-java.exe	7540	Running	<username>	00 	421,008 K	**"C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin\java.exe" -Xmx4096m -Dchunky.home=D:\Programs\Chunky_293 --module-path "C:\Program Files\openjfx\lib" --add-modules javafx.controls,javafx.fxml -classpath D:\Programs\Chunky_293\lib\chunky-core-2.3.0-56-g4419bd7e.jar;D:\Programs\Chunky_293\lib\fastutil-8.4.4.jar;D:\Programs\Chunky_293\lib\commons-math3-3.2.jar -DlogLevel=INFO se.llbit.chunky.main.Chunky -tile-width 16**	Disabled
+java.exe	7540	Running	<username>	00 	421,008 K	"C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin\java.exe" -Xmx4096m -Dchunky.home=D:\Programs\Chunky_293 --module-path "C:\Program Files\openjfx\lib" --add-modules javafx.controls,javafx.fxml -classpath D:\Programs\Chunky_293\lib\chunky-core-2.3.0-56-g4419bd7e.jar;D:\Programs\Chunky_293\lib\fastutil-8.4.4.jar;D:\Programs\Chunky_293\lib\commons-math3-3.2.jar -DlogLevel=INFO se.llbit.chunky.main.Chunky -tile-width 16	Disabled
 ```
