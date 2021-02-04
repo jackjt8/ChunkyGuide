@@ -70,6 +70,8 @@ WIP PBR builds of Chunky have addtional options
 
 - `-Dchunky.pbr.specular=labpbr` - `labpbr`, `oldpbr` - Tells Chunky which format the specular map is in.
 
+- `-Dchunky.pbr.updateMaterialDefaults=true` - Sets default materials to emittance=1, smoothness=0, metalness=1 such that the specular map is applied to all materials.
+
 ---
 
 ### Chunky options
