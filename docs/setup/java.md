@@ -69,31 +69,33 @@ On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of w
 
 ### What about Java 11?
 
-If you wish to run Chunky on Java 11 you will need to add `--module-path` and `--add-modules` in the Launcher under `Advanced` field `Java options` directly to the relevant modules.
-
-For more information, [please see issue #523](https://github.com/llbit/chunky/issues/523).
+If you wish to run Chunky on Java 11 you will need to ensure you have ChunkyLauncher v1.12.1, or later, in addtion to OpenJFX.
 
 ---
 
 #### OpenJDK 11 OpenJFX on Windows
 
-1. Install OpenJDK of your choice.
+1. Install the OpenJDK of your choice.
 
-2. Download the [OpenJFX Windows SDK from gluonhq](https://gluonhq.com/products/javafx/), extract, and copy the `Bin` and `Lib` folder into the OpenJDK install directory; Typcially, this would be something like `C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot` where you should see existing `Bin` and `Lib` folders.
+2. Download the [OpenJFX Windows SDK from gluonhq](https://gluonhq.com/products/javafx/), extract to `C:\Program Files\openjfx` with the folder structure seen below.
 
-3. In the `Lib` folder found in your OpenJDK install directory, find and delete `jrt-fs.jar` otherwise you may run into an error when attempting to launch Chunky - `java.lang.LayerInstantiationException: Package jdk.internal.jimage in both module java.base and module jrt.fs`.
+	openjfx
+		| bin
+		| legal
+		\ lib
 
-4. Launch ChunkyLauncher.jar via command line using `java --module-path "path\to\openjdk\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar "path\to\chunkylauncher\chunkylauncher.jar"`
+3. Launch ChunkyLauncher.jar either by double clicking the .jar file or by using `java -jar "path\to\chunkylauncher\chunkylauncher.jar"`
+
+4. Inside ChunkyLauncher, under Advanced Settings, the `Java options` field should be auto-populated with `--module-path` and `--add-modules` which point towards the openjfx install location.
 
     ie
 
-    `java --module-path "C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar D:\Programs\Chunky_293\chunkylauncher.jar`
+    `--module-path "C:\Program Files\openjfx" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml`
 
-5. Inside ChunkyLauncher, under Advanced Settings add the same `--module-path` and `--add-modules` options to the `Java options` field. 
 
-    ie
+Note
 
-    `--module-path "C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml`
+If you get the following error: `java.lang.LayerInstantiationException: Package jdk.internal.jimage in both module java.base and module jrt.fs`, open `C:\Program Files\openjfx\lib` and delete `jrt-fs.jar`.
 
 ---
 
@@ -101,7 +103,7 @@ For more information, [please see issue #523](https://github.com/llbit/chunky/is
 
 A common issue with Java on Windows is that jar files may not be correctly associated with Java.
 
-This can be fixed by either uninstalling and reinstalling Java or through using an application like [Jarfix](https://johann.loefflmann.net/en/software/jarfix/index.html).
+This can be fixed by either uninstalling and reinstalling Java or through using an application like [Jarfix](https://johann.loefflmann.net/en/software/jarfix/index.html) or through launching via CMD, ie `java -jar "path\to\chunkylauncher\chunkylauncher.jar"`.
 
 ---
 
