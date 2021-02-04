@@ -79,13 +79,12 @@ If you wish to run Chunky on Java 11 you will need to ensure you have ChunkyLaun
 
 2. Download the [OpenJFX Windows SDK from gluonhq](https://gluonhq.com/products/javafx/), extract to `C:\Program Files\openjfx` with the folder structure seen below.
 
+```
 	openjfx
-	
 		| bin
-		
 		| legal
-		
 		\ lib
+```
 
 3. Launch ChunkyLauncher.jar either by double clicking the .jar file or by using `java -jar "path\to\chunkylauncher\chunkylauncher.jar"`
 
