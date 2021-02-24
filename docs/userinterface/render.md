@@ -1,7 +1,7 @@
 ---
 title: Render Controls
 parent: User Interface
-has_children: false
+has_children: true
 nav_order: 3
 ---
 
@@ -13,6 +13,8 @@ nav_order: 3
 
 1. TOC
 {:toc}
+
+[Render Preview]({{ site.baseurl }}/docs/userinterface/preview.html){: .btn }
 
 ---
 
@@ -246,7 +248,7 @@ Provides a list of all detected scenes in the Scenes directory.
 
 `Subject distance` - Distance from camera to block/object you wish to focus on.
 
-`Autofocus` - Typically only useful for range finding (Subject Distance) unless working with closer blocks. DoF typically needs to be adjusted manually if looking for a stronger effect.
+`Autofocus` - Typically only useful for range finding (Subject Distance) unless working with closer blocks. DoF typically needs to be adjusted manually if looking for a stronger effect. Autofocues on the target block.
 
 ---
 

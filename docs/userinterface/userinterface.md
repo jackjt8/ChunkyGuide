@@ -49,5 +49,10 @@ The second covers Render related UI elements.
 
 [Render Controls]({{ site.baseurl }}/docs/userinterface/render.html){: .btn }
 
+#### Render Preview
+
+With a subsection on the Render Preview.
+
+[Render Preview]({{ site.baseurl }}/docs/userinterface/preview.html){: .btn }
 
 	
