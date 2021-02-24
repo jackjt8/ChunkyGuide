@@ -24,7 +24,9 @@ As stated in Installation, Chunky requires Java 8 update 40 or later (with JavaF
 
 ---
 
-## No Class Def Found Error - aka missing JavaFX
+## Cannot find JavaFX or No Class Def Found Error
+
+{% responsive_image path: "assets/images/installation/cannot_find_javafx.png" %}
 
 ```
 Exception in thread "main" java.lang.NoClassDefFoundError: javafx/stage/Stage
@@ -37,7 +39,7 @@ Caused by: java.lang.ClassNotFoundException: javafx.stage.Stage
         ... 2 more
 ```
 
-JavaFX/OpenJFX are often the short straw and unfortunately Chunky needs them. Below are a few solutions.
+JavaFX/OpenJFX are often the short straw and unfortunately Chunky needs them. Below are a few solutions depending on platform and Java version.
 
 ---
 
@@ -67,24 +69,19 @@ On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of w
 
 ---
 
-### What about Java 11?
+### What about Java 11+?
 
-If you wish to run Chunky on Java 11 you will need to ensure you have ChunkyLauncher v1.12.1, or later, in addtion to OpenJFX.
+If you wish to run Chunky on Java 11+ you will need to ensure you have ChunkyLauncher v1.12.1, or later, in addtion to OpenJFX.
 
 ---
 
-#### OpenJDK 11 OpenJFX on Windows
+#### OpenJDK 11+ OpenJFX on Windows
 
 1. Install the OpenJDK of your choice.
 
 2. Download the [OpenJFX Windows SDK from gluonhq](https://gluonhq.com/products/javafx/), extract to `C:\Program Files\openjfx` with the folder structure seen below.
 
-```
-	openjfx
-		| bin
-		| legal
-		\ lib
-```
+{% responsive_image path: "assets/images/installation/openjfx_folder.png" %}
 
 3. Launch ChunkyLauncher.jar either by double clicking the .jar file or by using `java -jar "path\to\chunkylauncher\chunkylauncher.jar"`
 
@@ -97,7 +94,7 @@ If you wish to run Chunky on Java 11 you will need to ensure you have ChunkyLaun
 
 Note
 
-If you get the following error: `java.lang.LayerInstantiationException: Package jdk.internal.jimage in both module java.base and module jrt.fs`, open `C:\Program Files\openjfx\lib` and delete `jrt-fs.jar`.
+If you get the following error: `java.lang.LayerInstantiationException: Package jdk.internal.jimage in both module java.base and module jrt.fs`, open `C:\Program Files\openjfx\lib` and delete `jrt-fs.jar`; However this issue typically occurs if you merge OpenJFX's `lib` folder into your OpenJDK `lib` folder.
 
 ---
 
