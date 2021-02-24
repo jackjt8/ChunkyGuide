@@ -54,6 +54,8 @@ created by leMaik
 
 For a description and some examples please see the section on [AI Based Denoising under Advanced Techniques]({{ site.baseurl }}/docs/advanced_techniques/denoising.html#ai-based-denoising--plugins).
 
+**Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
+
 [GitHub Repo](https://github.com/leMaik/chunky-denoiser)
 
 [Releases page](https://github.com/leMaik/chunky-denoiser/releases){: .btn }
@@ -77,6 +79,8 @@ created by leMaik
 ## ChunkyClPlugin
 
 A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii.
+
+**Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
 
 [GitHub Repo](https://github.com/alexhliu/ChunkyClPlugin)
 
@@ -110,6 +114,8 @@ Preview
 AO
 {% responsive_image path: "assets/images/installation/plugins/1_plugin_test-AO.png" %}
 
+**Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
+
 [GitHub Repo](https://github.com/llbit/Chunky-AOPlugin)
 
 [Complied Chunky-AOPlugin]({{ site.baseurl }}/assets/downloads/plugins/Chunky-AOPlugin.jar){: .btn }
@@ -124,6 +130,8 @@ Preview
 
 Depth
 {% responsive_image path: "assets/images/installation/plugins/1_plugin_test-depth.png" %}
+
+**Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
 
 [GitHub Repo](https://github.com/llbit/Chunky-DepthPlugin)
 
