@@ -77,13 +77,27 @@ created by leMaik
 
 ---
 ## ChunkyClPlugin
+created by Redox
 
-A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii.
+A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-77-g55a3c929 or later.
 
 **Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
 
 [GitHub Repo](https://github.com/alexhliu/ChunkyClPlugin)
 
+[Latest Release](https://ci.wertarbyte.com/job/ChunkyCL/lastSuccessfulBuild/artifact/ChunkyCL.jar){: .btn }
+
+[Releases page](https://ci.wertarbyte.com/job/ChunkyCL/)
+
+---
+## Chunky-MagickExportPlugin
+created by ShirleyNeko
+
+A WIP plugin that adds more export options, EXR, PNG16, etc, using ImageMagick.
+
+[GitHub Repo](https://github.com/ShirleyNekoDev/Chunky-MagickExportPlugin)
+
+[Releases page](https://github.com/ShirleyNekoDev/Chunky-MagickExportPlugin/releases){: .btn }
 
 ---
 ## Chunky-octree-plugin
