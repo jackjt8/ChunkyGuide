@@ -62,15 +62,13 @@ nav_order: 1
 
 - `-DlogLevel=INFO` - `ERROR`,`WARNING`, `INFO` - Default is WARNING which will mean Chunky shows warnings for missing items. ERROR should disable missing item warnings.
 
-- `-Dchunky.mapLoaderThreads=3` - Controls how many threads should be used for loading the Map View. Default is 3. Raising this value can improve Map load times at the cost of increased CPU usage when the map is being drawn.
-
-WIP PBR builds of Chunky have addtional options
-
-- `-Dchunky.pbr.emittance=labpbr` - `labpbr`, `oldpbr` - Tells Chunky which format the emittance map is in.
+[WIP PBR builds of Chunky](https://github.com/leMaik/chunky/tree/pbr) have addtional options required.
 
 - `-Dchunky.pbr.specular=labpbr` - `labpbr`, `oldpbr` - Tells Chunky which format the specular map is in.
 
 - `-Dchunky.pbr.updateMaterialDefaults=true` - Sets default materials to emittance=1, smoothness=0, metalness=1 such that the specular map is applied to all materials.
+
+- `-Dchunky.pbr.normal=true` - Enables normal mapping on certain blocks (cubes with the same texture on each face) like wooden planks, cobblestone, stone bricks, etc.
 
 ---
 
