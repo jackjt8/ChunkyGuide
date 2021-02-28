@@ -23,6 +23,60 @@ Clicking `Manage Plugins` within the `Chunky Launcher` will open the `Plugin Man
 1. TOC
 {:toc}
 
+
+---
+## ChunkyClPlugin
+created by Redox
+
+A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-77-g55a3c929 or later.
+
+**Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
+
+[GitHub Repo](https://github.com/alexhliu/ChunkyClPlugin)
+
+[Latest Release](https://ci.wertarbyte.com/job/ChunkyCL/lastSuccessfulBuild/artifact/ChunkyCL.jar){: .btn }
+
+[Releases page](https://ci.wertarbyte.com/job/ChunkyCL/)
+
+
+---
+## Chunky-jpegxl-plugin
+
+Plugin adds an option to export the render as a JPEG-XL image; A brand-new image format (as of February 2021).
+
+[GitHub Repo](https://github.com/aTom3333/chunky-jpegxl-plugin)
+
+
+---
+## Chunky-MagickExportPlugin
+created by ShirleyNeko
+
+A WIP plugin that adds more export options, EXR, PNG16, etc, using ImageMagick.
+
+[GitHub Repo](https://github.com/ShirleyNekoDev/Chunky-MagickExportPlugin)
+
+[Releases page](https://github.com/ShirleyNekoDev/Chunky-MagickExportPlugin/releases){: .btn }
+
+
+---
+## Chunky-octree-plugin
+created by aTom3333
+
+This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below:
+
+- Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled.
+
+- Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering.
+
+- Garbage-collected Implementation - Generally faster octree creation/loading times.
+
+- Small-leaf Implementation - Should offer a 33% memory saving Vs Packed at a small performance cost. *This has yet to be tested*
+
+[GitHub Repo](https://github.com/aTom3333/chunky-octree-plugin)
+
+[Releases page](https://github.com/aTom3333/chunky-octree-plugin/releases){: .btn }
+
+
 ---
 ## Denoising Plugin
 created by leMaik
@@ -74,48 +128,6 @@ created by leMaik
 [GitHub Repo](https://github.com/leMaik/chunky-discord)
 
 [Releases page](https://github.com/leMaik/chunky-discord/releases){: .btn }
-
----
-## ChunkyClPlugin
-created by Redox
-
-A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-77-g55a3c929 or later.
-
-**Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
-
-[GitHub Repo](https://github.com/alexhliu/ChunkyClPlugin)
-
-[Latest Release](https://ci.wertarbyte.com/job/ChunkyCL/lastSuccessfulBuild/artifact/ChunkyCL.jar){: .btn }
-
-[Releases page](https://ci.wertarbyte.com/job/ChunkyCL/)
-
----
-## Chunky-MagickExportPlugin
-created by ShirleyNeko
-
-A WIP plugin that adds more export options, EXR, PNG16, etc, using ImageMagick.
-
-[GitHub Repo](https://github.com/ShirleyNekoDev/Chunky-MagickExportPlugin)
-
-[Releases page](https://github.com/ShirleyNekoDev/Chunky-MagickExportPlugin/releases){: .btn }
-
----
-## Chunky-octree-plugin
-created by aTom3333
-
-This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below:
-
-- Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled.
-
-- Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering.
-
-- Garbage-collected Implementation - Generally faster octree creation/loading times.
-
-- Small-leaf Implementation - Should offer a 33% memory saving Vs Packed at a small performance cost. *This has yet to be tested*
-
-[GitHub Repo](https://github.com/aTom3333/chunky-octree-plugin)
-
-[Releases page](https://github.com/aTom3333/chunky-octree-plugin/releases){: .btn }
 
 
 ---
