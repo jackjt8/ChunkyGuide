@@ -11,7 +11,7 @@ nav_order: 2
 ## Installation
 {: .no_toc }
 
-Clicking `Manage Plugins` within the `Chunky Launcher` will open the `Plugin Manager` and create a `plugins` folder in the install directory. Chunky plugins, which are `.jar` files, should be placed in the `plugins` folder and then Enabled within the `Plugin Manager`.
+Clicking `Manage Plugins` within the [Chunky Launcher]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html) will open the `Plugin Manager` and create a `plugins` folder in the install directory. Chunky plugins, which are `.jar` files, should be placed in the `plugins` folder and then Enabled within the `Plugin Manager`.
 
 {% responsive_image path: "assets/images/user_interface/chunky_plugin_manager.png" %}
 
@@ -28,15 +28,25 @@ Clicking `Manage Plugins` within the `Chunky Launcher` will open the `Plugin Man
 ## ChunkyClPlugin
 created by Redox
 
-A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-77-g55a3c929 or later.
+A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-85-gbcef6ebc or later.
 
 **Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
 
 [GitHub Repo](https://github.com/alexhliu/ChunkyClPlugin)
 
-[Latest Release](https://ci.wertarbyte.com/job/ChunkyCL/lastSuccessfulBuild/artifact/ChunkyCL.jar){: .btn }
+[Latest mostly stable build](https://ci.wertarbyte.com/job/ChunkyCL/lastSuccessfulBuild/artifact/ChunkyCL.jar){: .btn }
 
-[Releases page](https://ci.wertarbyte.com/job/ChunkyCL/)
+[Latest development build](https://nightly.link/alexhliu/ChunkyClPlugin/workflows/development/master/ChunkyClPlugin.zip)
+
+
+---
+## Chunky-excel-plugin
+
+Export renders as ODS such that an image viewer like Excel can render it... Not even joking this plugin is amazing.
+
+[GitHub Repo](https://github.com/aTom3333/chunky-excel-plugin)
+
+[Releases page](https://github.com/aTom3333/chunky-excel-plugin/releases){: .btn }
 
 
 ---
