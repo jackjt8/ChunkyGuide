@@ -439,13 +439,13 @@
   },"73": {
     "doc": "Plugins",
     "title": "Chunky-excel-plugin",
-    "content": "Export renders as ODS such that an image viewer like Excel can render it… Not even joking this plugin is amazing. GitHub Repo . Releases page . ",
+    "content": "created by aTom3333 . Export renders as ODS such that an image viewer like Excel can render it… Not even joking this plugin is amazing. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-excel-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-excel-plugin"
   },"74": {
     "doc": "Plugins",
     "title": "Chunky-jpegxl-plugin",
-    "content": "Plugin adds an option to export the render as a JPEG-XL image; A brand-new image format (as of February 2021). GitHub Repo . ",
+    "content": "created by aTom3333 . Plugin adds an option to export the render as a JPEG-XL image; A brand-new image format (as of February 2021). GitHub Repo . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-jpegxl-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-jpegxl-plugin"
   },"75": {
