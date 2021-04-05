@@ -41,6 +41,7 @@ A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Re
 
 ---
 ## Chunky-excel-plugin
+created by aTom3333
 
 Export renders as ODS such that an image viewer like Excel can render it... Not even joking this plugin is amazing.
 
@@ -51,6 +52,7 @@ Export renders as ODS such that an image viewer like Excel can render it... Not 
 
 ---
 ## Chunky-jpegxl-plugin
+created by aTom3333
 
 Plugin adds an option to export the render as a JPEG-XL image; A brand-new image format (as of February 2021).
 
