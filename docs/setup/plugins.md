@@ -28,6 +28,14 @@ Clicking `Manage Plugins` within the [Chunky Launcher]({{ site.baseurl }}/docs/u
 ## ChunkyClPlugin
 created by Redox
 
+<div class="label-block" markdown="1">
+Work In Progress
+{: .label .label-yellow }
+
+New release
+{: .label .label-purple }
+</div>
+
 A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-85-gbcef6ebc or later.
 
 **Compatibility note:** Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin.
@@ -43,6 +51,14 @@ A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Re
 ## Chunky-excel-plugin
 created by aTom3333
 
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+New release
+{: .label .label-purple }
+</div>
+
 Export renders as ODS such that an image viewer like Excel can render it... Not even joking this plugin is amazing.
 
 [GitHub Repo](https://github.com/aTom3333/chunky-excel-plugin)
@@ -54,6 +70,14 @@ Export renders as ODS such that an image viewer like Excel can render it... Not 
 ## Chunky-jpegxl-plugin
 created by aTom3333
 
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+Coming soon
+{: .label .label-yellow }
+</div>
+
 Plugin adds an option to export the render as a JPEG-XL image; A brand-new image format (as of February 2021).
 
 [GitHub Repo](https://github.com/aTom3333/chunky-jpegxl-plugin)
@@ -62,6 +86,14 @@ Plugin adds an option to export the render as a JPEG-XL image; A brand-new image
 ---
 ## Chunky-MagickExportPlugin
 created by ShirleyNeko
+
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+New release
+{: .label .label-purple }
+</div>
 
 A WIP plugin that adds more export options, EXR, PNG16, etc, using ImageMagick.
 
@@ -73,6 +105,14 @@ A WIP plugin that adds more export options, EXR, PNG16, etc, using ImageMagick.
 ---
 ## Chunky-octree-plugin
 created by aTom3333
+
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+New release
+{: .label .label-purple }
+</div>
 
 This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below:
 
@@ -92,6 +132,11 @@ This is a plugin for Chunky that adds more octree implementations with a range o
 ---
 ## Denoising Plugin
 created by leMaik
+
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+</div>
 
 {% responsive_image path: "assets/images/installation/plugins/chunky_denoiser_ui.png" %}
 
@@ -131,6 +176,11 @@ For a description and some examples please see the section on [AI Based Denoisin
 ## Discord Rich Presence plugin
 created by leMaik
 
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+</div>
+
 {% responsive_image path: "assets/images/installation/plugins/chunky_discord.png" %}
 
 {% responsive_image path: "assets/images/installation/plugins/discord_rtp.png" %}
@@ -145,6 +195,14 @@ created by leMaik
 ---
 ## *demo* Ambient Occlusion Plugin
 created by llbit
+
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+Prebuilt
+{: .label .label-blue }
+</div>
 
 Preview
 {% responsive_image path: "assets/images/installation/plugins/1_plugin_test-0.png" %}
@@ -162,6 +220,14 @@ AO
 ---
 ## *demo* Depth Buffer Plugin
 created by llbit
+
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+Prebuilt
+{: .label .label-blue }
+</div>
 
 Preview
 {% responsive_image path: "assets/images/installation/plugins/1_plugin_test-0.png" %}
@@ -184,12 +250,28 @@ Depth
 ### *demo* Block Plugin Template
 created by llbit
 
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+Manual builds only
+{: .label .label-red }
+</div>
+
 [GitHub Repo](https://github.com/llbit/Chunky-BlockMod)
 
 
 ---
 ### *demo* Tab Plugin Template
 created by llbit
+
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+Manual builds only
+{: .label .label-red }
+</div>
 
 [Github Repo](https://github.com/llbit/Chunky-TabMod)
 
