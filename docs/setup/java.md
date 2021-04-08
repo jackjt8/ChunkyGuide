@@ -112,19 +112,9 @@ Don't want to have to type out commands each time you want to launch Chunky? Wel
 
 Create a `.txt` file and enter the following lines, adjusting them where necessary to match the commands you need, then save the file as a `.bat` file in the same directory as ChunkyLauncher.jar.
 
-*Java 8 example*
-
 ```
 cd /d %~dp0
 java -jar ChunkyLauncher.jar --launcher
-pause
-```
-
-*AdoptOpenJDK\jdk-11 example*
-
-```
-cd /d %~dp0
-java --module-path "C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\lib" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar ChunkyLauncher.jar --launcher
 pause
 ```
 

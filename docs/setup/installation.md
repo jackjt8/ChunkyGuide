@@ -80,5 +80,3 @@ If you have already performed the first time setup and cannot download older ver
 Chunky 2.0_beta6 --- Superseded by Chunky 2.3 which supports 1.13 - 1.16~+
 
 [Chunky 2.3.0]({{ site.baseurl }}/assets/downloads/chunky/chunky_2.3.0.zip){: .btn }
-
----
