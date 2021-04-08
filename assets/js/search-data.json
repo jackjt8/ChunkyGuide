@@ -433,61 +433,61 @@
   },"72": {
     "doc": "Plugins",
     "title": "ChunkyClPlugin",
-    "content": "created by Redox . A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-85-gbcef6ebc or later. Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Latest mostly stable build . Latest development build . ",
+    "content": "created by Redox . Work In Progress . New release . A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Requires Chunky 2.4.0-85-gbcef6ebc or later. Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Latest mostly stable build . Latest development build . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunkyclplugin",
     "relUrl": "/docs/setup/plugins.html#chunkyclplugin"
   },"73": {
     "doc": "Plugins",
     "title": "Chunky-excel-plugin",
-    "content": "created by aTom3333 . Export renders as ODS such that an image viewer like Excel can render it… Not even joking this plugin is amazing. GitHub Repo . Releases page . ",
+    "content": "created by aTom3333 . Stable . New release . Export renders as ODS such that an image viewer like Excel can render it… Not even joking this plugin is amazing. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-excel-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-excel-plugin"
   },"74": {
     "doc": "Plugins",
     "title": "Chunky-jpegxl-plugin",
-    "content": "created by aTom3333 . Plugin adds an option to export the render as a JPEG-XL image; A brand-new image format (as of February 2021). GitHub Repo . ",
+    "content": "created by aTom3333 . Stable . Coming soon . Plugin adds an option to export the render as a JPEG-XL image; A brand-new image format (as of February 2021). GitHub Repo . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-jpegxl-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-jpegxl-plugin"
   },"75": {
     "doc": "Plugins",
     "title": "Chunky-MagickExportPlugin",
-    "content": "created by ShirleyNeko . A WIP plugin that adds more export options, EXR, PNG16, etc, using ImageMagick. GitHub Repo . Releases page . ",
+    "content": "created by ShirleyNeko . Stable . New release . A WIP plugin that adds more export options, EXR, PNG16, etc, using ImageMagick. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-magickexportplugin",
     "relUrl": "/docs/setup/plugins.html#chunky-magickexportplugin"
   },"76": {
     "doc": "Plugins",
     "title": "Chunky-octree-plugin",
-    "content": "created by aTom3333 . This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below: . | Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled. | Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering. | Garbage-collected Implementation - Generally faster octree creation/loading times. | Small-leaf Implementation - Should offer a 33% memory saving Vs Packed at a small performance cost. This has yet to be tested . | . GitHub Repo . Releases page . ",
+    "content": "created by aTom3333 . Stable . New release . This is a plugin for Chunky that adds more octree implementations with a range of uses and benefits. See the GitHub repo for more information and use however I will list some of the implementations below: . | Compressed Siblings Implementation - Half memory usage vs Packed (default), Cannot be built (ie needs an existing octree), Render times are doubled. | Disk Implementation - Caches octree to disk (temp directory). While this is extremely slow when it comes to loading and rendering, it does bypass typical chunk limits with RAM. Recommend pairing with Compressed Siblings for rendering. | Garbage-collected Implementation - Generally faster octree creation/loading times. | Small-leaf Implementation - Should offer a 33% memory saving Vs Packed at a small performance cost. This has yet to be tested . | . GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#chunky-octree-plugin",
     "relUrl": "/docs/setup/plugins.html#chunky-octree-plugin"
   },"77": {
     "doc": "Plugins",
     "title": "Denoising Plugin",
-    "content": "created by leMaik . | Noisy image | Denosied output | . | | | . For a description and some examples please see the section on AI Based Denoising under Advanced Techniques. Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Releases page . ",
+    "content": "created by leMaik . Stable . | Noisy image | Denosied output | . | | | . For a description and some examples please see the section on AI Based Denoising under Advanced Techniques. Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#denoising-plugin",
     "relUrl": "/docs/setup/plugins.html#denoising-plugin"
   },"78": {
     "doc": "Plugins",
     "title": "Discord Rich Presence plugin",
-    "content": "created by leMaik . Compatibility note: Make sure that this plugin is loaded after the Denoising plugin, i.e. use the Down button to move it below it in the plugin list. Otherwise the denoising plugin will not work. GitHub Repo . Releases page . ",
+    "content": "created by leMaik . Stable . Compatibility note: Make sure that this plugin is loaded after the Denoising plugin, i.e. use the Down button to move it below it in the plugin list. Otherwise the denoising plugin will not work. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#discord-rich-presence-plugin",
     "relUrl": "/docs/setup/plugins.html#discord-rich-presence-plugin"
   },"79": {
     "doc": "Plugins",
     "title": "demo Ambient Occlusion Plugin",
-    "content": "created by llbit . Preview . AO . Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Complied Chunky-AOPlugin . ",
+    "content": "created by llbit . Stable . Prebuilt . Preview . AO . Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Complied Chunky-AOPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-ambient-occlusion-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-ambient-occlusion-plugin"
   },"80": {
     "doc": "Plugins",
     "title": "demo Depth Buffer Plugin",
-    "content": "created by llbit . Preview . Depth . Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Complied Chunky-DepthPlugin . ",
+    "content": "created by llbit . Stable . Prebuilt . Preview . Depth . Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Complied Chunky-DepthPlugin . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#demo-depth-buffer-plugin",
     "relUrl": "/docs/setup/plugins.html#demo-depth-buffer-plugin"
   },"81": {
     "doc": "Plugins",
     "title": "Plugin Templates",
-    "content": ". demo Block Plugin Template . created by llbit . GitHub Repo . demo Tab Plugin Template . created by llbit . Github Repo . ",
+    "content": ". demo Block Plugin Template . created by llbit . Stable . Manual builds only . GitHub Repo . demo Tab Plugin Template . created by llbit . Stable . Manual builds only . Github Repo . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#plugin-templates",
     "relUrl": "/docs/setup/plugins.html#plugin-templates"
   },"82": {
