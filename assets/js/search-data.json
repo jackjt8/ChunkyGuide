@@ -43,7 +43,7 @@
   },"7": {
     "doc": "Chunky Launcher",
     "title": "Table of contents",
-    "content": ". | Chunky Launcher | Advanced Settings . | Java options | Chunky options | . | Older versions of Chunky . | For Minecraft 1.2.1 - 1.12.2 (Anvil world format) | For Minecraft 1.13 (new world format?) | . | Bypassing the ChunkyLauncher (ie directly running Chunky-Core) . | View command used to launch Chunky on Windows | . | . ",
+    "content": ". | Chunky Launcher | Advanced Settings . | Java options | Chunky options | . | Bypassing the ChunkyLauncher (ie directly running Chunky-Core) . | View command used to launch Chunky on Windows | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#table-of-contents",
     "relUrl": "/docs/userinterface/chunkylauncher.html#table-of-contents"
   },"8": {
@@ -60,226 +60,226 @@
     "relUrl": "/docs/userinterface/chunkylauncher.html#advanced-settings"
   },"10": {
     "doc": "Chunky Launcher",
-    "title": "Older versions of Chunky",
-    "content": "Unfortunately, while the Chunky Launcher does allows you to select any installed version; it only allows newer versions of Chunky to be downloaded. This may cause an issue if you wish to render a Minecraft 1.12 world which requires Chunky 1.X if you have say Chunky 2.2 downloaded. As a work around to this issue I will be providing copies of older Chunky versions in .zip files which can be extracted into your Chunky directory. This should allow the Launchers Version Select to then see and use these older versions. For Minecraft 1.2.1 - 1.12.2 (Anvil world format) . Chunky 1.4.5 zip . Chunky 1.4.6_beta2 zip . For Minecraft 1.13 (new world format?) . Chunky 2.0_beta6 — Superseded by Chunky 2.2 which supports 1.13 - 1.16~+. ",
-    "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#older-versions-of-chunky",
-    "relUrl": "/docs/userinterface/chunkylauncher.html#older-versions-of-chunky"
-  },"11": {
-    "doc": "Chunky Launcher",
     "title": "Bypassing the ChunkyLauncher (ie directly running Chunky-Core)",
     "content": "The ChunkyLauncher will only display and run Chunky versions which have a valid version .json located within chunky.home\\versions\\. Valid .json files need to have a correct md5 hash and file size else you will get an integrity issue stopping that version from launching. To bypass the ChunkyLauncher and these checks you can directly launch chunky-cores you can directly invoke java with -classpath ensuring you add all required. ie java -Xmx4G -classpath ...\\lib\\chunky-core-2.3.0-56-g4419bd7e.jar;...\\lib\\fastutil-8.4.4.jar;...\\lib\\commons-math3-3.2.jar . Additional arguments may be required or preferred such as specifying Chunky Home using -Dchunky.home or adding JavaFX modules. View command used to launch Chunky on Windows . Launch a version of Chunky via the launcer. Open Task Manager and under processes find the JRE/JDK process for that Chunky version. Right click and Go to Details. From here, right click the top of the table and Select Columns, scroll down to and enable Command Line. Then, assuming the java.exe process is still selected, press ctrl+c. Paste into any document. From here we can extract and modify the command freely. Example of what you can extract from Task Manager: . Name PID Status Username CPU Memory (active private working set) Command line UAC virtualisation java.exe 7540 Running &lt;username&gt; 00 421,008 K \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot\\bin\\java.exe\" -Xmx4096m -Dchunky.home=D:\\Programs\\Chunky_293 --module-path \"C:\\Program Files\\openjfx\\lib\" --add-modules javafx.controls,javafx.fxml -classpath D:\\Programs\\Chunky_293\\lib\\chunky-core-2.3.0-56-g4419bd7e.jar;D:\\Programs\\Chunky_293\\lib\\fastutil-8.4.4.jar;D:\\Programs\\Chunky_293\\lib\\commons-math3-3.2.jar -DlogLevel=INFO se.llbit.chunky.main.Chunky -tile-width 16 Disabled . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#bypassing-the-chunkylauncher-ie-directly-running-chunky-core",
     "relUrl": "/docs/userinterface/chunkylauncher.html#bypassing-the-chunkylauncher-ie-directly-running-chunky-core"
-  },"12": {
+  },"11": {
     "doc": "Cubic Chunks",
     "title": "Cubic Chunks?",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/cubicchunks.html#cubic-chunks",
     "relUrl": "/docs/advanced_techniques/cubicchunks.html#cubic-chunks"
-  },"13": {
+  },"12": {
     "doc": "Cubic Chunks",
     "title": "Table of contents",
     "content": ". | No native support… but a work around | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/cubicchunks.html#table-of-contents",
     "relUrl": "/docs/advanced_techniques/cubicchunks.html#table-of-contents"
-  },"14": {
+  },"13": {
     "doc": "Cubic Chunks",
     "title": "No native support… but a work around",
     "content": "Should you wish to render a Cubic Chunks world with Chunky you would first need to convert the world to a Vanilla Minecraft Anvil (upto 1.12). To do this there is a provided standalone Cubic Chunks Converter which will export the Cubic Chunks world into multiple 0-255 block slices in the vanilla Anvil format. You would then render layer 0-255, layer 256-512 while applying a +256 to the cameras height/y position, layer 513-768 : +256y, etc. seperately, using the recommended parallel camera projection, and composite these in an application like GIMP. The use of alternative projection modes may require addtional math and/or lense shifting to correctly composite them. Addtional features images like the depth map may prove useful. (This method has not been tested. If someone has world for me to test I would be happy to do so) . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/cubicchunks.html#no-native-support-but-a-work-around",
     "relUrl": "/docs/advanced_techniques/cubicchunks.html#no-native-support-but-a-work-around"
-  },"15": {
+  },"14": {
     "doc": "Cubic Chunks",
     "title": "Cubic Chunks",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/cubicchunks.html",
     "relUrl": "/docs/advanced_techniques/cubicchunks.html"
-  },"16": {
+  },"15": {
     "doc": "Denoising",
     "title": "Denoising",
     "content": "todo - need to scale downsampling to 540p . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html",
     "relUrl": "/docs/advanced_techniques/denoising.html"
-  },"17": {
+  },"16": {
     "doc": "Denoising",
     "title": "Table of contents",
     "content": ". | Denoising . | Super Sample Downscaling Denoising . | Original examples | . | Split Pass Denoising . | llbit’s example | . | Multi-plane . | Example | . | AI Based Denoising &amp; Plugins . | Example | Example of painted effect | leMaik’s Denoising Plugin | Albedo Map | Normal Map | . | Split Pass + AI Denoising . | Example 1 | Example 2 | A simple proof of concept with Layer mode: Screen | . | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#table-of-contents",
     "relUrl": "/docs/advanced_techniques/denoising.html#table-of-contents"
-  },"18": {
+  },"17": {
     "doc": "Denoising",
     "title": "Super Sample Downscaling Denoising",
     "content": "A technique first covered back in October 2014. The basic premise is to render a scene at a higher than target resolution, apply a Gaussian blur to the whole image, and then scale it down to the target resolution. In any case it is assumed you render the scene for the same duration. Generally this means that a scene at say 1920x1080 with a target of 1024 SPP could be rendered at 3840x2160 at 256 SPP- These should take the same amount of time to render and the 2160p image would have perceptually less noise than the same scene rendered natively at 1080p. The noise is still present but given the higher resolution each pixel of noise takes up less screen space compared to the “noiseless” data from the sun/sky. Blurring and scaling to target resolution should result in better results than rendering at native resolution. Increasing the canvas resolution does increase memory consumption. Original examples . 540p Native . 1080p (2x supersampling) . 2160p (4x supersampling) . 4320p (8x supersampling) . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#super-sample-downscaling-denoising",
     "relUrl": "/docs/advanced_techniques/denoising.html#super-sample-downscaling-denoising"
-  },"19": {
+  },"18": {
     "doc": "Denoising",
     "title": "Split Pass Denoising",
     "content": "An approach llbit showcased in September 2015. By rendering the scene twice, first with a “Sunlight Pass” to 200 SPP and then a “Raw Emitter Pass” to 400 SPP. The noisy emitter pass could then be filtered with a Selective Gaussian Blur in GIMP and then combined. Comparing a typical 400 SPP Sunlight + Raw Emitter image to the Sunlight + Filtered Emitter image it was seen that the lighting was softer and there was less noticeable noise. The different lighting passes can be setup through the Lighting and the Sky &amp; Fog tabs. For a Sunlight pass you would simply need to disable emitters. For an Emitter pass things are a bit more complex: Enable emitters (if not done), disable sunlight, and Sky mode: black OR enable transparent sky. llbit’s example . Sunlight pass at 200 SPP . Emitter pass at 400 SPP . Filtered emitter pass . Sunlight + filtered emitter pass . Same scene rendered at 400 SPP . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#split-pass-denoising",
     "relUrl": "/docs/advanced_techniques/denoising.html#split-pass-denoising"
-  },"20": {
+  },"19": {
     "doc": "Denoising",
     "title": "Multi-plane",
     "content": "A technique which I never released; Covers rendering a scene with a clear and distinct fore and background elements. By rendering the complete scene with emitters at 0.01, emitters would light up but not emit visible light. This would lead to zero emitter noise in the distance. Meaning lower SPPs could be used for this element. Foreground element should be loaded with a reduced number of chunks, to speed up rendering speed, with the chosen emittance. With a careful selection of Chunks and combination of the two elements in post a reasonable result can be achieved. Example . Foreground selection of 76 chunks . 1024 SPP @ 932k SPS - aka it’s fast . Background selection of 1877 chunks . 128 SPP @ 482k SPS - aka it’s slow . Crude composite . The key issue with this technique is that the lighting information in the foreground element would not completely match the background. Further mitigations would be to instead combine this Multi-plane technique with Split Pass to further speed up rendering and retain bounce lighting from Sun/Sky present within the background pass. Using Split Pass would also mean that less effort is required to recombine the completed results. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#multi-plane",
     "relUrl": "/docs/advanced_techniques/denoising.html#multi-plane"
-  },"21": {
+  },"20": {
     "doc": "Denoising",
     "title": "AI Based Denoising &amp; Plugins",
     "content": "First showcased by u/StaysAwakeAllWeek in Nov 2018, this was the first time an AI based denoiser was mentioned on r/Chunky. Unfortunately at the time it was limited to just Nvidia GPUs. A few months later I discovered Intel’s Open Image Denoise; an AI based denoiser that works on any CPU with SSE4.1 support. Example . | SPP | RAW | OIDN | . | 512 | | | . | 2048 | | | . | 4096 | | | . | 8192 | | | . As some of you may have noticed while AI based denoisers work wonders there are a few issues with the outputted images. Noteworthy visual artifacts are the deformed blocks, blurred textures, and the painted effect you can often see. Below you can see an extreme case where a 32 SPP scene lit mostly by emitters was denoised. Example of painted effect . leMaik’s Denoising Plugin . Some of these issues can be resolved or mitigated by using leMaik’s Denoising Plugin which has the ability to, not only to automatically denoise a scene once the target SPP is reached but, render auxiliary feature images / AOVs (Arbitrary Output Variables) to provide additional information to the denoiser. Unfortunately you still can’t expect the AI denoiser to work real magic; If there is too much noise you will still get a painted effect. Albedo Map . The Albedo map is a feature image that provides the largest quality bump to the denoiser. It’s basically just a representation of the texture information within the scene independant of shading (lighting) or viewing angle. This map tends to help restore texture details. Normal Map . The Normal map is another feature image that can help. In order to use a Normal map you need to provide the Denoiser with the Albedo map first. This map tends to help restore block shape. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#ai-based-denoising--plugins",
     "relUrl": "/docs/advanced_techniques/denoising.html#ai-based-denoising--plugins"
-  },"22": {
+  },"21": {
     "doc": "Denoising",
     "title": "Split Pass + AI Denoising",
     "content": "For some scenes where we have access to both Sun/Sky light and Emitters. This technique is… well it is mostly a combinaton of llbit’s Split Pass and AI denoising with a touch of my Multi-plane. The goal of this method is to min-max speed and quality as much as possible. As many would probably know by now; Scenes which receive most of their lighting directly from the Sun or Sky generally do not require SPPs past 1000 SPP, and often work fine with 64-256 SPP, unlike scenes with emitters that can require 8000 SPP or more. Subjecting the whole scene to an AI based denoiser when it is not necessary is what this combination technique aims to solve. We take llbit’s Split Pass Denoising and instead of feeding the emitter pass through a simple Gaussian blur we use an AI based denoiser like Nvidia Optix or OIDN. Given the Sun, Sky, and Fog pass is not put through the denoiser any fine details or grain from this pass will be kept. This is most noticeable when looking at the fog as this tends to be heavily blurred by AI Denoisers. Any part of the scene that does not receive lighting from the Sun, Sky, and Fog pass but instead is lit from the emitter pass will still unfortunately be subjected the the pitfalls of the AI Denoiser. However, given that we can reduce the number of chunks loaded for this pass, and that we do not need to deal with fog, it should be possible to achieve a high SPP relatively quickly. Put simply: Render the Sun, Sky, and Fog in one pass. In another pass render the emitters and denoise them with an AI base denoiser like Open Image Denoise or Nvidia Optix. These two passes can be combined using GIMP by setting the layer mode to Screen. Example 1 . Sun + Sky + Fog Pass at 256 SPP . Raw Emitter Pass at 2048 SPP . AI denoised Emitter Pass . Combined SSF + E_dn using GIMP and layer mode set to screen . Example 2 . Sun + Sky + Fog Pass at 256 SPP . Raw Emitter Pass at 2048 SPP . AI denoised Emitter Pass . Combined SSF + E_dn using GIMP and layer mode set to screen . A simple proof of concept with Layer mode: Screen . Below is a showcase of further subdividing light sources into different passes and the combined composite VS a typical render. This is merely to showcase that splitting render passes and combining in post can produce equivalent results to a more typical render. Of course subdividing a scene into this many passes and rendering to such a high SPP is not required for Split Pass + AI Denoising. | Sun pass | Sky pass | Emitter pass | . | | | | . | SSE_Comp | | Typical bake | . | | | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/denoising.html#split-pass--ai-denoising",
     "relUrl": "/docs/advanced_techniques/denoising.html#split-pass--ai-denoising"
-  },"23": {
+  },"22": {
     "doc": "FAQ / Troubleshooting",
     "title": "FAQ / Troubleshooting",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html",
     "relUrl": "/docs/faq/faq.html"
-  },"24": {
+  },"23": {
     "doc": "FAQ / Troubleshooting",
     "title": "Table of contents",
     "content": ". | FAQ | Troubleshooting . | Chunky does not Launch | Cannot allocate more than 2GB of RAM? | Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage | Black blocks with a red X | Trying to contribute and are getting missing JavaFX modules while building? | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#table-of-contents",
     "relUrl": "/docs/faq/faq.html#table-of-contents"
-  },"25": {
+  },"24": {
     "doc": "FAQ / Troubleshooting",
     "title": "FAQ",
     "content": "TODO Read llbit’s one for now . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#faq",
     "relUrl": "/docs/faq/faq.html#faq"
-  },"26": {
+  },"25": {
     "doc": "FAQ / Troubleshooting",
     "title": "Troubleshooting",
     "content": ". Chunky does not Launch . See here. Cannot allocate more than 2GB of RAM? . If Java is installed to C:\\Program Files (x86)\\Java\\... this is a 32 bit installation. It is highly recommended to remove this and install 64 bit Java. Exception in thread “main” java.lang.NoClassDefFoundError: javafx/stage/Stage . More info and potential fixes . Black blocks with a red X . If Chunky cannot find a Minecraft installation to load textures from a missing texture texture will be shown. Options --&gt; Edit resource packs --&gt; Add . Navigate to .../.minecraft/versions/ open the corresponding version folder, ie 1.14.4, and then select the .jar file, ie 1.14.4.jar, and hit Open, &amp; Apply. Alternatively, navigate a Minecraft Resource Pack stored in a .zip file and Open and Apply that. You may need to use Scene --&gt; Reload chunks for this to work. Trying to contribute and are getting missing JavaFX modules while building? . a_Tom has a .patch for you! . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/faq/faq.html#troubleshooting",
     "relUrl": "/docs/faq/faq.html#troubleshooting"
-  },"27": {
+  },"26": {
     "doc": "GIMP",
     "title": "GNU Image Manipulation Program - A quick rundown",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#gnu-image-manipulation-program---a-quick-rundown",
     "relUrl": "/docs/advanced_techniques/gimp.html#gnu-image-manipulation-program---a-quick-rundown"
-  },"28": {
+  },"27": {
     "doc": "GIMP",
     "title": "Table of contents",
     "content": ". | Other | Filtering . | Blur . | Gaussian blur | Selective Gaussian blur | . | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#table-of-contents",
     "relUrl": "/docs/advanced_techniques/gimp.html#table-of-contents"
-  },"29": {
+  },"28": {
     "doc": "GIMP",
     "title": "Other",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#other",
     "relUrl": "/docs/advanced_techniques/gimp.html#other"
-  },"30": {
+  },"29": {
     "doc": "GIMP",
     "title": "Filtering",
     "content": "With the chosen layer selected over in the Layers window. You can apply various Filters to it by accessing the menu from the Menu Bar. Blur . Gaussian blur . Performs an averaging of neighboring pixels with the normal distribution as weighting . This is the most basic blur filter available and really quick. Has the option to change blur size in X and Y independently. . Selective Gaussian blur . Blur neighboring pixels, but only in low contrast areas . This filter is more advanced and lets you set a threshold so that only similar pixels are blurred together. Should help retain sharp edges while reducing grain. This filter is much slower than Gaussian blur but this probably won’t amount to much addtional processing time unless working with a high resolution image. Unfortunately you cannot control blur in X&amp;Y independently instead it is controlled by a Blur radius. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html#filtering",
     "relUrl": "/docs/advanced_techniques/gimp.html#filtering"
-  },"31": {
+  },"30": {
     "doc": "GIMP",
     "title": "GIMP",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/advanced_techniques/gimp.html",
     "relUrl": "/docs/advanced_techniques/gimp.html"
-  },"32": {
+  },"31": {
     "doc": "Help Wanted",
     "title": "Current things that need to be tested",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#current-things-that-need-to-be-tested",
     "relUrl": "/docs/helpwanted/helpwanted.html#current-things-that-need-to-be-tested"
-  },"33": {
+  },"32": {
     "doc": "Help Wanted",
     "title": "Table of contents",
     "content": ". | UI elements vs Text fields | Explore different tile-width sizes for potential speedups | Chunky AI Denoiser Training | GitHub Issues | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#table-of-contents",
     "relUrl": "/docs/helpwanted/helpwanted.html#table-of-contents"
-  },"34": {
+  },"33": {
     "doc": "Help Wanted",
     "title": "UI elements vs Text fields",
     "content": "While it is known that UI elements have set ranges which we can bypass by entering values into the corresponding Text Field. Anyone is able to view and comment this document, but I do intend to manually grant edit permissions. Google Sheets . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#ui-elements-vs-text-fields",
     "relUrl": "/docs/helpwanted/helpwanted.html#ui-elements-vs-text-fields"
-  },"35": {
+  },"34": {
     "doc": "Help Wanted",
     "title": "Explore different tile-width sizes for potential speedups",
     "content": "In the ChunkyLauncher, under advanced, you can find Chunky options where you can provide arguments to change more advanced settings. The particular one we are looking at here is -tile-width x which modifies the frame subdivision size per worker thread. Alternatively you can call this option and render via commandline using the following: . java -jar ChunkyLauncher.jar -tile-width x java -jar ChunkyLauncher.jar -render scene . In my limited testing of a scene that takes approximately 17 minutes I found that a tile-width of 16 seemed to provide a 3.5% boost to rendering speed over default. While this is a minimal improvement it would add up over time. A value of 256 or greater resulted in a significant reduction in rendering performance. This behaviour has been confirmed by deltakeks#4740 on discord. When providing results please let me know the CPU model, Chunky version, resolution, and SPP target in addtional to providing data regarding tile-width values tested and the time in seconds. Just.. send me a spreadsheet or something. Notes- Testing was performed on an i7-9750H, leMaik 1.4.5-231, 1920x1080, to a target of 256 SPP. | tile-width | Time (s) | SPS | . | 1 | 1035 | 512882 | . | 2 | 1018 | 521024 | . | 4 | 1020 | 520021 | . | 8 | 1014 | 523149 | . | 16 | 1000 | 529312 | . | 20 | 1033 | 513731 | . | 32 | 1032 | 514064 | . | … | … | … | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups",
     "relUrl": "/docs/helpwanted/helpwanted.html#explore-different-tile-width-sizes-for-potential-speedups"
-  },"36": {
+  },"35": {
     "doc": "Help Wanted",
     "title": "Chunky AI Denoiser Training",
     "content": "Would training Intel’s Open Image Denoise with Chunky data provide any meaningful improvement to denoising results? No clue. But given they only used as few as 20 different scenes from some renderers it certainly gives us some hope! . If you want to help out there is more information over at my GitHub Repo where you can provide your own data. Chunky AI Training Data . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#chunky-ai-denoiser-training",
     "relUrl": "/docs/helpwanted/helpwanted.html#chunky-ai-denoiser-training"
-  },"37": {
+  },"36": {
     "doc": "Help Wanted",
     "title": "GitHub Issues",
     "content": "Confirming bugs, providing steps to reproduce them, or maybe even fixing them yourself are all really helpful. Maybe.. Try it out… . Chunky GitHub Issues . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html#github-issues",
     "relUrl": "/docs/helpwanted/helpwanted.html#github-issues"
-  },"38": {
+  },"37": {
     "doc": "Help Wanted",
     "title": "Help Wanted",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/helpwanted/helpwanted.html",
     "relUrl": "/docs/helpwanted/helpwanted.html"
-  },"39": {
+  },"38": {
     "doc": "Home",
     "title": "jackjt8's Guide to Chunky ",
     "content": "Chunky is a Minecraft rendering tool that uses Path Tracing to create realistic images of your Minecraft worlds. Witchcraft and Wizardry - The Floo Network . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"40": {
+  },"39": {
     "doc": "Home",
     "title": "jackjt8's (unscripted) Video Guide to Chunky",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"41": {
+  },"40": {
     "doc": "Home",
     "title": "About Me",
     "content": "I have used Chunky for over 7 years now and in this time I have produced in excess of 400 renders. Over the years I have learnt so much and I feel it's time to put everything in writing. This guide is an accumulation of knowledge and I very much hope that others will add to it so it can evolve and become something more. Just in case anyone wants to see my work, you can find all of it in this Google Drive folder. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"42": {
+  },"41": {
     "doc": "Home",
     "title": "Home",
     "content": ". ",
     "url": "https://jackjt8.github.io/ChunkyGuide/",
     "relUrl": "/"
-  },"43": {
+  },"42": {
     "doc": "Installation",
     "title": "Installing Chunky",
     "content": " ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#installing-chunky",
     "relUrl": "/docs/setup/installation.html#installing-chunky"
-  },"44": {
+  },"43": {
     "doc": "Installation",
     "title": "Table of contents",
-    "content": ". | Prerequisites - Java . | Java Downloads | . | First time setup | . ",
+    "content": ". | Prerequisites - Java . | Java Downloads | . | First time setup | Older versions of Chunky . | For Minecraft 1.2.1 - 1.12.2 (Anvil world format) | For Minecraft 1.13 (new world format) | . | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#table-of-contents",
     "relUrl": "/docs/setup/installation.html#table-of-contents"
-  },"45": {
+  },"44": {
     "doc": "Installation",
     "title": "Prerequisites - Java",
     "content": "Chunky requires Java 8 update 40 or later (with JavaFX) and we recommend using the 64 bit version if you have a 64 bit OS. Java Downloads . Oracle Java 8 (including JavaFX) . Notes . | OpenJDK varients will work but some addtional setup may be required. | You may run into issues installing Oracle Java on Ubuntu; JavaFX is missing. | Newer versions of Java, ie Java 9, Java 11, etc., may also require addtional setup. | . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#prerequisites---java",
     "relUrl": "/docs/setup/installation.html#prerequisites---java"
-  },"46": {
+  },"45": {
     "doc": "Installation",
     "title": "First time setup",
     "content": "ChunkyLauncher.jar . The Chunky Launcher is a Java application that handles updating Chunky, version selection, Plugins, and various settings. You can start the Launcher by double clicking on the donloaded Jar file, or by typing the following command into a terminal/command prompt from the appropriate directory. java -jar ChunkyLauncher.jar . The first time you start Chunky Launcher you will be asked to pick a settings directory for Chunky. I personally do not use the recommended Home Directory install location. Instead I like using Program or Working Directory such that I can keep multiple seperate installations of Chunky. The reason I do this will become clear with some of the advanced topics this guide will cover later. After making this selection the Chunky Launcher will be shown. Please hit Check for update to show any available updates and then Update to New Version to get Chunky Launcher to download required files. Once done hit Launch Chunky to use the downloaded version. Or Close and use the Launch option within Chunky Launcher. Note - If no update is found or the download of the update fails you may need to enable Download snapshots from the advanced section of the Launcher. For further information on the functionally of the Chunky Launcher, including how to obtain different Chunky versions, please refer to the User Interface section on the Chunky Launcher. ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#first-time-setup",
     "relUrl": "/docs/setup/installation.html#first-time-setup"
+  },"46": {
+    "doc": "Installation",
+    "title": "Older versions of Chunky",
+    "content": "Unfortunately, while the Chunky Launcher does allows you to select any installed version, it only allows newer versions of Chunky to be downloaded. This may cause an issue if you wish to render a Minecraft 1.12 world which requires Chunky 1.X if you have say Chunky 2.3 downloaded. https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#advanced-settings . Opposed to completing the First time setup steps listed above, setting the Update Site field under Advanced Settings in the Chunky Launcher to http://chunkyupdate.llbit.se/ with the Download snapshotscheckbox disabled and clicking on Check for update should give you a download prompt for Chunky 1.4.5 (mc 1.2.1 - 1.12.2). Enabling Download snapshots and checking for updates again should give you Chunky 1.4.6 beta 2 which a few new features and bugs fixes including support for mc 1.13 resource packs ONLY (no support for mc 1.13 worlds). It it then recommended to switch the Update Site back to https://chunkyupdate.lemaik.de/, disabling Download snapshots, and checking and downloading Chunky 2.3.0 or any stable release prior to enabling Download snapshots. Following these steps should give you Chunky 1.4.5 &amp; 1.4.6b2 for Minecraft &lt;1.12.2 rendering and at least Chunky 2.3.0 (stable) with an experimental Chunky 2.4 build. If you have already performed the first time setup and cannot download older versions as a work around to this issue I will be providing copies of older Chunky versions in .zip files; which can be extracted into the root of your Chunky directory. This should allow the Launchers Version Select to then see and use these older versions. For Minecraft 1.2.1 - 1.12.2 (Anvil world format) . Chunky 1.4.5 zip . Chunky 1.4.6_beta2 zip . For Minecraft 1.13 (new world format) . Chunky 2.0_beta6 — Superseded by Chunky 2.3 which supports 1.13 - 1.16~+ . Chunky 2.3.0 . ",
+    "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/installation.html#older-versions-of-chunky",
+    "relUrl": "/docs/setup/installation.html#older-versions-of-chunky"
   },"47": {
     "doc": "Installation",
     "title": "Installation",
