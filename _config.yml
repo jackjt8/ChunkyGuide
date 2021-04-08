@@ -1,7 +1,7 @@
 # See https://github.com/pmarsceill/just-the-docs/blob/master/_config.yml
 
 title: "jackjt8's Guide to Chunky"
-description: "A guide to Chunky made by jackjt8"
+description: "A guide to Chunky"
 url: "https://jackjt8.github.io"
 baseurl: "/ChunkyGuide"
 
@@ -26,7 +26,7 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 #content
-footer_content: "Copyright &copy; 2020 jackjt8. Distributed by an <a href=\"https://github.com/jackjt8/ChunkyGuide/blob/master/LICENSE\">GNU license.</a>"
+footer_content: "Copyright &copy; 2021 jackjt8. Distributed by an <a href=\"https://github.com/jackjt8/ChunkyGuide/blob/master/LICENSE\">GNU license.</a>"
 
 # Footer last edited timestamp
 #last_edit_timestamp: true # Needs frontmatter!!
@@ -66,9 +66,11 @@ responsive_image:
     - width: 1366  # [Required] How wide the resized image will be.
       quality: 90 # [Optional] Overrides default_quality for this size.
     - width: 1600
+      quality: 90
     - width: 1920
       quality: 90
     - width: 3840 # Might be overkill for a website
+      quality: 90
 
   # [Optional, Default: false]
   # Rotate resized images depending on their EXIF rotation attribute. Useful for
@@ -78,7 +80,7 @@ responsive_image:
   # [Optional, Default: false]
   # Strip EXIF and other JPEG profiles. Helps to minimize JPEG size and win friends
   # at Google PageSpeed.
-  strip: false
+  strip: true
 
   # [Optional, Default: assets]
   # The base directory where assets are stored. This is used to determine the
