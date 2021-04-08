@@ -122,9 +122,11 @@ Provides a list of all detected scenes in the Scenes directory.
 
 `Sky mode settings`
 
-`Simulated` - A simple day-light sky model (Preetham Sky)
+`Simulated` - Simulates a sky
 
-- `Horizon offset` - 0.1
+- `Sky Mode` - Preetham is a basic day time model that breaks if the sun altitude is below the horizon. Nishita is a more realistic day time model that fades to black if the sun is below the horizon. At present there are no night time sky models in Chunky.
+
+- `Horizon offset` - 0.0
 
 `Solid Color` - Paints a solid color sky.
 
@@ -148,6 +150,8 @@ Provides a list of all detected scenes in the Scenes directory.
 
 - `Skymap rotation` - Rotates the skymap horizontally.
 
+[More information on Skymaps and downloads](https://chunky.llbit.se/skymaps.html) - External
+
 `Skybox` - Load upto 6 textures which get mapped onto a cuboid to act as a sky. [More information](https://en.wikipedia.org/wiki/Skybox_(video_games))
 
 - `Up`, `Down`, `Front`, `Back`, `Left`, `Right` - Opens a file picker
@@ -156,7 +160,7 @@ Provides a list of all detected scenes in the Scenes directory.
 
 `Black` - Not sure why we have this option given we have a `Solid Color` option.
 
-
+~~~
 
 `Transparent sky` - Makes the sky transparent.
 
@@ -316,6 +320,8 @@ NOTE - Support for PBR resource packs is WIP and will fundamentially change how 
 
 `Fast Fog` - Impacts the quality of fog rendering. Typically only noticable if viewing fog through alpha textures which is rare.
 
+`Sky cache resolution` - Resolution of the rendered simulated sky. Lower values may boost rendering performance at the cost of sky model accuracy.
+
 `Output mode` - `PNG` (default), `TIFF, 32-bit floating point`, `PFM, Portable FloatMap (32-bit)`
 
 `Octree implementation` - `PACKED` (default), `BIGPACKED`, `NODE` (legacy)
@@ -330,5 +336,5 @@ NOTE - Support for PBR resource packs is WIP and will fundamentially change how 
 
 {% responsive_image path: "assets/images/user_interface/chunky_render_help.png" %}
 
-Camera bindings.
+Camera bindings, see [Render Preview]({{ site.baseurl }}/docs/userinterface/preview.html) for up-to-date controls.
 
