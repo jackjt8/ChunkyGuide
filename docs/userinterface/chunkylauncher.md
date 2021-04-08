@@ -80,24 +80,6 @@ nav_order: 1
 
 ---
 
-## Older versions of Chunky
-
-Unfortunately, while the Chunky Launcher does allows you to select any installed version; it only allows newer versions of Chunky to be downloaded. This may cause an issue if you wish to render a Minecraft 1.12 world which requires Chunky 1.X if you have say Chunky 2.2 downloaded.
-
-As a work around to this issue I will be providing copies of older Chunky versions in .zip files which can be extracted into your Chunky directory. This should allow the Launchers `Version Select` to then see and use these older versions.
-
-### For Minecraft 1.2.1 - 1.12.2 (Anvil world format)
-
-[Chunky 1.4.5 zip]({{ site.baseurl }}/assets/downloads/chunky/chunky_1.4.5.zip){: .btn }
-
-[Chunky 1.4.6_beta2 zip]({{ site.baseurl }}/assets/downloads/plugins/chunky_1.4.6b2.zip){: .btn }
-
-### For Minecraft 1.13 (new world format?)
-
-Chunky 2.0_beta6 --- Superseded by Chunky 2.2 which supports 1.13 - 1.16~+.
-
----
-
 ## Bypassing the ChunkyLauncher (ie directly running Chunky-Core)
 
 The ChunkyLauncher will only display and run Chunky versions which have a valid version .json located within `chunky.home\versions\`. Valid .json files need to have a correct md5 hash and file size else you will get an integrity issue stopping that version from launching.

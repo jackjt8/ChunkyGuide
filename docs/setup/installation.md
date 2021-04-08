@@ -55,4 +55,30 @@ Note - If no update is found or the download of the update fails you may need to
 
 For further information on the functionally of the Chunky Launcher, including how to obtain different Chunky versions, please refer to the [User Interface section on the Chunky Launcher]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html).
 
+---
 
+## Older versions of Chunky
+
+Unfortunately, while the Chunky Launcher does allows you to select any installed version, it only allows newer versions of Chunky to be downloaded. This may cause an issue if you wish to render a Minecraft 1.12 world which requires Chunky 1.X if you have say Chunky 2.3 downloaded.
+
+https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#advanced-settings
+
+Opposed to completing the First time setup steps listed above, setting the [Update Site field under Advanced Settings in the Chunky Launcher]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html#advanced-settings) to `http://chunkyupdate.llbit.se/` with the `Download snapshots`checkbox disabled and clicking on `Check for update` should give you a download prompt for Chunky 1.4.5 (mc 1.2.1 - 1.12.2). Enabling `Download snapshots` and checking for updates again should give you Chunky 1.4.6 beta 2 which a few new features and bugs fixes including support for mc 1.13 resource packs ONLY (no support for mc 1.13 worlds). It it then recommended to switch the `Update Site` back to `https://chunkyupdate.lemaik.de/`, disabling `Download snapshots`, and checking and downloading Chunky 2.3.0 or any stable release prior to enabling `Download snapshots`. 
+
+Following these steps should give you Chunky 1.4.5 & 1.4.6b2 for Minecraft <1.12.2 rendering and at least Chunky 2.3.0 (stable) with an experimental Chunky 2.4 build.
+
+If you have already performed the first time setup and cannot download older versions as a work around to this issue I will be providing copies of older Chunky versions in .zip files; which can be extracted into the root of your Chunky directory. This should allow the Launchers `Version Select` to then see and use these older versions.
+
+### For Minecraft 1.2.1 - 1.12.2 (Anvil world format)
+
+[Chunky 1.4.5 zip]({{ site.baseurl }}/assets/downloads/chunky/chunky_1.4.5.zip){: .btn }
+
+[Chunky 1.4.6_beta2 zip]({{ site.baseurl }}/assets/downloads/chunky/chunky_1.4.6b2.zip){: .btn }
+
+### For Minecraft 1.13 (new world format)
+
+Chunky 2.0_beta6 --- Superseded by Chunky 2.3 which supports 1.13 - 1.16~+
+
+[Chunky 2.3.0]({{ site.baseurl }}/assets/downloads/chunky/chunky_2.3.0.zip){: .btn }
+
+---
