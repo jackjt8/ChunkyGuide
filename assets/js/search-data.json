@@ -349,7 +349,7 @@
   },"58": {
     "doc": "Java",
     "title": "Batch script to launch (Windows)",
-    "content": "Don’t want to have to type out commands each time you want to launch Chunky? Well in comes Batch scripts! . Create a .txt file and enter the following lines, adjusting them where necessary to match the commands you need, then save the file as a .bat file in the same directory as ChunkyLauncher.jar. Java 8 example . cd /d %~dp0 java -jar ChunkyLauncher.jar --launcher pause . AdoptOpenJDK\\jdk-11 example . cd /d %~dp0 java --module-path \"C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.8.10-hotspot\\lib\" --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml -jar ChunkyLauncher.jar --launcher pause . You can then right click the .bat file and create a shortcut which can be place on the desktop, pinned to the taskbar, etc. For more advanced scripts please see the section on Automation . ",
+    "content": "Don’t want to have to type out commands each time you want to launch Chunky? Well in comes Batch scripts! . Create a .txt file and enter the following lines, adjusting them where necessary to match the commands you need, then save the file as a .bat file in the same directory as ChunkyLauncher.jar. cd /d %~dp0 java -jar ChunkyLauncher.jar --launcher pause . You can then right click the .bat file and create a shortcut which can be place on the desktop, pinned to the taskbar, etc. For more advanced scripts please see the section on Automation . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/java.html#batch-script-to-launch-windows",
     "relUrl": "/docs/setup/java.html#batch-script-to-launch-windows"
   },"59": {
