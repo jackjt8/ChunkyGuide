@@ -49,6 +49,8 @@ The first time you start Chunky Launcher you will be asked to pick a settings di
 
 After making this selection the Chunky Launcher will be shown. Please hit `Check for update` to show any available updates and then `Update to New Version` to get Chunky Launcher to download required files. Once done hit `Launch Chunky` to use the downloaded version. Or `Close` and use the `Launch` option within Chunky Launcher.
 
+Note - You may need to check the [Update Site field under Advanced Settings]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html#advanced-settings) to ensure that the field is set to the correct URL.
+
 {% responsive_image path: "assets/images/installation/chunky_update_available.png" %}
 
 Note - If no update is found or the download of the update fails you may need to enable `Download snapshots` from the advanced section of the Launcher.
@@ -60,8 +62,6 @@ For further information on the functionally of the Chunky Launcher, including ho
 ## Older versions of Chunky
 
 Unfortunately, while the Chunky Launcher does allows you to select any installed version, it only allows newer versions of Chunky to be downloaded. This may cause an issue if you wish to render a Minecraft 1.12 world which requires Chunky 1.X if you have say Chunky 2.3 downloaded.
-
-https://jackjt8.github.io/ChunkyGuide/docs/userinterface/chunkylauncher.html#advanced-settings
 
 Opposed to completing the First time setup steps listed above, setting the [Update Site field under Advanced Settings in the Chunky Launcher]({{ site.baseurl }}/docs/userinterface/chunkylauncher.html#advanced-settings) to `http://chunkyupdate.llbit.se/` with the `Download snapshots`checkbox disabled and clicking on `Check for update` should give you a download prompt for Chunky 1.4.5 (mc 1.2.1 - 1.12.2). Enabling `Download snapshots` and checking for updates again should give you Chunky 1.4.6 beta 2 which a few new features and bugs fixes including support for mc 1.13 resource packs ONLY (no support for mc 1.13 worlds). It it then recommended to switch the `Update Site` back to `https://chunkyupdate.lemaik.de/`, disabling `Download snapshots`, and checking and downloading Chunky 2.3.0 or any stable release prior to enabling `Download snapshots`. 
 
