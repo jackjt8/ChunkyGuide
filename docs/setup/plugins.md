@@ -155,6 +155,9 @@ created by leMaik
 <div class="label-block" markdown="1">
 Stable
 {: .label .label-green }
+
+New release
+{: .label .label-purple }
 </div>
 
 {% responsive_image path: "assets/images/installation/plugins/chunky_denoiser_ui.png" %}
