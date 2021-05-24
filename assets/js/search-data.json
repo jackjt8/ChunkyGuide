@@ -469,7 +469,7 @@
   },"78": {
     "doc": "Plugins",
     "title": "Denoising Plugin",
-    "content": "created by leMaik . Stable . | Noisy image | Denosied output | . | | | . For a description and some examples please see the section on AI Based Denoising under Advanced Techniques. Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Releases page . ",
+    "content": "created by leMaik . Stable . New release . | Noisy image | Denosied output | . | | | . For a description and some examples please see the section on AI Based Denoising under Advanced Techniques. Compatibility note: Not comptaible with other Plugins that replace the render manager. ie Denoising Plugin, ChunkyClPlugin, Ambient Occlusion Plugin, and Depth Buffer Plugin. GitHub Repo . Releases page . ",
     "url": "https://jackjt8.github.io/ChunkyGuide/docs/setup/plugins.html#denoising-plugin",
     "relUrl": "/docs/setup/plugins.html#denoising-plugin"
   },"79": {
