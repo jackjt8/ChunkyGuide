@@ -48,6 +48,25 @@ A WIP OpenCL raytracer for Chunky. Note- May or may not come with spaghettii. Re
 
 
 ---
+## Chunky-bloom-plugin
+created by aTom3333
+
+<div class="label-block" markdown="1">
+Stable
+{: .label .label-green }
+
+New release
+{: .label .label-purple }
+</div>
+
+This is a Chunky plugin that adds a bloom post processing effect.
+
+[GitHub Repo](https://github.com/aTom3333/chunky-bloom-plugin)
+
+[Releases page](https://github.com/aTom3333/chunky-bloom-plugin/releases){: .btn }
+
+
+---
 ## Chunky-excel-plugin
 created by aTom3333
 
