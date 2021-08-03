@@ -45,6 +45,8 @@ JavaFX/OpenJFX are often the short straw and unfortunately Chunky needs them. Be
 
 ### OpenJDK 8 OpenJFX fix on Ubuntu
 
+**NOTE** - This script is currently not working. If anyone can fix it please let me know or PR the fix.
+
 Below is a script you can run on Ubuntu to obtain and retain a working OpenJFX. *credit - UNuX#1985 - 11/07/2019*
 
 
@@ -72,6 +74,28 @@ On Windows, OpenJDK does not come with OpenJFX and is does not, at the time of w
 ### What about Java 11+?
 
 If you wish to run Chunky on Java 11+ you will need to ensure you have ChunkyLauncher v1.12.1, or later, in addtion to OpenJFX.
+
+---
+
+#### OpenJDK 11+ OpenJFX on Ubuntu
+
+1. Install OpenJDK
+
+`sudo apt-get install openjdk-11-jdk`
+
+2. Install OpenJFX
+
+`sudo apt install openjfx`
+
+3. Right click on ChunkyLauncher.jar
+
+	a) Properties, Permissions, Execute: Ticked
+
+	b) Open With, OpenJDK Java 11 Runtime (or eqv)
+
+4. Double click on ChunkyLauncher.jar
+
+Note -ChunkyLauncher should auto find OpenJFX assuming it's in the default `/usr/share/openjfx/lib`
 
 ---
 
