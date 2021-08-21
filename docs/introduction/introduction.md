@@ -21,7 +21,7 @@ nav_order: 2
 
 ## Emitter Sampling Strategy (ESS)
 
-With every intersection the sun is sampled adding its contribution to the ray without the need for random sampling; which is one of the main reasons why the convergence of scenes lit by the sun (and sky) occurs quickly. Emitters on the other hand need to be directly hit for them to contribute which has a lower probability of occuring; espically with smaller emitters like torchers.
+With every intersection the sun is sampled adding its contribution to the ray without the need for random sampling; which is one of the main reasons why the convergence of scenes lit by the sun (and sky) occurs quickly. Emitters on the other hand need to be directly hit for them to contribute which has a lower probability of occuring; espically with smaller emitters like torches.
 
 ESS enables similar sampling to which the sun uses and, in theory, should lead to faster convergence.
 
