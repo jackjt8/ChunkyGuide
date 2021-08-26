@@ -95,7 +95,7 @@ If you wish to run Chunky on Java 11+ you will need to ensure you have ChunkyLau
 
 4. Double click on ChunkyLauncher.jar
 
-Note -ChunkyLauncher should auto find OpenJFX assuming it's in the default `/usr/share/openjfx/lib`
+Note - ChunkyLauncher should auto find OpenJFX in a number of locations: Within `/usr/share/openjfx/lib`, `/usr/lib/jvm/java-<javaVersion>-openjdk`, `.chunky`, or the extracted folder contains `javafx` though this is crude.
 
 ---
 
@@ -106,6 +106,8 @@ Note -ChunkyLauncher should auto find OpenJFX assuming it's in the default `/usr
 2. Download the [OpenJFX Windows SDK from gluonhq](https://gluonhq.com/products/javafx/), extract to `C:\Program Files\openjfx` with the folder structure seen below.
 
 {% responsive_image path: "assets/images/installation/openjfx_folder.png" %}
+
+Note - ChunkyLauncher should auto find OpenJFX in a number of locations: Within `/.chunky/`, or alongside your `jre` or `jdk` install (ie merging /lib/ folders), or the extracted folder contains `javafx` though this is crude.
 
 3. Launch ChunkyLauncher.jar either by double clicking the .jar file or by using `java -jar "path\to\chunkylauncher\chunkylauncher.jar"`
 
