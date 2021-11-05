@@ -32,6 +32,10 @@ permalink: /
 
 <div align="center">Chunky is a Minecraft rendering tool that uses Path Tracing to create realistic images of your Minecraft worlds.</div>
 
+<div align="center" style="background-color:#a35a00">
+This guide was orginally created back when we did not have access to make changes to Chunky's original site at chunky.llbit.se. As Chunky has developed over the years things have changed. We now have a new and up to date site, <a href="https://chunky-dev.github.io/docs/"> Chunky Manual </a>, which we have worked tirelessly to create. As such the majority of the content here is no longer required. This guide will live on as a place to find more advanced techniques.
+</div>
+
 ---
 
 {% responsive_image path: "assets/images/index/HP_14-512.denoised.png" alt: "A description of the image" %}
